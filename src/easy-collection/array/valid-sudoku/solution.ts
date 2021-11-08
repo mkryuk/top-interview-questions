@@ -15,47 +15,47 @@ export function isValidSudoku(board: string[][]): boolean {
 }
 
 function checkRow(board: string[][], rowIndex: number): boolean {
-  let rowMap = new Map<string, number>();
+  let rowSet = new Set<string>();
   for (let index = 0; index < board.length; index++) {
     const element = board[rowIndex][index];
     if (element === ".") {
       continue;
     }
-    if (rowMap.has(element)) {
+    if (rowSet.has(element)) {
       return false;
     }
-    rowMap.set(element, 0);
+    rowSet.add(element);
   }
   return true;
 }
 
 function checkColumn(board: string[][], columnIndex: number): boolean {
-  let columnMap = new Map<string, number>();
+  let columnSet = new Set<string>();
   for (let index = 0; index < board.length; index++) {
     const element = board[index][columnIndex];
     if (element === ".") {
       continue;
     }
-    if (columnMap.has(element)) {
+    if (columnSet.has(element)) {
       return false;
     }
-    columnMap.set(element, 0);
+    columnSet.add(element);
   }
   return true;
 }
 
 function checkBox(board: string[][], left: number, top: number): boolean {
-  let boxMap = new Map<string, number>();
+  let boxSet = new Set<string>();
   for (let i = top; i < top + 3; i++) {
     for (let k = left; k < left + 3; k++) {
       const element = board[i][k];
       if (element === ".") {
         continue;
       }
-      if (boxMap.has(element)) {
+      if (boxSet.has(element)) {
         return false;
       }
-      boxMap.set(element, 0);
+      boxSet.add(element);
     }
   }
   return true;

@@ -1,4 +1,4 @@
-import { isAnagram } from "./solution-sort";
+import { isAnagram } from "./solution-map";
 
 it('isAnagram should return true for s = "anagram", t = "nagaram"', () => {
   const s = "anagram",

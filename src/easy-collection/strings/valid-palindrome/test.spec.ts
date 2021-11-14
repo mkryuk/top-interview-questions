@@ -17,3 +17,9 @@ it('isPalindrome should return true for s = " "', () => {
   const result = isPalindrome(s);
   expect(result).toBe(true);
 });
+
+it('isPalindrome should return false for s = "0P"', () => {
+  const s = "0P";
+  const result = isPalindrome(s);
+  expect(result).toBe(false);
+});

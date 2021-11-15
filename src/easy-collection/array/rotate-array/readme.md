@@ -26,7 +26,7 @@ rotate 2 steps to the right: [3,99,-1,-100]
 ## Constraints:
 
 1 <= nums.length <= 105
--231 <= nums[i] <= 231 - 1
+-2<sup>31</sup> <= nums[i] <= 2<sup>31</sup> - 1
 0 <= k <= 105
 
 Follow up:

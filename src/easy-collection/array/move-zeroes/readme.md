@@ -20,6 +20,6 @@ Output: [0]
 
 1 <= nums.length <= 104
 
--231 <= nums[i] <= 231 - 1
+-2<sup>31</sup> <= nums[i] <= 2<sup>31</sup> - 1
 
 Follow up: Could you minimize the total number of operations done?

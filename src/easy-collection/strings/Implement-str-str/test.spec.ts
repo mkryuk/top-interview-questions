@@ -14,6 +14,27 @@ it('strStr should return -1 for haystack = "aaaaa", needle = "bba"', function ()
   expect(result).toEqual(-1);
 });
 
+it('strStr should return 3 for haystack = "abbaaa", needle = "aa"', function () {
+  let haystack = "abbaaa",
+    needle = "aa";
+  let result = strStr(haystack, needle);
+  expect(result).toEqual(3);
+});
+
+it('strStr should return 3 for haystack = "abaabbaaa", needle = "aa"', function () {
+  let haystack = "abbaaa",
+    needle = "aa";
+  let result = strStr(haystack, needle);
+  expect(result).toEqual(3);
+});
+
+it('strStr should return 4 for haystack = "mississippi",needle = "issip"', function () {
+  let haystack = "mississippi",
+    needle = "issip";
+  let result = strStr(haystack, needle);
+  expect(result).toEqual(4);
+});
+
 it('strStr should return 0 for haystack = "", needle = ""', function () {
   let haystack = "",
     needle = "";

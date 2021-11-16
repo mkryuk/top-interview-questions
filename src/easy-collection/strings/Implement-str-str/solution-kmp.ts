@@ -3,42 +3,36 @@ export function strStr(haystack: string, needle: string): number {
     return 0;
   }
   const prefix = getKmpTable(needle);
-  for (let i = 0, j = 0; i < haystack.length; ) {
-    if (haystack[i] === needle[j]) {
-      if (j === needle.length - 1) {
-        return i - j;
-      }
+  for (let i = 0, k = 0; i < haystack.length; ) {
+    if (haystack[i] === needle[k]) {
       i++;
-      j++;
+      k++;
+      if (k === needle.length) {
+        return i - k;
+      }
     } else {
-      if (j === 0) {
+      if (k === 0) {
         i++;
       } else {
-        j = prefix[j - 1];
+        k = prefix[k - 1];
       }
     }
   }
   return -1;
 }
 
-function getKmpTable(needle: string): number[] {
-  let table = new Array(needle.length);
+function getKmpTable(s: string): number[] {
+  let table = new Array(s.length);
   table[0] = 0;
-  for (let j = 0, i = 1; i < needle.length; i++) {
-    if (needle[i] === needle[j]) {
-      table[i] = j + 1;
-      j++;
-    } else {
-      while (j > 0 && needle[i] !== needle[j]) {
-        j = table[j - 1];
-      }
-      if (j === 0 && needle[i] !== needle[j]) {
-        table[i] = 0;
-      } else {
-        table[i] = table[j] + 1;
-        j++;
-      }
+  for (let k = 0, i = 1; i < s.length; i++) {
+    k = table[i - 1];
+    while (k > 0 && s[k] !== s[i]) {
+      k = table[k - 1];
     }
+    if (s[k] == s[i]) {
+      k += 1;
+    }
+    table[i] = k;
   }
   return table;
 }

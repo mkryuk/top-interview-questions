@@ -12,4 +12,7 @@ export class ListNode {
 /**
  Do not return anything, modify it in-place instead.
  */
-export function deleteNode(root: ListNode): void {}
+export function deleteNode(root: ListNode): void {
+  root.val = root.next?.val || 0;
+  root.next = root.next?.next || null;
+}

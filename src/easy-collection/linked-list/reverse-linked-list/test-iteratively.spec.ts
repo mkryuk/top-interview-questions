@@ -1,5 +1,5 @@
 import { arrayToList, listToArray } from "../common";
-import { reverseList } from "./solution";
+import { reverseList } from "./solution-iteratively";
 
 it("reverseList should return [5,4,3,2,1] for head = [1,2,3,4,5]", function () {
   const head = [1, 2, 3, 4, 5];

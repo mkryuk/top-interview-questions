@@ -9,7 +9,10 @@ export class ListNode {
   }
 }
 
-export function arrayToList(nodes: number[]): ListNode {
+export function arrayToList(nodes: number[]): ListNode | null {
+  if (nodes.length === 0) {
+    return null;
+  }
   let root: ListNode = new ListNode(nodes[0]);
   let currentNode: ListNode = root;
   for (let i = 1; i < nodes.length; i++) {
@@ -20,13 +23,16 @@ export function arrayToList(nodes: number[]): ListNode {
   return root;
 }
 
-export function getNodeToDelete(list: ListNode, node: number): ListNode {
-  let step: ListNode = list;
+export function getNodeToDelete(
+  list: ListNode | null,
+  node: number
+): ListNode | null {
+  let step = list;
   while (true) {
-    if (step.val === node) {
+    if (step?.val === node) {
       return step;
     }
-    if (!step.next) {
+    if (!step?.next) {
       break;
     }
     step = step.next;

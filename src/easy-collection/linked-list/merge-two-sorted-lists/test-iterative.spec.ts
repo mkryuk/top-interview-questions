@@ -1,4 +1,4 @@
-import { mergeTwoLists } from "./solution";
+import { mergeTwoLists } from "./solution-iterative";
 import { arrayToList, listToArray } from "../common";
 
 it("mergeTwoLists should return [1,1,2,3,4,4] for l1 = [1,2,4], l2 = [1,3,4]", function () {

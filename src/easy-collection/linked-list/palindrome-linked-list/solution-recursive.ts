@@ -1,22 +1,21 @@
 import { ListNode } from "../common";
 
-let frontPointer = new ListNode();
+let headPointer: ListNode | null;
+
 export function isPalindrome(head: ListNode | null): boolean {
-  const [result] = isPalindromeRecurse(head, head, 0);
-  return result;
+  headPointer = head;
+  return isPalindromeRecurse(head);
 }
 
-function isPalindromeRecurse(
-  head: ListNode | null,
-  tail: ListNode | null,
-  index: number
-): [boolean, ListNode | null] {
-  let result = true;
-  if (tail && tail.next) {
-    [result, head] = isPalindromeRecurse(head, tail.next, index++);
+function isPalindromeRecurse(current: ListNode | null): boolean {
+  if (current !== null) {
+    if (!isPalindromeRecurse(current.next)) {
+      return false;
+    }
+    if (headPointer?.val !== current.val) {
+      return false;
+    }
+    headPointer = headPointer.next;
   }
-  if (!result || head?.val !== tail?.val) {
-    return [false, head];
-  }
-  return [true, head?.next || null];
+  return true;
 }

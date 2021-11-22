@@ -8,8 +8,9 @@ export class ListNode {
     this.next = next === undefined ? null : next;
   }
 }
+export type NullableListNode = ListNode | null;
 
-export function arrayToList(nodes: number[]): ListNode | null {
+export function arrayToList(nodes: number[]): NullableListNode {
   if (nodes.length === 0) {
     return null;
   }

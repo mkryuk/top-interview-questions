@@ -1,22 +1,13 @@
 import { ListNode } from "../common";
 
 export function reverseList(head: ListNode | null): ListNode | null {
-  let listArray: ListNode[] = [];
-  let tempNode = head;
-  while (tempNode) {
-    listArray.push(tempNode);
-    tempNode = tempNode.next;
+  let prev: ListNode | null = null;
+  let current = head;
+  while (current) {
+    let tempNode = current.next;
+    current.next = prev;
+    prev = current;
+    current = tempNode;
   }
-  if (listArray.length === 0) {
-    return null;
-  }
-  listArray[0].next = null;
-  let result = listArray.pop() || null;
-  tempNode = result;
-  while (listArray && tempNode) {
-    tempNode.next = listArray.pop() || null;
-    tempNode = tempNode?.next || null;
-  }
-
-  return result;
+  return prev;
 }

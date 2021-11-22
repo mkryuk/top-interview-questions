@@ -1,4 +1,4 @@
-import { arrayToList, listToArray } from "../common";
+import { arrayToList } from "../common";
 import { isPalindrome } from "./solution-recursive";
 
 it("isPalindrome should return true for head = [1,2,2,1]", function () {

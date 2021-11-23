@@ -50,3 +50,24 @@ export function listToArray(list: ListNode | null): number[] {
   }
   return result;
 }
+
+export function createLoop(
+  head: ListNode | null,
+  pos: number
+): ListNode | null {
+  if (pos === -1) {
+    return head;
+  }
+  let current = head;
+  for (let i = 0; i < pos && current; i++) {
+    current = current?.next || null;
+  }
+  const loopNode = current;
+  while (current?.next) {
+    current = current.next;
+  }
+  if (current && loopNode) {
+    current.next = loopNode;
+  }
+  return head;
+}

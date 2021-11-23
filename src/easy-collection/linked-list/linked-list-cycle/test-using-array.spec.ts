@@ -1,5 +1,5 @@
 import { arrayToList, createLoop } from "../common";
-import { hasCycle } from "./solution";
+import { hasCycle } from "./solution-using-array";
 
 it("hasCycle should return true for head = [3,2,0,-4], pos = 1", function () {
   const head = [3, 2, 0, -4],

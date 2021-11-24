@@ -15,6 +15,13 @@ it("maxDepth should return 2 for root = [1,null,2]", function () {
   expect(result).toBe(2);
 });
 
+it("maxDepth should return 3 for root = [1,null,2,null,null,3,4]", function () {
+  const root = [1, null, 2, null, null, 3, 4];
+  const tree = arrayToTreeNode(root);
+  const result = maxDepth(tree);
+  expect(result).toBe(3);
+});
+
 it("maxDepth should return 0 for root = []", function () {
   const root: (number | null)[] = [];
   const tree = arrayToTreeNode(root);

@@ -11,10 +11,28 @@ export class TreeNode {
   }
 }
 
-export function arrayToTreeNode(nodes: (number | null)[]): TreeNode {
-  return new TreeNode();
+function createTreeLevel(
+  nodes: (number | null)[],
+  root: TreeNode | null,
+  i: number,
+  n: number
+): TreeNode | null {
+  if (i < n) {
+    const element = nodes[i];
+    if (element !== null) {
+      let temp: TreeNode = new TreeNode(element);
+      root = temp;
+      root.left = createTreeLevel(nodes, root.left, 2 * i + 1, n);
+      root.right = createTreeLevel(nodes, root.right, 2 * i + 2, n);
+    } else {
+      return null;
+    }
+  }
+  return root;
 }
 
-export function treeNodeToArray(tree: TreeNode): (number | null)[] {
-  return [];
+export function arrayToTreeNode(nodes: (number | null)[]): TreeNode | null {
+  let root: TreeNode | null = null;
+  root = createTreeLevel(nodes, root, 0, nodes.length);
+  return root;
 }

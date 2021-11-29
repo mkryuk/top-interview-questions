@@ -1,5 +1,5 @@
 import { arrayToTreeNode } from "../common";
-import { isSymmetric } from "./solution";
+import { isSymmetric } from "./solution-recursive";
 
 it("isSymmetric should return true for root = [1,2,2,3,4,4,3]", function () {
   const root = [1, 2, 2, 3, 4, 4, 3];

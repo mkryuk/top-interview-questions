@@ -37,6 +37,19 @@ export function arrayToTreeNode(nodes: (number | null)[]): TreeNode | null {
   return root;
 }
 
-export function treeNodeToArray(treeNode: TreeNode | null): (number | null)[] {
-  return [];
+export function treeNodeToArray(root: TreeNode | null): (number | null)[] {
+  if (!root) {
+    return [];
+  }
+  let result: (number | null)[] = [];
+  let queue: (TreeNode | null)[] = [root];
+  while (queue.length) {
+    let node = queue.shift();
+    result.push(node?.val ?? null);
+    if (node?.left || node?.right) {
+      queue.push(node.left || null);
+      queue.push(node.right || null);
+    }
+  }
+  return result;
 }

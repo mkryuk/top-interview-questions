@@ -36,3 +36,7 @@ export function arrayToTreeNode(nodes: (number | null)[]): TreeNode | null {
   root = createTreeLevel(nodes, root, 0, nodes.length);
   return root;
 }
+
+export function treeNodeToArray(treeNode: TreeNode | null): (number | null)[] {
+  return [];
+}

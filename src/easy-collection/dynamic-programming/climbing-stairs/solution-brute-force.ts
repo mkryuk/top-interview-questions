@@ -2,7 +2,7 @@ export function climbStairs(n: number): number {
   return makeStep(0, n);
 }
 
-export function makeStep(step: number, n: number): number {
+function makeStep(step: number, n: number): number {
   if (step > n) {
     return 0;
   }

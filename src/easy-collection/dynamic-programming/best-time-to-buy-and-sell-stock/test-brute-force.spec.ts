@@ -1,4 +1,4 @@
-import { maxProfit } from "../../array/best-time-to-buy-and-sell-stock-II/solution";
+import { maxProfit } from "./solution-brute-force";
 
 it("maxProfit should return 5 for prices = [7,1,5,3,6,4]", () => {
   const prices = [7, 1, 5, 3, 6, 4];

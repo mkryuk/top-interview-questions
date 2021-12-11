@@ -1,4 +1,4 @@
-import { maxSubArray } from "./solution";
+import { maxSubArray } from "./solution-one-pass";
 
 it("maxSubArray should return 6 for nums = [-2,1,-3,4,-1,2,1,-5,4]", function () {
   const nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
@@ -27,5 +27,5 @@ it("maxSubArray should return 7 for nums = [-2,1,-3,4,-1,2,1,-5,6]", function ()
 it("maxSubArray should return 7 for nums = [2,1,-3,4,-1,2,1,-5,6]", function () {
   const nums = [2, 1, -3, 4, -1, 2, 1, -5, 6];
   const result = maxSubArray(nums);
-  expect(result).toEqual(6);
+  expect(result).toEqual(7);
 });

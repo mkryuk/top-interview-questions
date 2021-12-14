@@ -1,11 +1,19 @@
 export class Solution {
-  constructor(private nums: number[]) {}
+  private original: number[];
+  constructor(nums: number[]) {
+    this.original = [...nums];
+  }
 
   reset(): number[] {
-    return [];
+    return [...this.original];
   }
 
   shuffle(): number[] {
-    return [];
+    const shuffled = [...this.original];
+    for (let i = 0; i < shuffled.length; i++) {
+      const ri = Math.floor(Math.random() * (shuffled.length - i) + i);
+      [shuffled[i], shuffled[ri]] = [shuffled[ri], shuffled[i]];
+    }
+    return shuffled;
   }
 }

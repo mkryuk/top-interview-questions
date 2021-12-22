@@ -1,4 +1,4 @@
-import { hammingWeight } from "./solution";
+import { hammingWeight } from "./solution-flip-last-bit";
 
 it("hammingWeight should return 3 for n = 0b1011", () => {
   const n = 0b1011;

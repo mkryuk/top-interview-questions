@@ -12,14 +12,14 @@ it("reverseBits should return 3221225471 (0b10111111111111111111111111111111) fo
   expect(result).toEqual(0b10111111111111111111111111111111);
 });
 
-it("reverseBits should return 5 (101) for n = 101", () => {
-  const n = 0b101;
+it("reverseBits should return 2684354560 (0b10100000000000000000000000000000) for n = 0b00000000000000000000000000000101", () => {
+  const n = 0b00000000000000000000000000000101;
   const result = reverseBits(n);
-  expect(result).toEqual(0b101);
+  expect(result).toEqual(0b10100000000000000000000000000000);
 });
 
-it("reverseBits should return 1 (001) for n = 100", () => {
-  const n = 0b100;
+it("reverseBits should return 536870912 (0b00100000000000000000000000000000) for n = 0b00000000000000000000000000000100", () => {
+  const n = 0b00000000000000000000000000000100;
   const result = reverseBits(n);
-  expect(result).toEqual(0b1);
+  expect(result).toEqual(0b00100000000000000000000000000000);
 });

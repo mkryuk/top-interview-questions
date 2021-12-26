@@ -53,13 +53,13 @@ expression? This would keep on shortening the expression. e.g.
 
 ```
 { { ( { } ) } }
-|_|
+      |_|
 
 { { (      ) } }
-|______|
+    |______|
 
 { {          } }
-|__________|
+  |__________|
 
 {                }
 |________________|

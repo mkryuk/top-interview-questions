@@ -1,10 +1,10 @@
 export function missingNumber(nums: number[]): number {
   const numSet = new Set<number>([]);
+  nums.forEach((n) => numSet.add(n));
   for (let i = 0; i <= nums.length; i++) {
-    numSet.add(i);
+    if (!numSet.has(i)) {
+      return i;
+    }
   }
-  for (let i = 0; i < nums.length; i++) {
-    numSet.delete(nums[i]);
-  }
-  return numSet.values().next().value;
+  return -1;
 }

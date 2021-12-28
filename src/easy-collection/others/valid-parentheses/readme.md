@@ -48,7 +48,9 @@ Can we exploit this recursive structure somehow?
 
 </details>
 
-Hint #2 What if whenever we encounter a matching pair of parenthesis in the expression, we simply remove it from the
+<details>
+<summary>Hint #2</summary>
+What if whenever we encounter a matching pair of parenthesis in the expression, we simply remove it from the
 expression? This would keep on shortening the expression. e.g.
 
 ```
@@ -67,7 +69,11 @@ expression? This would keep on shortening the expression. e.g.
 
 VALID EXPRESSION!
 
-Hint #3  
+</details>
+
+<details>
+<summary>Hint #3</summary>
 The stack data structure can come in handy here in representing this recursive structure of the problem. We can't really
 process this from the inside out because we don't have an idea about the overall structure. But, the stack can help us
 process this recursively i.e. from outside to inwards.
+</details>

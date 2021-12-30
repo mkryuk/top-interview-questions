@@ -1,4 +1,4 @@
-import { setZeroes } from "./solution";
+import { setZeroes } from "./solution-constant-space";
 
 it("setZeroes should modify matrix = [[1,1,1],[1,0,1],[1,1,1]] to [[1,0,1],[0,0,0],[1,0,1]]", function () {
   const matrix = [

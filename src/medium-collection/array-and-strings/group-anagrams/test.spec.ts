@@ -3,17 +3,17 @@ import { groupAnagrams } from "./solution";
 it('groupAnagrams should return [["bat"],["nat","tan"],["ate","eat","tea"]] for strs = ["eat","tea","tan","ate","nat","bat"]', function () {
   const strs = ["eat", "tea", "tan", "ate", "nat", "bat"];
   const result = groupAnagrams(strs);
-  expect(result).toEqual([["bat"], ["nat", "tan"], ["ate", "eat", "tea"]]);
+  expect(result).toEqual([["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]);
 });
 
 it('groupAnagrams should return [["squad","quads"],["fats","fast"],["bat"],["tea","ate"]] for strs = ["quads","fast","fats","squad","ate","tea","bat"]', function () {
   const strs = ["quads", "fast", "fats", "squad", "ate", "tea", "bat"];
   const result = groupAnagrams(strs);
   expect(result).toEqual([
-    ["squad", "quads"],
-    ["fats", "fast"],
+    ["quads", "squad"],
+    ["fast", "fats"],
+    ["ate", "tea"],
     ["bat"],
-    ["tea", "ate"],
   ]);
 });
 

@@ -23,3 +23,9 @@ it('longestPalindrome should return "bbabb" for s = "bbbabbcx"', function () {
   const result = longestPalindrome(s);
   expect(result).toEqual("bbabb");
 });
+
+it('longestPalindrome should return "a" for s = "a"', function () {
+  const s = "a";
+  const result = longestPalindrome(s);
+  expect(result).toEqual("a");
+});

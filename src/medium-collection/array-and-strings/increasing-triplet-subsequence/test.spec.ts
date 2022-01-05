@@ -59,3 +59,15 @@ it("increasingTriplet should return true for nums = [9,7,8,0,6,2,0,3]", () => {
   const result = increasingTriplet(nums);
   expect(result).toBeTrue();
 });
+
+it("increasingTriplet should return true for nums = [9,7,8,0,6,2,0,2,3]", () => {
+  const nums = [9, 7, 8, 0, 6, 2, 0, 2, 3];
+  const result = increasingTriplet(nums);
+  expect(result).toBeTrue();
+});
+
+it("increasingTriplet should return true for nums = [9,7,8,0,6,2,0]", () => {
+  const nums = [9, 7, 8, 0, 6, 2, 0];
+  const result = increasingTriplet(nums);
+  expect(result).toBeFalse();
+});

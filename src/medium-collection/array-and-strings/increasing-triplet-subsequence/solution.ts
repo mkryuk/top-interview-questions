@@ -16,7 +16,7 @@ export function increasingTriplet(nums: number[]): boolean {
       j = k;
       jt = j;
       k++;
-    } else if (nums[jt] <= nums[i] && nums[k] < nums[j]) {
+    } else if (nums[jt] < nums[k] && nums[jt] <= nums[i] && nums[k] < nums[j]) {
       // if we found the case when
       // the next increasing tuple
       // is lower than the first one
@@ -26,7 +26,7 @@ export function increasingTriplet(nums: number[]): boolean {
       jt = j;
       k++;
     } else {
-      // otherwise just move second tuple
+      // otherwise, just move second tuple
       jt++;
       k++;
     }

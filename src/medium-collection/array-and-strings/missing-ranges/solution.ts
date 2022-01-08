@@ -6,11 +6,7 @@ export function findMissingRanges(
   let result: string[] = [];
   if (nums.length === 0) {
     const diff = upper - lower;
-    return diff > 1
-      ? [`${lower}->${upper}`]
-      : diff === 1
-      ? [`${lower}`, `${upper}`]
-      : [`${lower}`];
+    return diff >= 1 ? [`${lower}->${upper}`] : [`${lower}`];
   }
   if (lower < nums[0]) {
     let record = nums[0] - lower > 1 ? `${lower}->${nums[0] - 1}` : `${lower}`;

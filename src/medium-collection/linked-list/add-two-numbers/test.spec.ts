@@ -80,3 +80,13 @@ it("addTwoNumbers should return [7,1] for l1 = [8], l2 = [9]", function () {
   const arrayResult = listToArray(result);
   expect(arrayResult).toEqual([7, 1]);
 });
+
+it("addTwoNumbers should return [2,4] for l1 = [], l2 = [2,4]", function () {
+  const l1: number[] = [],
+    l2 = [2, 4];
+  const list1 = arrayToList(l1),
+    list2 = arrayToList(l2);
+  const result = addTwoNumbers(list1, list2);
+  const arrayResult = listToArray(result);
+  expect(arrayResult).toEqual([2, 4]);
+});

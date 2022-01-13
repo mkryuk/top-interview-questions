@@ -1,5 +1,5 @@
 import { arrayToList, ListNode, listToArray } from "../common";
-import { getIntersectionNode } from "./solution";
+import { getIntersectionNode } from "./solution-set";
 
 function composeIntersectionLists(
   listA: ListNode | null,

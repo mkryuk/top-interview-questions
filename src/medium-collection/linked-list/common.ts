@@ -34,3 +34,22 @@ export function listToArray(list: ListNode | null): number[] {
   }
   return result;
 }
+
+export function composeIntersectionLists(
+  listA: ListNode | null,
+  listB: ListNode | null,
+  skipA: number,
+  skipB: number
+) {
+  let tempA = listA;
+  let tempB = listB;
+  for (let i = 0; i < skipA - 1; i++) {
+    tempA = tempA?.next ?? null;
+  }
+  for (let i = 0; i < skipB - 1; i++) {
+    tempB = tempB?.next ?? null;
+  }
+  if (tempA && tempB) {
+    tempB.next = tempA.next;
+  }
+}

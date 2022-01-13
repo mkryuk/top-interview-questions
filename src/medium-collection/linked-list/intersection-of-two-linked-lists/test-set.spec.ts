@@ -1,24 +1,5 @@
-import { arrayToList, ListNode, listToArray } from "../common";
+import { arrayToList, composeIntersectionLists, listToArray } from "../common";
 import { getIntersectionNode } from "./solution-set";
-
-function composeIntersectionLists(
-  listA: ListNode | null,
-  listB: ListNode | null,
-  skipA: number,
-  skipB: number
-) {
-  let tempA = listA;
-  let tempB = listB;
-  for (let i = 0; i < skipA - 1; i++) {
-    tempA = tempA?.next ?? null;
-  }
-  for (let i = 0; i < skipB - 1; i++) {
-    tempB = tempB?.next ?? null;
-  }
-  if (tempA && tempB) {
-    tempB.next = tempA.next;
-  }
-}
 
 it("getIntersectionNode should return [8,4,5] for listA = [4,1,8,4,5], listB = [5,6,1,8,4,5], skipA=2, skipB=3", function () {
   const a = [4, 1, 8, 4, 5],

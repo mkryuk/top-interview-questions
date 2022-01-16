@@ -1,5 +1,5 @@
 import { arrayToTreeNode } from "../common";
-import { inorderTraversal } from "./solution-recursive";
+import { inorderTraversal } from "./solution-iterative";
 
 it("inorderTraversal should return [1,3,2] for root = [1,null,2,null,null,3,null]", function () {
   const root = [1, null, 2, null, null, 3, null];

@@ -2,15 +2,20 @@ import { TreeNode } from "../common";
 
 export function inorderTraversal(root: TreeNode | null): number[] {
   let result: number[] = [];
-  traverseNode(root, result);
-  return result;
-}
-
-function traverseNode(node: TreeNode | null, result: number[]) {
-  if (!node) {
-    return;
+  let queue = [root];
+  let visitedNodes = new Set<TreeNode>();
+  while (queue.length) {
+    let node = queue[0];
+    if (node && node.left && !visitedNodes.has(node.left)) {
+      queue.unshift(node.left);
+    } else if (node && !visitedNodes.has(node)) {
+      result.push(node.val);
+      visitedNodes.add(node);
+    } else if (node && node.right && !visitedNodes.has(node.right)) {
+      queue.unshift(node.right);
+    } else {
+      queue.shift();
+    }
   }
-  traverseNode(node.left, result);
-  result.push(node.val);
-  traverseNode(node.right, result);
+  return result;
 }

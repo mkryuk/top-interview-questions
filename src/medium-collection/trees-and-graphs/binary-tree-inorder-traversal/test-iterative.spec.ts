@@ -15,6 +15,13 @@ it("inorderTraversal should return [4,2,1,3,5] for root = [1,2,3,4,null,null,5]"
   expect(result).toEqual([4, 2, 1, 3, 5]);
 });
 
+it("inorderTraversal should return [2,4,1,5,3] for root = [1,2,3,null,4,5,null]", function () {
+  const root = [1, 2, 3, null, 4, 5, null];
+  const rootNode = arrayToTreeNode(root);
+  const result = inorderTraversal(rootNode);
+  expect(result).toEqual([2, 4, 1, 5, 3]);
+});
+
 it("inorderTraversal should return [] for root = []", function () {
   const root: number[] = [];
   const rootNode = arrayToTreeNode(root);

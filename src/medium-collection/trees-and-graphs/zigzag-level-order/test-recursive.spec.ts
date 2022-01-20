@@ -1,4 +1,4 @@
-import { zigzagLevelOrder } from "./solution";
+import { zigzagLevelOrder } from "./solution-recursive";
 import { arrayToTreeNode } from "../common";
 
 it("zigzagLevelOrder should return [[3],[20,9],[15,7]] for root = [3,9,20,null,null,15,7]", function () {

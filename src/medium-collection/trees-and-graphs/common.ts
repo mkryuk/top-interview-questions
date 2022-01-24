@@ -67,3 +67,49 @@ export class Node {
     this.next = next === undefined ? null : next;
   }
 }
+
+export function nodeToArray(root: Node | null): (number | string)[] {
+  if (!root) {
+    return [];
+  }
+  let result: (number | string)[] = [];
+  let queue: (Node | null)[] = [root];
+  while (queue.length) {
+    let node = queue.shift();
+    result.push(node?.val ?? "#");
+    if (node?.left || node?.right) {
+      queue.push(node.left || null);
+      queue.push(node.right || null);
+    }
+    if (node?.next === null) {
+      result.push("#");
+    }
+  }
+  return result;
+}
+
+function createNodeLevel(
+  nodes: (number | null)[],
+  root: Node | null,
+  i: number,
+  n: number
+): Node | null {
+  if (i < n) {
+    const element = nodes[i];
+    if (element !== null) {
+      root = new Node(element);
+      root.left = createNodeLevel(nodes, root.left, 2 * i + 1, n);
+      root.right = createNodeLevel(nodes, root.right, 2 * i + 2, n);
+      root.next = null;
+    } else {
+      return null;
+    }
+  }
+  return root;
+}
+
+export function arrayToNode(nodes: (number | null)[]): Node | null {
+  let root: Node | null = null;
+  root = createNodeLevel(nodes, root, 0, nodes.length);
+  return root;
+}

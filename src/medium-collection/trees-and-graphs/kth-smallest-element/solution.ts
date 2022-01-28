@@ -1,32 +1,17 @@
 import { TreeNode } from "../common";
 
 export function kthSmallest(root: TreeNode | null, k: number): number {
-  if (!root) {
-    return 0;
-  }
-
   let count = 1;
-  let stack: TreeNode[] = [root];
-  let visited = new Set<TreeNode>();
-  while (stack.length) {
-    let current: TreeNode | null = stack[0];
-    if (current.left && !visited.has(current.left)) {
-      current = current.left;
-      stack.unshift(current);
-      continue;
+  let stack: TreeNode[] = [];
+  while (true) {
+    while (root) {
+      stack.push(root);
+      root = root.left;
     }
-    if (count === k) {
-      return current.val;
+    root = stack.pop() ?? null;
+    if (root && count++ === k) {
+      return root?.val;
     }
-    count++;
-    visited.add(current);
-    stack.shift();
-    if (current.right && !visited.has(current.right)) {
-      current = current.right;
-      stack.unshift(current);
-      continue;
-    }
+    root = root?.right ?? null;
   }
-
-  return 0;
 }

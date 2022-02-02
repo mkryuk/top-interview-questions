@@ -27,3 +27,22 @@ it('letterCombinations should return ["a","b","c"] for digits = "2"', () => {
   const result = letterCombinations(digits);
   expect(result).toEqual(["a", "b", "c"]);
 });
+
+it('letterCombinations should return ["pt","pu","pv","qt","qu","qv","rt","ru","rv","st","su","sv"] for digits = "78"', () => {
+  const digits = "78";
+  const result = letterCombinations(digits);
+  expect(result).toEqual([
+    "pt",
+    "pu",
+    "pv",
+    "qt",
+    "qu",
+    "qv",
+    "rt",
+    "ru",
+    "rv",
+    "st",
+    "su",
+    "sv",
+  ]);
+});

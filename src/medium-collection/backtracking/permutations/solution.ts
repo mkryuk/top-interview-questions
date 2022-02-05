@@ -1,6 +1,6 @@
 export function permute(nums: number[]): number[][] {
   if (nums.length === 1) {
-    return [[...nums]];
+    return [nums];
   }
   const result: number[][] = [];
   for (let i = 0; i < nums.length; i++) {

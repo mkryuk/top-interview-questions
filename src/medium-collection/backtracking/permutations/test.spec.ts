@@ -1,4 +1,5 @@
 import { permute } from "./solution";
+import { arrayEquals } from "../common";
 
 it("permute should return [[1]] for nums = [1]", function () {
   const nums = [1];
@@ -42,12 +43,3 @@ it("permute should return [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]] for 
     expect(result).toBeTrue();
   });
 });
-
-function arrayEquals(a: number[], b: number[]) {
-  return (
-    Array.isArray(a) &&
-    Array.isArray(b) &&
-    a.length === b.length &&
-    a.every((val, index) => val === b[index])
-  );
-}

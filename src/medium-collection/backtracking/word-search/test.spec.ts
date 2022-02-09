@@ -39,7 +39,7 @@ it('exist should return false for board = [["A","B","C","E"],["S","F","C","S"],[
       ["S", "F", "C", "S"],
       ["A", "D", "E", "E"],
     ],
-    word = "ABCCED";
+    word = "ABCB";
   const result = exist(board, word);
   expect(result).toBeFalse();
 });
@@ -53,4 +53,22 @@ it('exist should return false for board = [["A","B","C","E"],["S","F","C","S"],[
     word = "ABCESCX";
   const result = exist(board, word);
   expect(result).toBeFalse();
+});
+
+it('exist should return false for board = [["A","B","C","E"],["S","F","E","S"],["A","D","E","E"]], word = "ABCESEEEFS"', () => {
+  const board = [
+      ["A", "B", "C", "E"],
+      ["S", "F", "E", "S"],
+      ["A", "D", "E", "E"],
+    ],
+    word = "ABCESEEEFS";
+  const result = exist(board, word);
+  expect(result).toBeTrue();
+});
+
+it('exist should return false for board = [["a"]], word = "a"', () => {
+  const board = [["a"]],
+    word = "a";
+  const result = exist(board, word);
+  expect(result).toBeTrue();
 });

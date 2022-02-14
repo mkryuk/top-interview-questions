@@ -1,3 +1,4 @@
 export function findKthLargest(nums: number[], k: number): number {
-  return 0;
+  nums.sort((a, b) => a - b);
+  return nums[nums.length - k];
 }

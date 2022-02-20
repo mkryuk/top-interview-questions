@@ -20,3 +20,10 @@ it("search should return -1 for nums = [1], target = 0", function () {
   const result = search(nums, target);
   expect(result).toEqual(-1);
 });
+
+it("search should return 1 for nums = [3,1], target = 1", function () {
+  const nums = [3, 1],
+    target = 1;
+  const result = search(nums, target);
+  expect(result).toEqual(1);
+});

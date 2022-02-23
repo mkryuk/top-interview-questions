@@ -38,3 +38,10 @@ it("searchMatrix should return true for matrix = [[1,2,3,10,18],[4,5,6,13,21],[7
   const result = searchMatrix(matrix, target);
   expect(result).toBeTrue();
 });
+
+it("searchMatrix should return true for matrix = [[-5]], target = -5", () => {
+  const matrix = [[-5]],
+    target = -5;
+  const result = searchMatrix(matrix, target);
+  expect(result).toBeTrue();
+});

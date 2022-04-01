@@ -12,6 +12,6 @@ it("uniquePaths should return 1 for m = 1, n = 1", function () {
   expect(uniquePaths(1, 1)).toBe(1);
 });
 
-it("uniquePaths should return 0 for m = 0, n = 0", function () {
-  expect(uniquePaths(0, 0)).toBe(0);
+it("uniquePaths should return 40116600 for m = 15, n = 15", function () {
+  expect(uniquePaths(15, 15)).toBe(40116600);
 });

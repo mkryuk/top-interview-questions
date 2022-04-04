@@ -56,6 +56,14 @@ it("coinChange should return 2 for coins = [1,2,5], amount = 10", () => {
   expect(result).toBe(2);
 });
 
+it("coinChange should return 2 for coins = [3,4,7], amount = 4", () => {
+  const coins = [3, 4, 7],
+    amount = 20;
+  // 7x2 + 3x2
+  const result = coinChange(coins, amount);
+  expect(result).toBe(4);
+});
+
 it("coinChange should return 20 for coins = [186,419,83,408], amount = 6249", () => {
   const coins = [186, 419, 83, 408],
     amount = 6249;

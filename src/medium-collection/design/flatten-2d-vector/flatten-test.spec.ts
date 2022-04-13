@@ -1,4 +1,4 @@
-import { Vector2D } from "./solution";
+import { Vector2D } from "./flatten-solution";
 
 it("should return [1, 2, 3, true, true, 4, false] for [[1, 2], [3], [4]]", () => {
   const vec = new Vector2D([[1, 2], [3], [4]]);

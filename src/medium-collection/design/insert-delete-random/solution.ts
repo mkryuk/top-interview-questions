@@ -1,23 +1,32 @@
 export class RandomizedSet {
+  arr: number[] = [];
+  valIdx = new Map();
   constructor() {}
 
   insert(val: number): boolean {
-    return false;
+    if (this.valIdx.has(val)) {
+      return false;
+    }
+    this.valIdx.set(val, this.arr.length);
+    this.arr.push(val);
+    return true;
   }
 
   remove(val: number): boolean {
-    return false;
+    if (!this.valIdx.has(val)) {
+      return false;
+    }
+    const idx = this.valIdx.get(val);
+    const lastItem = this.arr[this.arr.length - 1];
+    this.arr[idx] = lastItem;
+    this.valIdx.set(lastItem, idx);
+    this.arr.pop();
+    this.valIdx.delete(val);
+    return true;
   }
 
   getRandom(): number {
-    return 0;
+    const rndIdx = Math.floor(Math.random() * this.arr.length);
+    return this.arr[rndIdx];
   }
 }
-
-/**
- * Your RandomizedSet object will be instantiated and called as such:
- * var obj = new RandomizedSet()
- * var param_1 = obj.insert(val)
- * var param_2 = obj.remove(val)
- * var param_3 = obj.getRandom()
- */

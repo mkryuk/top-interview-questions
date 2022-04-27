@@ -1,4 +1,4 @@
-import { trailingZeroes } from "./solution";
+import { trailingZeroes } from "./solution-optimized";
 
 it("trailingZeroes should return 0 for n = 3", () => {
   expect(trailingZeroes(3)).toBe(0);

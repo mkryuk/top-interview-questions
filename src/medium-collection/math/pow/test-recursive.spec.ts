@@ -1,4 +1,4 @@
-import { myPow } from "./solution";
+import { myPow } from "./solution-recursive";
 
 it("myPow should return 1024.00000 for x = 2.00000, n = 10", () => {
   expect(myPow(2.0, 10)).toBe(1024.0);

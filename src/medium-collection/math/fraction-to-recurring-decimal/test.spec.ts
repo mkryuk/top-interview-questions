@@ -17,3 +17,15 @@ it("fractionToDecimal should return 0.(012) for numerator = 4, denominator = 333
   let denominator = 333;
   expect(fractionToDecimal(numerator, denominator)).toBe("0.(012)");
 });
+
+it("fractionToDecimal should return -6.25 for numerator = -50, denominator = 8", () => {
+  let numerator = -50;
+  let denominator = 8;
+  expect(fractionToDecimal(numerator, denominator)).toBe("-6.25");
+});
+
+it("fractionToDecimal should return 6.25 for numerator = -50, denominator = -8", () => {
+  let numerator = -50;
+  let denominator = -8;
+  expect(fractionToDecimal(numerator, denominator)).toBe("6.25");
+});

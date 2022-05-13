@@ -2,7 +2,7 @@ import { ListNode } from "../common";
 
 export function removeNthFromEnd(
   head: ListNode | null,
-  n: number
+  n: number,
 ): ListNode | null {
   let headBehind = new ListNode(0);
   headBehind.next = head;

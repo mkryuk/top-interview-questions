@@ -5,7 +5,7 @@ export function merge(
   nums1: number[],
   m: number,
   nums2: number[],
-  n: number
+  n: number,
 ): void {
   let p1 = m - 1;
   let p2 = n - 1;

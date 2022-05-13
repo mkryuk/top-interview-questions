@@ -1,6 +1,6 @@
 export function fractionToDecimal(
   numerator: number,
-  denominator: number
+  denominator: number,
 ): string {
   if (numerator == 0) {
     return "0";

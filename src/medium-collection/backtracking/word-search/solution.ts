@@ -14,7 +14,7 @@ function backtrack(
   word: string,
   i: number,
   j: number,
-  board: string[][]
+  board: string[][],
 ): boolean {
   if (index >= word.length) {
     return true;

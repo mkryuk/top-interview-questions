@@ -5,7 +5,7 @@ let inorderMap: Map<number, number>;
 
 export function buildTree(
   preorder: number[],
-  inorder: number[]
+  inorder: number[],
 ): TreeNode | null {
   preorderIndex = 0;
   // create an inorder map to find index by value in O(1)
@@ -13,7 +13,7 @@ export function buildTree(
   //   inorderMap.set(inorder[i], i);
   // }
   inorderMap = new Map<number, number>(
-    inorder.map((value, index) => [value, index])
+    inorder.map((value, index) => [value, index]),
   );
 
   return arrayToTree(preorder, 0, preorder.length - 1);
@@ -22,7 +22,7 @@ export function buildTree(
 function arrayToTree(
   preorder: number[],
   left: number,
-  right: number
+  right: number,
 ): TreeNode | null {
   if (left > right) {
     return null;

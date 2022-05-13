@@ -7,7 +7,7 @@ export function isValidBST(root: TreeNode | null): boolean {
 function isValidNode(
   root: TreeNode | null,
   min?: number,
-  max?: number
+  max?: number,
 ): boolean {
   if (!root) {
     return true;

@@ -9,7 +9,7 @@ function backtrack(
   n: number,
   open: number,
   close: number,
-  result: string[]
+  result: string[],
 ) {
   if (parenthesis.length === n * 2) {
     result.push(parenthesis);

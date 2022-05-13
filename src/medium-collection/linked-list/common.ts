@@ -39,7 +39,7 @@ export function composeIntersectionLists(
   listA: ListNode | null,
   listB: ListNode | null,
   skipA: number,
-  skipB: number
+  skipB: number,
 ) {
   let tempA = listA;
   let tempB = listB;

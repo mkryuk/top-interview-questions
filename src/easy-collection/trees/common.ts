@@ -15,7 +15,7 @@ function createTreeLevel(
   nodes: (number | null)[],
   root: TreeNode | null,
   i: number,
-  n: number
+  n: number,
 ): TreeNode | null {
   if (i < n) {
     const element = nodes[i];

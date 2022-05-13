@@ -26,7 +26,7 @@ export function arrayToList(nodes: number[]): NullableListNode {
 
 export function getNodeToDelete(
   list: ListNode | null,
-  node: number
+  node: number,
 ): ListNode | null {
   let step = list;
   while (true) {
@@ -53,7 +53,7 @@ export function listToArray(list: ListNode | null): number[] {
 
 export function createLoop(
   head: ListNode | null,
-  pos: number
+  pos: number,
 ): ListNode | null {
   if (pos === -1) {
     return head;

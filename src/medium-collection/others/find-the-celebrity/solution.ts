@@ -1,11 +1,10 @@
-/**
- * The knows API is defined in the parent class Relation.
- * knows(a: number, b: number): boolean {
- *     ...
- * };
- */
+export const knows = function (graph: number[][]) {
+  return function (a: number, b: number): boolean {
+    return !!graph[a][b];
+  };
+};
 
-export var solution = function (knows: any) {
+export const solution = function (knows: any) {
   return function (n: number): number {
     return 0;
   };

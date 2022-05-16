@@ -8,25 +8,28 @@ export const knows = function (
 
 export const solution = function (knows: (a: number, b: number) => boolean) {
   return function (n: number): number {
-    let ci = 0;
+    let celebrity = 0;
+    // find potential celebrity
     for (let i = 1; i < n; i++) {
-      if (knows(ci, i)) {
-        ci = i;
+      if (knows(celebrity, i)) {
+        celebrity = i;
       }
     }
+    // check if everyone knows the potential celebrity
     for (let i = 0; i < n; i++) {
-      if (!knows(i, ci)) {
+      if (!knows(i, celebrity)) {
         return -1;
       }
     }
+    // check if the potential celebrity knows no one
     for (let i = 0; i < n; i++) {
-      if (ci === i) {
+      if (celebrity === i) {
         continue;
       }
-      if (knows(ci, i)) {
+      if (knows(celebrity, i)) {
         return -1;
       }
     }
-    return ci;
+    return celebrity;
   };
 };

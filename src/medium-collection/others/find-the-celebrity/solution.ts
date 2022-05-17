@@ -16,17 +16,12 @@ export const solution = function (knows: (a: number, b: number) => boolean) {
       }
     }
     // check if everyone knows the potential celebrity
-    for (let i = 0; i < n; i++) {
-      if (!knows(i, celebrity)) {
-        return -1;
-      }
-    }
-    // check if the potential celebrity knows no one
+    // and the potential celebrity knows no one
     for (let i = 0; i < n; i++) {
       if (celebrity === i) {
         continue;
       }
-      if (knows(celebrity, i)) {
+      if (!knows(i, celebrity) || knows(celebrity, i)) {
         return -1;
       }
     }

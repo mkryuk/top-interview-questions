@@ -8,12 +8,12 @@ export function spiralOrder(matrix: number[][]): number[] {
     Up,
   }
   let direction: Direction = Direction.Right;
-  let i = 0,
-  j = 0,
-  top = 0,
-  right = n - 1,
-  bottom = m - 1,
-  left = 0;
+  let i = 0;
+  let j = 0;
+  let top = 0;
+  let right = n - 1;
+  let bottom = m - 1;
+  let left = 0;
   let result = [matrix[i][j]];
   for (let index = 0; index < m * n - 1; ) {
     if (direction === Direction.Right) {

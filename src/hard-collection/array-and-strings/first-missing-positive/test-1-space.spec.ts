@@ -1,4 +1,4 @@
-import { firstMissingPositive } from "./solution";
+import { firstMissingPositive } from "./solution-1-space";
 
 it("firstMissingPositive should return 3 for nums = [1,2,0]", () => {
   const nums = [1, 2, 0];

@@ -10,6 +10,11 @@ it("longestConsecutive should return 9 for nums = [0,3,7,2,5,8,4,6,0,1]", () => 
   expect(longestConsecutive(nums)).toBe(9);
 });
 
+it("longestConsecutive should return 10 for nums = [-1,0,3,-2,2,5,-4,4,-3,0,1]", () => {
+  const nums = [-1, 0, 3, -2, 2, 5, -4, 4, -3, 0, 1];
+  expect(longestConsecutive(nums)).toBe(10);
+});
+
 it("longestConsecutive should return 0 for nums = []", () => {
   const nums: number[] = [];
   expect(longestConsecutive(nums)).toBe(0);

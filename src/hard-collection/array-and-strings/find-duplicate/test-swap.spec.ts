@@ -1,4 +1,4 @@
-import { findDuplicate } from "./solution";
+import { findDuplicate } from "./solution-swap";
 
 it("findDuplicate should return 2 for nums = [1,3,4,2,2]", () => {
   const nums = [1, 3, 4, 2, 2];

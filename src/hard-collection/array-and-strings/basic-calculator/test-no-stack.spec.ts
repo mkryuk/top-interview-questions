@@ -1,4 +1,4 @@
-import { calculate } from "./solution";
+import { calculate } from "./solution-no-stack";
 
 it('calculate should return 7 for s = "3+2*2"', () => {
   const s = "3+2*2";

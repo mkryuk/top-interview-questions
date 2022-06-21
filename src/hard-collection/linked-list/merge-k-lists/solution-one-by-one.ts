@@ -19,11 +19,11 @@ export function mergeKLists(lists: Array<ListNode | null>): ListNode | null {
         changed = true;
       }
     }
+    let next = lists[index]?.next ?? null;
     if (temp?.next?.next) {
       temp.next.next = null;
     }
     temp = temp!.next;
-    const next = lists[index]?.next ?? null;
     // move head of lists[index] forward
     lists[index] = next;
   } while (changed);

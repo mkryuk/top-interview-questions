@@ -23,3 +23,11 @@ it('ladderLength should return 3for beginWord = "dot", endWord = "cog", wordList
   const result = ladderLength(beginWord, endWord, wordList);
   expect(result).toEqual(3);
 });
+
+it('ladderLength should return 5 for beginWord = "hit", endWord = "cog", wordList = ["hot", "hog", "dot","dog","lot","log","cog"]', () => {
+  const beginWord = "hit";
+  const endWord = "cog";
+  const wordList = ["hot", "hog", "dot", "dog", "lot", "log", "cog"];
+  const result = ladderLength(beginWord, endWord, wordList);
+  expect(result).toEqual(3);
+});

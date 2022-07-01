@@ -42,21 +42,24 @@ class Word {
     this.addNeighbors(wordList);
   }
 
-  private addNeighbors(wordList: string[]) {
+  private addNeighbors(wordList: string[]): void {
     for (let i = 0; i < wordList.length; i++) {
-      if (this.getDistance(this.word, wordList[i]) === 1) {
+      if (this.isNeighbor(this.word, wordList[i])) {
         this.neighbors.push(wordList[i]);
       }
     }
   }
 
-  private getDistance(left: string, right: string) {
+  private isNeighbor(left: string, right: string): boolean {
     let distance = 0;
     for (let i = 0; i < left.length; i++) {
       if (left[i] !== right[i]) {
         distance++;
       }
+      if (distance > 1) {
+        return false;
+      }
     }
-    return distance;
+    return distance === 1;
   }
 }

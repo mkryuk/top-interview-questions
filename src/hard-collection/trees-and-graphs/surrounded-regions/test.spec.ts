@@ -1,6 +1,6 @@
 import { solve } from "./solution";
 
-it('solve should return [["X","X","X","X"],["X","X","X","X"],["X","X","X","X"],["X","O","X","X"]] for board = [["X","X","X","X"],["X","O","O","X"],["X","X","O","X"],["X","O","X","X"]]', function () {
+it("solve should correctly find surrounded regions for case 1", function () {
   let board = [
     ["X", "X", "X", "X"],
     ["X", "O", "O", "X"],
@@ -17,7 +17,26 @@ it('solve should return [["X","X","X","X"],["X","X","X","X"],["X","X","X","X"],[
   expect(board).toEqual(expected);
 });
 
-it('solve should return board = [["X"]] for board = [["X"]]', function () {
+it("solve should correctly find surrounded regions for case 2", function () {
+  let board = [
+    ["X", "O", "O", "X"],
+    ["X", "X", "O", "X"],
+    ["X", "O", "O", "X"],
+    ["X", "X", "O", "X"],
+    ["X", "O", "O", "X"],
+  ];
+  let expected = [
+    ["X", "O", "O", "X"],
+    ["X", "X", "O", "X"],
+    ["X", "X", "O", "X"],
+    ["X", "X", "O", "X"],
+    ["X", "O", "O", "X"],
+  ];
+  solve(board);
+  expect(board).toEqual(expected);
+});
+
+it("solve should correctly find surrounded regions for case 3", function () {
   let board = [["X"]];
   let expected = [["X"]];
   solve(board);

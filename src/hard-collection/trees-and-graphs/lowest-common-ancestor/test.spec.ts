@@ -21,13 +21,13 @@ it("lowestCommonAncestor should return 5 for root = [3,5,1,6,2,0,8,null,null,7,4
   expect(result?.val).toBe(5);
 });
 
-it("lowestCommonAncestor should return 3 for root = [5,3,4,7,8,6,9,2,1,10,11], p = 2, q = 1", () => {
+it("lowestCommonAncestor should return 7 for root = [5,3,4,7,8,6,9,2,1,10,11], p = 2, q = 1", () => {
   const rootArr = [5, 3, 4, 7, 8, 6, 9, 2, 1, 10, 11];
   const p = new TreeNode(2);
   const q = new TreeNode(1);
   const root = arrayToTreeNode(rootArr);
   const result = lowestCommonAncestor(root, p, q);
-  expect(result?.val).toBe(3);
+  expect(result?.val).toBe(7);
 });
 
 it("lowestCommonAncestor should return 1 for root = [1,2], p = 1, q = 2", () => {

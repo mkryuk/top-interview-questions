@@ -21,3 +21,10 @@ it("maxPathSum should return 40 for root = [5,3,4,7,8,6,9,2,1,10,11]", () => {
   const result = maxPathSum(root);
   expect(result).toBe(40);
 });
+
+it("maxPathSum should return 53 for root = [5,3,4,7,8,6,9,2,25,10,11]", () => {
+  const arr = [5, 3, 4, 7, 8, 6, 9, 2, 25, 10, 11];
+  const root = arrayToTreeNode(arr);
+  const result = maxPathSum(root);
+  expect(result).toBe(53);
+});

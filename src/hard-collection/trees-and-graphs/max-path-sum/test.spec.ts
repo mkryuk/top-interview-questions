@@ -22,9 +22,23 @@ it("maxPathSum should return 40 for root = [5,3,4,7,8,6,9,2,1,10,11]", () => {
   expect(result).toBe(40);
 });
 
-it("maxPathSum should return 53 for root = [5,3,4,7,8,6,9,2,25,10,11]", () => {
+it("maxPathSum should return 54 for root = [5,3,4,7,8,6,9,2,25,10,11]", () => {
   const arr = [5, 3, 4, 7, 8, 6, 9, 2, 25, 10, 11];
   const root = arrayToTreeNode(arr);
   const result = maxPathSum(root);
-  expect(result).toBe(53);
+  expect(result).toBe(54);
+});
+
+it("maxPathSum should return 153 for root = [5,3,4,7,8,6,9,2,25,10,110]", () => {
+  const arr = [5, 3, 4, 7, 8, 6, 9, 2, 25, 10, 110];
+  const root = arrayToTreeNode(arr);
+  const result = maxPathSum(root);
+  expect(result).toBe(153);
+});
+
+it("maxPathSum should return -3 for root = [-3]", () => {
+  const arr = [-3];
+  const root = arrayToTreeNode(arr);
+  const result = maxPathSum(root);
+  expect(result).toBe(-3);
 });

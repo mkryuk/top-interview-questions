@@ -1,5 +1,5 @@
 import { arrayToTreeNode } from "../common";
-import { maxPathSum } from "./solution";
+import { maxPathSum } from "./solution-v2";
 
 it("maxPathSum should return 6 for root = [1,2,3]", () => {
   const arr = [1, 2, 3];

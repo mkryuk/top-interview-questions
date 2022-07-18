@@ -24,7 +24,7 @@ it("findCircleNum should return 3 for isConnected = [[1,0,0],[0,1,0],[0,0,1]]", 
     [0, 1, 0],
     [0, 0, 1],
   ];
-  expect(findCircleNum(isConnected)).toBe(2);
+  expect(findCircleNum(isConnected)).toBe(3);
 });
 
 it("findCircleNum should return 2 for isConnected = [[1,0,1,0,0],[0,1,0,1,0],[1,0,1,0,0],[0,1,0,1,1],[0,0,0,1,1]]", () => {

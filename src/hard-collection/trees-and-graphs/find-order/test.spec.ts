@@ -25,3 +25,35 @@ it("findOrder should return [0] for numCourses = 1, prerequisites = []", () => {
   const result = findOrder(numCourses, prerequisites);
   expect(result).toEqual([0]);
 });
+
+it("findOrder should return [0,1,2,3,4,5,6] for numCourses = 7, prerequisites = [[2,0],[3,0],[4,1],[5,1],[4,3],[3,5],[6,2],[6,4]]", () => {
+  const numCourses = 7;
+  const prerequisites = [
+    [2, 0],
+    [3, 0],
+    [4, 1],
+    [5, 1],
+    [4, 3],
+    [3, 5],
+    [6, 2],
+    [6, 4],
+  ];
+  const result = findOrder(numCourses, prerequisites);
+  expect(result).toEqual([0, 1, 2, 3, 4, 5, 6]);
+});
+
+it("findOrder should return [] for numCourses = 7, prerequisites = [[3,0],[4,1],[5,1],[4,3],[3,5],[6,4],[2,6],[0,2]]", () => {
+  const numCourses = 7;
+  const prerequisites = [
+    [3, 0],
+    [4, 1],
+    [5, 1],
+    [4, 3],
+    [3, 5],
+    [6, 4],
+    [2, 6],
+    [0, 2],
+  ];
+  const result = findOrder(numCourses, prerequisites);
+  expect(result).toEqual([]);
+});

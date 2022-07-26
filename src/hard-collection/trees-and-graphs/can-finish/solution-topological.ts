@@ -1,6 +1,6 @@
 interface GNode {
-  depCount: number;
-  outNodes: number[];
+  depth: number;
+  nextNodes: number[];
 }
 
 export function canFinish(
@@ -12,31 +12,31 @@ export function canFinish(
   }
 
   // course -> list of next courses
-  let graph = new Map<number, GNode>();
+  const graph = new Map<number, GNode>();
   prerequisites.forEach((relation) => {
     // relation[1] -> relation[0]
     const [next, prev] = relation;
     const prevCourse = getCreateGNode(graph, prev);
     const nextCourse = getCreateGNode(graph, next);
-    prevCourse.outNodes.push(next);
-    nextCourse.depCount++;
+    prevCourse.nextNodes.push(next);
+    nextCourse.depth++;
   });
   const totalEdges = prerequisites.length;
-  let rootCourses: number[] = [];
+  const rootCourses: number[] = [];
   // find all courses with no prerequisites
   graph.forEach((node, key) => {
-    if (node.depCount === 0) {
+    if (node.depth === 0) {
       rootCourses.push(key);
     }
   });
   let removedEdges = 0;
   while (rootCourses.length > 0) {
     let course = rootCourses.pop()!;
-    graph.get(course)!.outNodes.forEach((nextCourse) => {
+    graph.get(course)!.nextNodes.forEach((nextCourse) => {
       const nextCourseNode = graph.get(nextCourse)!;
-      nextCourseNode.depCount--;
+      nextCourseNode.depth--;
       removedEdges++;
-      if (nextCourseNode.depCount === 0) {
+      if (nextCourseNode.depth === 0) {
         rootCourses.push(nextCourse);
       }
     });
@@ -50,8 +50,8 @@ function getCreateGNode(graph: Map<number, GNode>, course: number): GNode {
     return graph.get(course)!;
   }
   const node: GNode = {
-    depCount: 0,
-    outNodes: [],
+    depth: 0,
+    nextNodes: [],
   };
   graph.set(course, node);
   return node;

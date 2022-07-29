@@ -1,4 +1,4 @@
-import { longestIncreasingPath } from "./solution";
+import { longestIncreasingPath } from "./solution-stack";
 
 it("longestIncreasingPath should return 4 for matrix = [[9,9,4],[6,6,8],[2,1,1]]", () => {
   const matrix = [

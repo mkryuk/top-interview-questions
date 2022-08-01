@@ -21,29 +21,32 @@ it('alienOrder should return "" for words = ["z","x","z"]', () => {
 it('alienOrder should return "ab" for words = ["a","ab","ad"]', () => {
   const words = ["a", "ab", "ad"];
   const result = alienOrder(words);
-  expect(result).toBe("abd");
+  const expectedResult = ["abd", "bda"];
+  expect(expectedResult).toContain(result);
 });
 
 it('alienOrder should return "abcdef" for words = ["ab","bc","cde","cdef"]', () => {
   const words = ["ab", "bc", "cde", "cdef"];
   const result = alienOrder(words);
-  expect(result).toBe("abcdef");
+  const expectedResult = ["fedabc", "abcdef"];
+  expect(expectedResult).toContain(result);
 });
 
 it('alienOrder should return "abcdefgh" for words = ["ab","cd","ef","gh"]', () => {
   const words = ["ab", "cd", "ef", "gh"];
   const result = alienOrder(words);
-  expect(result).toBe("abcdefgh");
+  expect(result).toBe("hfdbaceg");
 });
 
 it('alienOrder should return "abcdefghij" for words = ["a","bc","def","ghij"]', () => {
   const words = ["a", "bc", "def", "ghij"];
   const result = alienOrder(words);
-  expect(result).toBe("abcdefghij");
+  expect(result).toBe("jihfecabdg");
 });
 
 it('alienOrder should return "abcdef" for words = ["abc","bcd","cde","def"]', () => {
   const words = ["abc", "bcd", "cde", "def"];
   const result = alienOrder(words);
-  expect(result).toBe("abcdef");
+  const expectedResult = ["feabcd", "abcdef"];
+  expect(expectedResult).toContain(result);
 });

@@ -1,4 +1,4 @@
-import { alienOrder } from "./solution";
+import { alienOrder } from "./solution-dfs";
 
 it('alienOrder should return "wertf" for words = ["wrt","wrf","er","ett","rftt"]', () => {
   const words = ["wrt", "wrf", "er", "ett", "rftt"];
@@ -18,7 +18,7 @@ it('alienOrder should return "" for words = ["z","x","z"]', () => {
   expect(result).toBe("");
 });
 
-it('alienOrder should return "abd" for words = ["a","ab","ad"]', () => {
+it('alienOrder should return "ab" for words = ["a","ab","ad"]', () => {
   const words = ["a", "ab", "ad"];
   const result = alienOrder(words);
   const expectedResult = ["abd", "bda"];
@@ -32,16 +32,16 @@ it('alienOrder should return "abcdef" for words = ["ab","bc","cde","cdef"]', () 
   expect(expectedResult).toContain(result);
 });
 
-it('alienOrder should return "hfdbaceg" for words = ["ab","cd","ef","gh"]', () => {
+it('alienOrder should return "abcdefgh" for words = ["ab","cd","ef","gh"]', () => {
   const words = ["ab", "cd", "ef", "gh"];
   const result = alienOrder(words);
-  expect(result).toBe("hfdbaceg");
+  expect(result).toBe("abcdefgh");
 });
 
-it('alienOrder should return "jihfecabdg" for words = ["a","bc","def","ghij"]', () => {
+it('alienOrder should return "abcdefghij" for words = ["a","bc","def","ghij"]', () => {
   const words = ["a", "bc", "def", "ghij"];
   const result = alienOrder(words);
-  expect(result).toBe("jihfecabdg");
+  expect(result).toBe("abcdefghij");
 });
 
 it('alienOrder should return "abcdef" for words = ["abc","bcd","cde","def"]', () => {

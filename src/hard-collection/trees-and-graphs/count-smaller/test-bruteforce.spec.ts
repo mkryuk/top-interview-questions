@@ -1,4 +1,4 @@
-import { countSmaller } from "./solution";
+import { countSmaller } from "./solution-bruteforce";
 
 it("countSmaller should return [2,1,1,0] for nums = [5,2,6,1]", () => {
   const nums = [5, 2, 6, 1];

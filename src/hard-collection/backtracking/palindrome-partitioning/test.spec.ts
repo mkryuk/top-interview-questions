@@ -52,3 +52,17 @@ it('partition should return correct result for s = "aabccbaa"', () => {
   const actual = partition(s);
   expect(actual).toEqual(expected);
 });
+
+it('partition should return correct result for s = "aabaac"', () => {
+  const s = "aabaac";
+  const expected = [
+    ["a", "a", "b", "a", "a", "c"],
+    ["a", "a", "b", "aa", "c"],
+    ["a", "aba", "a", "c"],
+    ["aa", "b", "a", "a", "c"],
+    ["aa", "b", "aa", "c"],
+    ["aabaa", "c"],
+  ];
+  const actual = partition(s);
+  expect(actual).toEqual(expected);
+});

@@ -1,4 +1,4 @@
-import { findWords } from "./solution-tle";
+import { findWords } from "./solution-trie";
 
 function compareArrays(left: string[], right: string[]): boolean {
   if (left.length !== right.length) {

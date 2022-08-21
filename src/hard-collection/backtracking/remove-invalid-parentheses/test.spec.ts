@@ -20,3 +20,24 @@ it('removeInvalidParentheses should return [""] for s = ")("', () => {
   const expected = [""];
   expect(result).toEqual(expected);
 });
+
+it('removeInvalidParentheses should return ["()"] for s = "())"', () => {
+  const s = "())";
+  const result = removeInvalidParentheses(s);
+  const expected = ["()"];
+  expect(result).toEqual(expected);
+});
+
+it('removeInvalidParentheses should return ["()"] for s = "(()"', () => {
+  const s = "(()";
+  const result = removeInvalidParentheses(s);
+  const expected = ["()"];
+  expect(result).toEqual(expected);
+});
+
+it('removeInvalidParentheses should return ["()()"] for s = "()))((()"', () => {
+  const s = "()))((()";
+  const result = removeInvalidParentheses(s);
+  const expected = ["()()"];
+  expect(result).toEqual(expected);
+});

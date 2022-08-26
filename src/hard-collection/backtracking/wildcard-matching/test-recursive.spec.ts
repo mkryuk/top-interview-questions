@@ -1,4 +1,4 @@
-import { isMatch } from "./solution";
+import { isMatch } from "./solution-recursive";
 
 it('isMatch should return false for s = "aa", p = "a"', () => {
   const s = "aa";

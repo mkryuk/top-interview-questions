@@ -41,3 +41,10 @@ it('isMatch should return false for s = "abcabcd", p = "a*b*c*d*"', () => {
   const result = isMatch(s, p);
   expect(result).toBeFalse();
 });
+
+it('isMatch should return true for s = "abbaccd", p = "a.b.c.d.*"', () => {
+  const s = "abbaccd";
+  const p = "a.b.c.d.*";
+  const result = isMatch(s, p);
+  expect(result).toBeTrue();
+});

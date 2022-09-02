@@ -48,3 +48,10 @@ it('isMatch should return true for s = "abbaccd", p = "a.b.c.d.*"', () => {
   const result = isMatch(s, p);
   expect(result).toBeTrue();
 });
+
+it('isMatch should return false for s = "ab", p = ".*c"', () => {
+  const s = "ab";
+  const p = ".*c";
+  const result = isMatch(s, p);
+  expect(result).toBeFalse();
+});

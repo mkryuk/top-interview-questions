@@ -28,3 +28,47 @@ it("kthSmallest should return 17 for matrix = [[1,5,9],[8,10,20],[15,17,21]], k 
   const result = kthSmallest(matrix, k);
   expect(result).toEqual(17);
 });
+
+it("kthSmallest should return 7 for matrix = [[1,2,3],[4,5,6],[7,8,9]], k = 7", () => {
+  const matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+  ];
+  const k = 7;
+  const result = kthSmallest(matrix, k);
+  expect(result).toEqual(7);
+});
+
+it("kthSmallest should return 7 for matrix = [[1,4,7],[2,5,8],[3,6,9]], k = 7", () => {
+  const matrix = [
+    [1, 4, 7],
+    [2, 5, 8],
+    [3, 6, 9],
+  ];
+  const k = 7;
+  const result = kthSmallest(matrix, k);
+  expect(result).toEqual(7);
+});
+
+it("kthSmallest should return 7 for matrix = [[1,2,7],[3,4,8],[5,6,9]], k = 7", () => {
+  const matrix = [
+    [1, 2, 7],
+    [3, 4, 8],
+    [5, 6, 9],
+  ];
+  const k = 7;
+  const result = kthSmallest(matrix, k);
+  expect(result).toEqual(7);
+});
+
+it("kthSmallest should return 7 for matrix = [[1,3,6],[2,5,8],[4,7,9]], k = 7", () => {
+  const matrix = [
+    [1, 3, 6],
+    [2, 5, 8],
+    [4, 7, 9],
+  ];
+  const k = 7;
+  const result = kthSmallest(matrix, k);
+  expect(result).toEqual(7);
+});

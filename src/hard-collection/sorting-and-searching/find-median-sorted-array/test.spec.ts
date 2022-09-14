@@ -20,3 +20,17 @@ it("findMedianSortedArrays should return 5 for nums1 = [1,3,11] nums2 = [-2,7,12
   const result = findMedianSortedArrays(nums1, nums2);
   expect(result).toEqual(5);
 });
+
+it("findMedianSortedArrays should return 3.5 for nums1 = [1,3,42] nums2 = [2,4,5]", () => {
+  const nums1 = [1, 3, 42];
+  const nums2 = [2, 4, 5];
+  const result = findMedianSortedArrays(nums1, nums2);
+  expect(result).toEqual(3.5);
+});
+
+it("findMedianSortedArrays should return 3 for nums1 = [1,3,42] nums2 = [2,4]", () => {
+  const nums1 = [1, 3, 42];
+  const nums2 = [2, 4];
+  const result = findMedianSortedArrays(nums1, nums2);
+  expect(result).toEqual(3);
+});

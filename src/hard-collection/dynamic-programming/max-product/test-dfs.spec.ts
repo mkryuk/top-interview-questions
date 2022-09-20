@@ -1,4 +1,4 @@
-import { maxProduct } from "./solution";
+import { maxProduct } from "./solution-dfs";
 
 it("maxProduct should return 6 nums = [2,3,-2,4]", () => {
   const nums = [2, 3, -2, 4];

@@ -17,3 +17,21 @@ it('numDecodings should return 0 for s = "06"', () => {
   const result = numDecodings(s);
   expect(result).toEqual(0);
 });
+
+it('numDecodings should return 5 for s = "12242"', () => {
+  const s = "12242";
+  const result = numDecodings(s);
+  expect(result).toEqual(5);
+});
+
+it('numDecodings should return 2 for s = "11106"', () => {
+  const s = "11106";
+  const result = numDecodings(s);
+  expect(result).toEqual(2);
+});
+
+it('numDecodings should return 0 for s = "11306"', () => {
+  const s = "11306";
+  const result = numDecodings(s);
+  expect(result).toEqual(0);
+});

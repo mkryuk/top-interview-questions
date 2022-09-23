@@ -35,3 +35,9 @@ it('numDecodings should return 0 for s = "11306"', () => {
   const result = numDecodings(s);
   expect(result).toEqual(0);
 });
+
+it('numDecodings should return 8 for s = "21212"', () => {
+  const s = "21212";
+  const result = numDecodings(s);
+  expect(result).toEqual(8);
+});

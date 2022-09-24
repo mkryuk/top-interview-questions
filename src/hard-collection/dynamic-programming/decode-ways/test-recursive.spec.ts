@@ -1,4 +1,4 @@
-import { numDecodings } from "./solution";
+import { numDecodings } from "./solution-recursive";
 
 it('numDecodings should return 2 for s = "12"', () => {
   const s = "12";
@@ -40,4 +40,10 @@ it('numDecodings should return 8 for s = "21212"', () => {
   const s = "21212";
   const result = numDecodings(s);
   expect(result).toEqual(8);
+});
+
+it('numDecodings should return 1 for s = "777"', () => {
+  const s = "777";
+  const result = numDecodings(s);
+  expect(result).toEqual(1);
 });

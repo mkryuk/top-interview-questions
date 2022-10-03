@@ -20,3 +20,17 @@ it('wordBreak should return false for s = "catsandog", wordDict = ["cats","dog",
   const result = wordBreak(s, wordDict);
   expect(result).toBeFalse();
 });
+
+it('wordBreak should return true for s = "abcabcd", wordDict = ["abc","cab","ab","cd"]', () => {
+  const s = "abcabcd";
+  const wordDict = ["abc", "cab", "ab", "cd"];
+  const result = wordBreak(s, wordDict);
+  expect(result).toBeTrue();
+});
+
+it('wordBreak should return false for s = "abcabcd", wordDict = ["abc","cab","cd"]', () => {
+  const s = "abcabcd";
+  const wordDict = ["abc", "cab", "cd"];
+  const result = wordBreak(s, wordDict);
+  expect(result).toBeFalse();
+});

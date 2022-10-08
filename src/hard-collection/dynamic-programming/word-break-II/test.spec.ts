@@ -28,6 +28,28 @@ it("wordBreak should return []", () => {
   expect(compareArrays(expected, result)).toBeTrue();
 });
 
+it("wordBreak should return all 'a' combinations", () => {
+  const s = "aaaaa";
+  const wordDict = ["a", "aa", "aaa"];
+  const expected: string[] = [
+    "a a a a a",
+    "aa a a a",
+    "a aa a a",
+    "aaa a a",
+    "a a aa a",
+    "aa aa a",
+    "a aaa a",
+    "a a a aa",
+    "aa a aa",
+    "a aa aa",
+    "aaa aa",
+    "a a aaa",
+    "aa aaa",
+  ];
+  const result = wordBreak(s, wordDict);
+  expect(compareArrays(expected, result)).toBeTrue();
+});
+
 function compareArrays(left: string[], right: string[]): boolean {
   if (left.length !== right.length) {
     return false;

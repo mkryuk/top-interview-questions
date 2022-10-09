@@ -50,6 +50,14 @@ it("wordBreak should return all 'a' combinations", () => {
   expect(compareArrays(expected, result)).toBeTrue();
 });
 
+it('wordBreak should return ["cats an d dog","cats and dog","cat sand dog"]', () => {
+  const s = "catsanddog";
+  const wordDict = ["cat", "cats", "and", "sand", "dog", "an", "d"];
+  const expected = ["cats an d dog", "cats and dog", "cat sand dog"];
+  const result = wordBreak(s, wordDict);
+  expect(compareArrays(expected, result)).toBeTrue();
+});
+
 function compareArrays(left: string[], right: string[]): boolean {
   if (left.length !== right.length) {
     return false;

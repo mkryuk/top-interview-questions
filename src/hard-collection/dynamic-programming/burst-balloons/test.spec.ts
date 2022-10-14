@@ -35,3 +35,9 @@ it("maxCoins should return 1700 for nums = [10,20,3,4,5]", () => {
   const result = maxCoins(nums);
   expect(result).toBe(1700);
 });
+
+it("maxCoins should return 3394 for nums = [8,3,4,3,5,0,5,6,6,2,8,5,6,2,3,8,3,5,1,0,2]", () => {
+  const nums = [8, 3, 4, 3, 5, 0, 5, 6, 6, 2, 8, 5, 6, 2, 3, 8, 3, 5, 1, 0, 2];
+  const result = maxCoins(nums);
+  expect(result).toBe(3394);
+});

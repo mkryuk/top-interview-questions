@@ -1,6 +1,6 @@
 import { NestedInteger } from "./nested-integer";
 
-class NestedIterator {
+export class NestedIterator {
   constructor(nestedList: NestedInteger[]) {}
 
   hasNext(): boolean {

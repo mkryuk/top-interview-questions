@@ -1,20 +1,29 @@
 import { NestedInteger } from "./nested-integer";
 
 export class NestedIterator {
-  constructor(nestedList: NestedInteger[]) {}
+  flatList: number[];
+  index: number;
+  constructor(nestedList: NestedInteger[]) {
+    this.flatList = [];
+    this.index = 0;
+    this.flatNestedList(nestedList, this.flatList);
+  }
+
+  flatNestedList(nestedList: NestedInteger[], flatList: number[]) {
+    nestedList.forEach((item) => {
+      if (item.isInteger()) {
+        flatList.push(item.getInteger()!);
+      } else {
+        this.flatNestedList(item.getList(), flatList);
+      }
+    });
+  }
 
   hasNext(): boolean {
-    return false;
+    return this.index < this.flatList.length;
   }
 
   next(): number {
-    return 0;
+    return this.flatList[this.index++];
   }
 }
-
-/**
- * Your ParkingSystem object will be instantiated and called as such:
- * var obj = new NestedIterator(nestedList)
- * var a: number[] = []
- * while (obj.hasNext()) a.push(obj.next());
- */

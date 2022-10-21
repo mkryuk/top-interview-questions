@@ -45,6 +45,6 @@ export class NestedInteger {
   //  Return the nested list that this NestedInteger holds,
   //  or an empty list if this NestedInteger holds a single integer
   getList(): NestedInteger[] {
-    return this.isSingleInteger ? this.list! : [];
+    return this.isSingleInteger ? [] : this.list!;
   }
 }

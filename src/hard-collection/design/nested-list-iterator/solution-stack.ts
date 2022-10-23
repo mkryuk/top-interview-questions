@@ -8,11 +8,8 @@ export class NestedIterator {
   }
 
   hasNext(): boolean {
-    if (!this.stack.length) {
-      return false;
-    }
     while (this.stack.length > 0) {
-      let top = this.stack[this.stack.length - 1];
+      const top = this.stack[this.stack.length - 1];
       if (top.isInteger()) {
         return true;
       }

@@ -18,7 +18,9 @@ export class NestedIterator {
   }
 
   hasNext(): boolean {
-    if (this.peeked !== null) return true;
+    if (this.peeked !== null) {
+      return true;
+    }
 
     const { value, done } = this.generator.next();
     if (done) {

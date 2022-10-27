@@ -5,21 +5,17 @@ export class MedianFinder {
   }
   addNum(num: number): void {
     const index = this.findIndex(this.numbers, num);
-    this.numbers = this.insertValue(this.numbers, num, index);
+    this.numbers.splice(index, 0, num);
   }
 
   findMedian(): number {
-    if (this.numbers.length % 2 === 0) {
-      const midIndex = this.numbers.length / 2;
-      const left = this.numbers[midIndex - 1];
-      const right = this.numbers[midIndex];
-      return (left + right) / 2;
-    }
     const midIndex = Math.trunc(this.numbers.length / 2);
-    return this.numbers[midIndex];
+    return this.numbers.length % 2 === 0
+      ? (this.numbers[midIndex - 1] + this.numbers[midIndex]) / 2
+      : this.numbers[midIndex];
   }
 
-  findIndex(array: number[], value: number): number {
+  private findIndex(array: number[], value: number): number {
     let left = 0;
     let right = array.length;
     while (left < right) {
@@ -31,17 +27,5 @@ export class MedianFinder {
       }
     }
     return left;
-  }
-
-  insertValue(array: number[], value: number, index: number): number[] {
-    const newNumbers: number[] = [];
-    for (let i = 0; i < index; i++) {
-      newNumbers.push(array[i]);
-    }
-    newNumbers.push(value);
-    for (let i = index; i < array.length; i++) {
-      newNumbers.push(array[i]);
-    }
-    return newNumbers;
   }
 }

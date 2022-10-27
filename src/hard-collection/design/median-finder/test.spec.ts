@@ -49,8 +49,7 @@ it("MedianFinder should pass test 5", () => {
   expect(medianFinder.findMedian()).toEqual(5);
 });
 
-/// TLE for this approach
-xit("MedianFinder should pass time test to add number", () => {
+it("MedianFinder should pass time test to add number", () => {
   const passTime = countPassTime(() => {
     const medianFinder = new MedianFinder();
     for (let i = 50001; i < 100000; i++) {
@@ -61,8 +60,7 @@ xit("MedianFinder should pass time test to add number", () => {
   expect(passTime).toBeLessThan(100);
 });
 
-/// TLE for this approach
-xit("MedianFinder should pass time test to add and find median number", () => {
+it("MedianFinder should pass time test to add and find median number", () => {
   const passTime = countPassTime(() => {
     const medianFinder = new MedianFinder();
     for (let i = 1; i < 15000; i++) {

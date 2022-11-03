@@ -29,3 +29,15 @@ it('largestNumber should return "5756548419" for nums = [5,48,419,57,56]', () =>
   const result = largestNumber(nums);
   expect(result).toEqual("5756548419");
 });
+
+it('largestNumber should return "343234323" for nums = [34323,3432]', () => {
+  const nums = [34323, 3432];
+  const result = largestNumber(nums);
+  expect(result).toEqual("343234323");
+});
+
+it('largestNumber should return "0" for nums = [0,0]', () => {
+  const nums = [0, 0];
+  const result = largestNumber(nums);
+  expect(result).toEqual("0");
+});

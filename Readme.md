@@ -11,3 +11,5 @@ This is repo for LeetCode:
 ## Run
 
 To run tests just run: `npm run test`
+
+[![Node.js CI](https://github.com/mkryuk/top-interview-questions/actions/workflows/node.js.yml/badge.svg)](https://github.com/mkryuk/top-interview-questions/actions/workflows/node.js.yml)

@@ -1,0 +1,23 @@
+import { arrayToTreeNode } from "../common";
+import { countNodes } from "./solution";
+
+it("countNodes should return 6 for nodes = [1,2,3,4,5,6]", () => {
+  const nodes = [1, 2, 3, 4, 5, 6];
+  const root = arrayToTreeNode(nodes);
+  const result = countNodes(root);
+  expect(result).toEqual(6);
+});
+
+it("countNodes should return 0 for nodes = []", () => {
+  const nodes: number[] = [];
+  const root = arrayToTreeNode(nodes);
+  const result = countNodes(root);
+  expect(result).toEqual(0);
+});
+
+it("countNodes should return 1 for nodes = [1]", () => {
+  const nodes = [1];
+  const root = arrayToTreeNode(nodes);
+  const result = countNodes(root);
+  expect(result).toEqual(1);
+});

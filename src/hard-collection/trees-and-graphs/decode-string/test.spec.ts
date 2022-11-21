@@ -17,3 +17,18 @@ it('decodeString should return "abcabccdcdcdef" for s = "2[abc]3[cd]ef"', () => 
   const result = decodeString(s);
   expect(result).toEqual("abcabccdcdcdef");
 });
+
+it('decodeString should return correct result for s = "100[leetcode]"', () => {
+  const s = "100[leetcode]";
+  const result = decodeString(s);
+  const expectedResult = "leetcode".repeat(100);
+  expect(result).toEqual(expectedResult);
+});
+
+it('decodeString should return correct result for s = "3[z]2[2[y]pq4[2[jk]e1[f]]]ef"', () => {
+  const s = "3[z]2[2[y]pq4[2[jk]e1[f]]]ef";
+  const result = decodeString(s);
+  expect(result).toEqual(
+    "zzzyypqjkjkefjkjkefjkjkefjkjkefyypqjkjkefjkjkefjkjkefjkjkefef",
+  );
+});

@@ -6,6 +6,7 @@ it("robot should not go over right bound", () => {
     [1, 1],
   ];
   const robot = new Robot(room, 0, 0);
+  robot.turnRight();
   let moveResult = robot.move();
   expect(moveResult).toBeTrue();
   moveResult = robot.move();
@@ -23,6 +24,7 @@ it("robot should not go over down bound", () => {
     [1, 1],
   ];
   const robot = new Robot(room, 0, 0);
+  robot.turnRight();
   robot.turnRight();
   let moveResult = robot.move();
   expect(moveResult).toBeTrue();
@@ -43,6 +45,7 @@ it("robot should not go over left bound", () => {
   const robot = new Robot(room, 0, 0);
   robot.turnRight();
   robot.turnRight();
+  robot.turnRight();
   let moveResult = robot.move();
   expect(moveResult).toBeFalse();
   robot.clean();
@@ -58,6 +61,7 @@ it("robot should not go over up bound", () => {
     [1, 1],
   ];
   const robot = new Robot(room, 0, 0);
+  robot.turnRight();
   robot.turnLeft();
   let moveResult = robot.move();
   expect(moveResult).toBeFalse();
@@ -74,6 +78,7 @@ it("robot should clean starting point", () => {
     [1, 1],
   ];
   const robot = new Robot(room, 0, 0);
+  robot.turnRight();
   robot.clean();
   expect(room).toEqual([
     [2, 1],
@@ -87,6 +92,7 @@ it("robot should go right and clean", () => {
     [1, 1],
   ];
   const robot = new Robot(room, 0, 0);
+  robot.turnRight();
   robot.move();
   robot.clean();
   expect(room).toEqual([
@@ -102,6 +108,7 @@ it("robot should go down and clean", () => {
   ];
   const robot = new Robot(room, 0, 0);
   robot.turnRight();
+  robot.turnRight();
   robot.move();
   robot.clean();
   expect(room).toEqual([
@@ -116,6 +123,7 @@ it("robot should clean all except starting point turning right", () => {
     [1, 1],
   ];
   const robot = new Robot(room, 0, 0);
+  robot.turnRight();
   robot.move();
   robot.clean();
   robot.turnRight();
@@ -136,7 +144,6 @@ it("robot should clean all except starting point turning left", () => {
     [1, 1],
   ];
   const robot = new Robot(room, 0, 0);
-  robot.turnLeft();
   robot.turnLeft();
   robot.turnLeft();
   robot.move();

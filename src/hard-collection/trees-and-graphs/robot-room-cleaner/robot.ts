@@ -1,7 +1,7 @@
 import { uniquePaths } from "../../../medium-collection/dynamic-programming/unique-paths/solution";
 
 export class Robot {
-  private directionIdx = Direction.Right;
+  private directionIdx = Direction.Up;
   get direction() {
     const directions = [
       [-1, 0],
@@ -40,39 +40,49 @@ export class Robot {
   // Robot will stay in the same cell after calling turnLeft/turnRight.
   // Each turn will be 90 degrees.
   turnRight(): void {
-    switch (this.directionIdx) {
-      case Direction.Right:
-        this.directionIdx = Direction.Down;
-        break;
-      case Direction.Down:
-        this.directionIdx = Direction.Left;
-        break;
-      case Direction.Left:
-        this.directionIdx = Direction.Up;
-        break;
-      case Direction.Up:
-        this.directionIdx = Direction.Right;
-        break;
+    if (this.directionIdx === Direction.Left) {
+      this.directionIdx = Direction.Up;
+    } else {
+      this.directionIdx++;
     }
+    // switch (this.directionIdx) {
+    //   case Direction.Right:
+    //     this.directionIdx = Direction.Down;
+    //     break;
+    //   case Direction.Down:
+    //     this.directionIdx = Direction.Left;
+    //     break;
+    //   case Direction.Left:
+    //     this.directionIdx = Direction.Up;
+    //     break;
+    //   case Direction.Up:
+    //     this.directionIdx = Direction.Right;
+    //     break;
+    // }
   }
 
   // Robot will stay in the same cell after calling turnLeft/turnRight.
   // Each turn will be 90 degrees.
   turnLeft(): void {
-    switch (this.directionIdx) {
-      case Direction.Right:
-        this.directionIdx = Direction.Up;
-        break;
-      case Direction.Up:
-        this.directionIdx = Direction.Left;
-        break;
-      case Direction.Left:
-        this.directionIdx = Direction.Down;
-        break;
-      case Direction.Down:
-        this.directionIdx = Direction.Right;
-        break;
+    if (this.directionIdx === Direction.Up) {
+      this.directionIdx = Direction.Left;
+    } else {
+      this.directionIdx--;
     }
+    // switch (this.directionIdx) {
+    //   case Direction.Right:
+    //     this.directionIdx = Direction.Up;
+    //     break;
+    //   case Direction.Up:
+    //     this.directionIdx = Direction.Left;
+    //     break;
+    //   case Direction.Left:
+    //     this.directionIdx = Direction.Down;
+    //     break;
+    //   case Direction.Down:
+    //     this.directionIdx = Direction.Right;
+    //     break;
+    // }
   }
 
   // Clean the current cell.

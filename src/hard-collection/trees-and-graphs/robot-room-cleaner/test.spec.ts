@@ -12,8 +12,8 @@ it("should pass test 1", () => {
   const row = 1;
   const col = 3;
   const robot = new Robot(room, row, col);
-  const result = isRoomClean(room);
   cleanRoom(robot);
+  const result = isRoomClean(room);
   expect(result).toBeTrue();
 });
 
@@ -22,8 +22,8 @@ it("should pass test 2", () => {
   const row = 0;
   const col = 0;
   const robot = new Robot(room, row, col);
-  const result = isRoomClean(room);
   cleanRoom(robot);
+  const result = isRoomClean(room);
   expect(result).toBeTrue();
 });
 

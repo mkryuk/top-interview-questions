@@ -1,13 +1,13 @@
 export class NumArray {
-  constructor(nums: number[]) {}
+  sums: number[] = [];
+  constructor(nums: number[]) {
+    this.sums = [nums[0]];
+    for (let i = 1; i < nums.length; i++) {
+      this.sums.push(nums[i] + this.sums[i - 1]);
+    }
+  }
 
   sumRange(left: number, right: number): number {
-    return 0;
+    return this.sums[right] - (left > 0 ? this.sums[left - 1] : 0);
   }
 }
-
-/**
- * Your NumArray object will be instantiated and called as such:
- * var obj = new NumArray(nums)
- * var param_1 = obj.sumRange(left,right)
- */

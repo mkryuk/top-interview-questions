@@ -23,6 +23,6 @@ it("NumArray should pass test 3", () => {
   let result = numArray.sumRange(2, 4);
   expect(result).toEqual(11);
   numArray.update(3, 3);
-  result = numArray.sumRange(0, 2);
+  result = numArray.sumRange(0, 3);
   expect(result).toEqual(12);
 });

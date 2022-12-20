@@ -11,3 +11,9 @@ it("should return false for rooms = [[1,3],[3,0,1],[2],[0]]", () => {
   const result = canVisitAllRooms(rooms);
   expect(result).toBeFalse();
 });
+
+it("should return false for rooms = [[1],[],[0,3],[1]]", () => {
+  const rooms = [[1], [], [0, 3], [1]];
+  const result = canVisitAllRooms(rooms);
+  expect(result).toBeFalse();
+});

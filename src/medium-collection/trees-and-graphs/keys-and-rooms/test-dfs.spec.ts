@@ -1,4 +1,4 @@
-import { canVisitAllRooms } from "./solution";
+import { canVisitAllRooms } from "./solution-dfs";
 
 it("should return true for rooms = [[1],[2],[3],[]]", () => {
   const rooms = [[1], [2], [3], []];

@@ -1,4 +1,4 @@
-import { possibleBipartition } from "./solution";
+import { possibleBipartition } from "./solution-bfs";
 
 it("possibleBipartition should return true for n = 4, dislikes = [[1,2],[1,3],[2,4]]", () => {
   const n = 4;

@@ -24,3 +24,11 @@ it("swapPairs should return [1] for head = [1]", () => {
   const resultNodes = listToArray(result);
   expect(resultNodes).toEqual([1]);
 });
+
+it("swapPairs should return [2,1,4,3,5] for head = [1,2,3,4,5]", () => {
+  const nodes = [1, 2, 3, 4, 5];
+  const head = arrayToList(nodes);
+  const result = swapPairs(head);
+  const resultNodes = listToArray(result);
+  expect(resultNodes).toEqual([2, 1, 4, 3, 5]);
+});

@@ -1,4 +1,4 @@
-import { detectCapitalUse } from "./solution";
+import { detectCapitalUse } from "./solution-regex";
 
 it('detectCapitalUse should return true for word = "USA"', () => {
   const word = "USA";

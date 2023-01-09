@@ -54,3 +54,12 @@ it("isSameTree should return false for p = [1], q = [2]", () => {
   const result = isSameTree(p, q);
   expect(result).toBeFalse();
 });
+
+it("isSameTree should return false for p = [1,2,3], q = [1,3,2]", () => {
+  const pNodes = [1, 2, 3];
+  const qNodes = [1, 3, 2];
+  const p = arrayToTreeNode(pNodes);
+  const q = arrayToTreeNode(qNodes);
+  const result = isSameTree(p, q);
+  expect(result).toBeFalse();
+});

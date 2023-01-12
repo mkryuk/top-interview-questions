@@ -42,5 +42,20 @@ it("minTime should return 0 for test 3", () => {
   ];
   const hasApple = [false, false, false, false, false, false, false];
   const result = minTime(n, edges, hasApple);
-  expect(result).toEqual(8);
+  expect(result).toEqual(0);
+});
+
+it("minTime should return 10 for test 4", () => {
+  const n = 7;
+  const edges = [
+    [0, 1],
+    [0, 3],
+    [1, 4],
+    [1, 5],
+    [2, 3],
+    [3, 6],
+  ];
+  const hasApple = [false, false, true, true, true, true, false];
+  const result = minTime(n, edges, hasApple);
+  expect(result).toEqual(10);
 });

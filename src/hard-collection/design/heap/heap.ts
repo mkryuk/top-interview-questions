@@ -1,16 +1,17 @@
-export class Heap {
-  compare: (left: number, right: number) => number;
-  nodes: any[];
+export class Heap<T> {
+  compare: (left: T, right: T) => number;
+  nodes: T[];
   constructor(
-    compare: (left: number, right: number) => number,
-    values?: number[],
-    private leaf?: any,
+    compare: (left: T, right: T) => number,
+    values?: T[],
+    private leaf: T | null = null,
   ) {
     if (typeof compare !== "function") {
       throw new Error("Heap constructor expects a compare function");
     }
     this.compare = compare;
     this.nodes = Array.isArray(values) ? values : [];
+    this.leaf = null;
   }
 
   hasLeftChild(parentIndex: number) {
@@ -87,16 +88,20 @@ export class Heap {
     }
   }
 
-  insert(value: number) {
+  insert(value: T) {
     this.nodes.push(value);
     this.heapifyUp(this.size() - 1);
-    if (this.leaf === null || this.compare(value, this.leaf) > 0) {
+    if (
+      this.leaf === null ||
+      this.leaf === undefined ||
+      this.compare(value, this.leaf) > 0
+    ) {
       this.leaf = value;
     }
     return this;
   }
 
-  push(value: number) {
+  push(value: T) {
     return this.insert(value);
   }
 

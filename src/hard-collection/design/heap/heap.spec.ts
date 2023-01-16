@@ -1,7 +1,7 @@
 import { Heap } from "./heap";
 
 it("heap should store min heap", () => {
-  const minHeap = new Heap((left, right) => left - right);
+  const minHeap = new Heap<number>((left, right) => left - right);
   minHeap.push(-3);
   minHeap.push(0);
   minHeap.push(5);
@@ -13,7 +13,7 @@ it("heap should store min heap", () => {
 });
 
 it("heap should store max heap", () => {
-  const maxHeap = new Heap((left, right) => right - left);
+  const maxHeap = new Heap<number>((left, right) => right - left);
   maxHeap.push(-3);
   maxHeap.push(0);
   maxHeap.push(5);

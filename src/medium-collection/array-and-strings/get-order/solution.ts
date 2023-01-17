@@ -8,38 +8,33 @@ export function getOrder(tasks: number[][]): number[] {
       processing,
       taskId,
     }))
-    .sort((left, right) => {
-      if (left.enqueue !== right.enqueue) {
-        return left.enqueue - right.enqueue;
-      } else if (left.processing !== right.processing) {
-        return left.processing - right.processing;
-      } else {
-        return left.taskId - right.taskId;
-      }
-    });
-  let heap = new Heap<ProcessType>((left, right) => {
-    if (left.processing !== right.processing) {
-      return left.processing - right.processing;
-    } else {
-      return left.taskId - right.taskId;
+    .sort((left, right) => left.enqueue - right.enqueue);
+
+  let heap = new Heap<ProcessType>((left, right) =>
+    left.processing !== right.processing
+      ? left.processing - right.processing
+      : left.taskId - right.taskId,
+  );
+
+  let currentTime = 0;
+  let taskIndex = 0;
+  const result: number[] = [];
+  while (taskIndex < processes.length || !heap.isEmpty()) {
+    if (heap.isEmpty() && currentTime < processes[taskIndex].enqueue) {
+      // When the heap is empty, try updating currTime to next task's enqueue time.
+      currentTime = processes[taskIndex].enqueue;
     }
-  });
-  let process = processes.shift()!;
-  let time = process.enqueue;
-  heap.push(process);
-  let result: number[] = [];
-  while (processes.length || !heap.isEmpty()) {
-    while (processes.length && processes[0].enqueue <= time) {
-      heap.push(processes.shift()!);
+    // Take available processes and put them into the heap
+    while (
+      taskIndex < processes.length &&
+      processes[taskIndex].enqueue <= currentTime
+    ) {
+      heap.push(processes[taskIndex++]);
     }
-    if (heap.isEmpty()) {
-      process = processes.shift()!;
-      time = process.enqueue;
-    } else {
-      process = heap.pop()!;
-    }
+
+    const process = heap.pop()!;
     result.push(process.taskId);
-    time += process.processing;
+    currentTime += process.processing;
   }
 
   return result;

@@ -119,3 +119,17 @@ it("getOrder should pass test 38", () => {
   const result = getOrder(tasks);
   expect(result).toEqual([5, 0, 1, 3, 2, 4]);
 });
+
+it("getOrder should pass test 39", () => {
+  const tasks = [
+    [5, 6],
+    [9, 4],
+    [3, 9],
+    [3, 7],
+    [1, 1],
+    [6, 9],
+    [9, 1],
+  ];
+  const result = getOrder(tasks);
+  expect(result).toEqual([4, 3, 6, 1, 0, 2, 5]);
+});

@@ -43,7 +43,7 @@ it("minAreaRect should return 1 for test 3", () => {
   expect(result).toEqual(1);
 });
 
-it("minAreaRect should return 1 for test 4", () => {
+it("minAreaRect should return 0 for test 4", () => {
   const points = [
     [3, 2],
     [3, 1],
@@ -56,4 +56,21 @@ it("minAreaRect should return 1 for test 4", () => {
   ];
   const result = minAreaRect(points);
   expect(result).toEqual(0);
+});
+
+it("minAreaRect should return 9 for test 5", () => {
+  const points = [
+    [1, 3],
+    [2, 1],
+    [2, 0],
+    [4, 3],
+    [0, 4],
+    [4, 2],
+    [1, 0],
+    [3, 4],
+    [2, 4],
+    [4, 0],
+  ];
+  const result = minAreaRect(points);
+  expect(result).toEqual(9);
 });

@@ -1,3 +1,12 @@
 export function lengthOfLastWord(s: string): number {
-  return 0;
+  let lastSpaceIndex = s.length - 1;
+  while (s[lastSpaceIndex] === " ") {
+    lastSpaceIndex--;
+  }
+  let firstSpaceIndex = lastSpaceIndex;
+  while (firstSpaceIndex >= 0 && s[firstSpaceIndex] !== " ") {
+    firstSpaceIndex--;
+  }
+
+  return lastSpaceIndex - firstSpaceIndex;
 }

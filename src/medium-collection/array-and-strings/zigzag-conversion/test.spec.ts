@@ -14,9 +14,9 @@ it('convert should return "PINALSIGYAHRPI" for s = "PAYPALISHIRING", numRows = 4
   expect(result).toEqual("PINALSIGYAHRPI");
 });
 
-it('convert should return "PAHNAPLSIIGYIR" for s = "A", numRows = 1', () => {
+it('convert should return "A" for s = "A", numRows = 1', () => {
   const s = "A";
   const numRows = 1;
   const result = convert(s, numRows);
-  expect(result).toEqual("PAHNAPLSIIGYIR");
+  expect(result).toEqual("A");
 });

@@ -26,6 +26,20 @@ describe("Minimum Fuel Cost to Report to the Capital", () => {
     expect(result).toBe(7);
   });
 
+  it("minimumFuelCost should return 8 for roads = [[0,1],[1,2],[0,3],[3,4],[0,5],[0,6]], seats = 1", () => {
+    const roads = [
+      [0, 1],
+      [1, 2],
+      [0, 3],
+      [3, 4],
+      [0, 5],
+      [0, 6],
+    ];
+    const seats = 1;
+    const result = minimumFuelCost(roads, seats);
+    expect(result).toBe(8);
+  });
+
   it("minimumFuelCost should return 0 for roads = [], seats = 1", () => {
     const roads: number[][] = [];
     const seats = 1;

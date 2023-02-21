@@ -1,3 +1,4 @@
+// O(n) solution
 export function singleNonDuplicate(nums: number[]): number {
   let result = nums[0];
   for (let i = 1; i < nums.length; i += 2) {

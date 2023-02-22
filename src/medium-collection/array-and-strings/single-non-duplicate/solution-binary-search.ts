@@ -1,8 +1,8 @@
 // O(log n) solution
 
-// The idea is to keep track of the middle index mid and compare nums[mid] with nums[mid + 1]. 
+// The idea is to keep track of the middle index mid and compare nums[mid] with nums[mid + 1].
 // If they are not equal, then the single element must be on the left side of the array (since every other element appears twice).
-// Otherwise, the single element must be on the right side of the array. 
+// Otherwise, the single element must be on the right side of the array.
 // We can then update the left or right index accordingly and continue the binary search until we find the single element.
 export function singleNonDuplicate(nums: number[]): number {
   let left = 0;

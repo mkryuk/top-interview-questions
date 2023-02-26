@@ -1,3 +1,13 @@
 export function searchInsert(nums: number[], target: number): number {
-  return 0;
+  let left = 0;
+  let right = nums.length - 1;
+  while (left <= right) {
+    let mid = left + Math.trunc((right - left) / 2);
+    if (nums[mid] < target) {
+      left = mid + 1;
+    } else {
+      right = mid - 1;
+    }
+  }
+  return left;
 }

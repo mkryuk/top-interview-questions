@@ -1,4 +1,4 @@
-import { QuadTreeNode } from "./quad-tree-node";
+import { QuadTreeNode } from "../common";
 
 export function construct(grid: number[][]): QuadTreeNode | null {
   return null;

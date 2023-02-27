@@ -113,3 +113,55 @@ export function arrayToNode(nodes: (number | null)[]): Node | null {
   root = createNodeLevel(nodes, root, 0, nodes.length);
   return root;
 }
+
+export class QuadTreeNode {
+  val: boolean;
+  isLeaf: boolean;
+  topLeft: QuadTreeNode | null;
+  topRight: QuadTreeNode | null;
+  bottomLeft: QuadTreeNode | null;
+  bottomRight: QuadTreeNode | null;
+  constructor(
+    val?: boolean,
+    isLeaf?: boolean,
+    topLeft?: QuadTreeNode,
+    topRight?: QuadTreeNode,
+    bottomLeft?: QuadTreeNode,
+    bottomRight?: QuadTreeNode,
+  ) {
+    this.val = val === undefined ? false : val;
+    this.isLeaf = isLeaf === undefined ? false : isLeaf;
+    this.topLeft = topLeft === undefined ? null : topLeft;
+    this.topRight = topRight === undefined ? null : topRight;
+    this.bottomLeft = bottomLeft === undefined ? null : bottomLeft;
+    this.bottomRight = bottomRight === undefined ? null : bottomRight;
+  }
+}
+
+export function quadTreeNodeToArray(
+  root: QuadTreeNode | null,
+): (number[] | null)[] {
+  if (!root) {
+    return [];
+  }
+  let result: (number[] | null)[] = [];
+  let queue: (QuadTreeNode | null)[] = [root];
+  while (queue.length) {
+    let node = queue.shift();
+    let val = node ? [node.isLeaf ? 1 : 0, node.val ? 1 : 0] : null;
+    result.push(val);
+
+    if (
+      node?.topLeft ||
+      node?.topRight ||
+      node?.bottomLeft ||
+      node?.bottomRight
+    ) {
+      queue.push(node?.topLeft || null);
+      queue.push(node?.topRight || null);
+      queue.push(node?.bottomLeft || null);
+      queue.push(node?.bottomRight || null);
+    }
+  }
+  return result;
+}

@@ -37,10 +37,6 @@ describe("Construct Quad Tree", () => {
       [0, 1],
       [1, 1],
       [1, 0],
-      null,
-      null,
-      null,
-      null,
       [1, 0],
       [1, 0],
       [1, 1],
@@ -63,10 +59,6 @@ describe("Construct Quad Tree", () => {
       [0, 1],
       [0, 1],
       [1, 0],
-      null,
-      null,
-      null,
-      null,
       [1, 1],
       [1, 1],
       [1, 1],
@@ -76,5 +68,15 @@ describe("Construct Quad Tree", () => {
       [1, 1],
       [1, 1],
     ]);
+  });
+
+  it("construct should pass test 4", () => {
+    const grid = [
+      [1, 1],
+      [1, 1],
+    ];
+    const root = construct(grid);
+    const result = quadTreeNodeToArray(root);
+    expect(result).toEqual([[1, 1]]);
   });
 });

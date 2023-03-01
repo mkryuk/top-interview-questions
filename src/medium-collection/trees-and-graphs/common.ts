@@ -122,12 +122,12 @@ export class QuadTreeNode {
   bottomLeft: QuadTreeNode | null;
   bottomRight: QuadTreeNode | null;
   constructor(
-    val?: boolean,
-    isLeaf?: boolean,
-    topLeft?: QuadTreeNode,
-    topRight?: QuadTreeNode,
-    bottomLeft?: QuadTreeNode,
-    bottomRight?: QuadTreeNode,
+    val: boolean,
+    isLeaf: boolean,
+    topLeft?: QuadTreeNode | null,
+    topRight?: QuadTreeNode | null,
+    bottomLeft?: QuadTreeNode | null,
+    bottomRight?: QuadTreeNode | null,
   ) {
     this.val = val === undefined ? false : val;
     this.isLeaf = isLeaf === undefined ? false : isLeaf;

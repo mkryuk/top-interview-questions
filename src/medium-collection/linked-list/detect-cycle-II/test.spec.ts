@@ -25,16 +25,24 @@ describe("Linked List Cycle II", () => {
     let result = detectCycle(root);
     expect(result).toEqual(null);
   });
+
+  it("detectCycle should return null for head = [], pos = -1", () => {
+    const head: number[] = [];
+    const pos = -1;
+    let root = createList(head, pos);
+    let result = detectCycle(root);
+    expect(result).toEqual(null);
+  });
 });
 
 function createList(nodes: number[], pos: number): ListNode | null {
   let root = arrayToList(nodes);
-  if (root === null) {
+  if (root === null || pos === -1) {
     return root;
   }
   let nodeTo: ListNode | null = root;
 
-  for (let i = 0; i <= pos; i++) {
+  for (let i = 0; i < pos; i++) {
     nodeTo = nodeTo!.next ?? null;
   }
   let tail = root;

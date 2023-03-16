@@ -15,4 +15,11 @@ describe("Check Completeness of a Binary Tree", () => {
     const result = isCompleteTree(node);
     expect(result).toBeFalse();
   });
+
+  it("isCompleteTree should return false for root = [1,2,3,5,null,7]", () => {
+    const root = [1, 2, 3, 5, null, 7];
+    const node = arrayToTreeNode(root);
+    const result = isCompleteTree(node);
+    expect(result).toBeFalse();
+  });
 });

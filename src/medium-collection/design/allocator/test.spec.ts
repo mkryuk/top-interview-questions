@@ -1,6 +1,6 @@
 import { Allocator } from "./solution";
 
-fdescribe("Design Memory Allocator", () => {
+describe("Design Memory Allocator", () => {
   it("should pass test 1", () => {
     var loc = new Allocator(10);
     expect(loc.allocate(1, 1)).toEqual(0); // The leftmost block's first index is 0. The memory array becomes [1,_,_,_,_,_,_,_,_,_]. We return 0.

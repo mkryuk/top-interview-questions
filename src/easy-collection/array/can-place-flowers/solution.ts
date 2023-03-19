@@ -5,7 +5,7 @@ export function canPlaceFlowers(flowerbed: number[], n: number): boolean {
       const right = i === flowerbed.length - 1 || flowerbed[i + 1] === 0;
       if (left && right) {
         n--;
-        // we move cursor one forward 
+        // we move cursor one forward
         // since we should not place new flower nearby
         i++;
       }

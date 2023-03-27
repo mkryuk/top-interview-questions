@@ -12,4 +12,16 @@ describe("Minimize Maximum of Array", () => {
     const result = minimizeArrayValue(nums);
     expect(result).toEqual(10);
   });
+
+  it("minimizeArrayValue should return 4 for nums = [1,1,1,10]", () => {
+    const nums = [1, 1, 1, 10];
+    const result = minimizeArrayValue(nums);
+    expect(result).toEqual(4);
+  });
+
+  it("minimizeArrayValue should return 4 for nums = [1,5,1,1,10]", () => {
+    const nums = [1, 5, 1, 1, 10];
+    const result = minimizeArrayValue(nums);
+    expect(result).toEqual(4);
+  });
 });

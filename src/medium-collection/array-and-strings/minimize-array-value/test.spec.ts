@@ -24,4 +24,10 @@ describe("Minimize Maximum of Array", () => {
     const result = minimizeArrayValue(nums);
     expect(result).toEqual(4);
   });
+
+  it("minimizeArrayValue should return 4 for nums = [1,2,1,3,10]", () => {
+    const nums = [1, 2, 1, 3, 10];
+    const result = minimizeArrayValue(nums);
+    expect(result).toEqual(4);
+  });
 });

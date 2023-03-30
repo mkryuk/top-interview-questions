@@ -12,4 +12,16 @@ describe("Rabbits in Forest", () => {
     const result = numRabbits(answers);
     expect(result).toEqual(11);
   });
+
+  it("numRabbits should return 20 answers = [1,2,3,4,5]", () => {
+    const answers = [1, 2, 3, 4, 5];
+    const result = numRabbits(answers);
+    expect(result).toEqual(20);
+  });
+
+  it("numRabbits should return 7 answers = [1,1,1,2,2]", () => {
+    const answers = [1, 1, 1, 2, 2];
+    const result = numRabbits(answers);
+    expect(result).toEqual(7);
+  });
 });

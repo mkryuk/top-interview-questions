@@ -14,6 +14,14 @@ describe("Grumpy Bookstore Owner", () => {
     const grumpy = [0];
     const minutes = 1;
     const result = maxSatisfied(customers, grumpy, minutes);
-    expect(result).toEqual(11);
+    expect(result).toEqual(1);
+  });
+
+  it("maxSatisfied should pass test 3", () => {
+    const customers = [3, 8, 8, 7, 1];
+    const grumpy = [1, 1, 1, 1, 1];
+    const minutes = 3;
+    const result = maxSatisfied(customers, grumpy, minutes);
+    expect(result).toEqual(23);
   });
 });

@@ -15,9 +15,9 @@ describe("", () => {
     const result = findTilt(root);
     expect(result).toEqual(15);
   });
-  
+
   it("findTilt should return 9 for root = [21,7,14,1,1,2,2,3,3]", () => {
-    const nodes = [21, 7, 14, 1, 1, 2, 2, 3, 3]n;
+    const nodes = [21, 7, 14, 1, 1, 2, 2, 3, 3];
     const root = arrayToTreeNode(nodes);
     const result = findTilt(root);
     expect(result).toEqual(9);

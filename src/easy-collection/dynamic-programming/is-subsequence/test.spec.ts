@@ -14,4 +14,11 @@ describe("Is Subsequence", () => {
     const result = isSubsequence(s, t);
     expect(result).toBeFalse();
   });
+
+  it('isSubsequence should return false for s = "aaaaaa", t = "bbaaaa"', () => {
+    const s = "aaaaaa";
+    const t = "bbaaaa";
+    const result = isSubsequence(s, t);
+    expect(result).toBeFalse();
+  });
 });

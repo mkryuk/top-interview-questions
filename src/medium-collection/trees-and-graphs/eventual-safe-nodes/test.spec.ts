@@ -12,4 +12,10 @@ describe("Find Eventual Safe States", () => {
     const result = eventualSafeNodes(graph);
     expect(result).toEqual([4]);
   });
+
+  it("eventualSafeNodes should return [0,1,2,3,4] for graph = [[],[0,2,3,4],[3],[4],[]]", () => {
+    const graph = [[], [0, 2, 3, 4], [3], [4], []];
+    const result = eventualSafeNodes(graph);
+    expect(result).toEqual([0, 1, 2, 3, 4]);
+  });
 });

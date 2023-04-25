@@ -12,4 +12,16 @@ describe("Add Digits", () => {
     const result = addDigits(num);
     expect(result).toEqual(0);
   });
+
+  it("addDigits should return 6 for num = 123", () => {
+    const num = 123;
+    const result = addDigits(num);
+    expect(result).toEqual(6);
+  });
+
+  it("addDigits should return 1 for num = 1", () => {
+    const num = 1;
+    const result = addDigits(num);
+    expect(result).toEqual(1);
+  });
 });

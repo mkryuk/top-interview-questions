@@ -1,18 +1,26 @@
 export function maxVowels(s: string, k: number): number {
-  let vowelCount = 0;
-  let maxVowelCount = 0;
-  let vowels = new Set<string>(["a", "e", "i", "o", "u"]);
-  for (let i = 0; i < s.length; i++) {
+  let vowelsCount = 0;
+  let maxVowelsCount = 0;
+  const vowels = new Set<string>(["a", "e", "i", "o", "u"]);
+
+  // Count vowels in the first window
+  for (let i = 0; i < k; i++) {
     if (vowels.has(s[i])) {
-      vowelCount++;
+      vowelsCount++;
     }
-    if (s[i - k] && vowels.has(s[i - k])) {
-      vowelCount--;
-    }
-    if (vowelCount === k) {
-      return k;
-    }
-    maxVowelCount = Math.max(vowelCount, maxVowelCount);
   }
-  return maxVowelCount;
+  maxVowelsCount = vowelsCount;
+
+  // Slide the window and update the count
+  for (let i = k; i < s.length; i++) {
+    if (vowels.has(s[i])) {
+      vowelsCount++;
+    }
+    if (vowels.has(s[i - k])) {
+      vowelsCount--;
+    }
+    maxVowelsCount = Math.max(vowelsCount, maxVowelsCount);
+  }
+
+  return maxVowelsCount;
 }

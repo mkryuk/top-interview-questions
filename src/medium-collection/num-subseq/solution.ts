@@ -1,4 +1,4 @@
-function numSubseq(nums: number[], target: number): number {
+export function numSubseq(nums: number[], target: number): number {
   // Sort the input array nums in ascending order
   nums.sort((a, b) => a - b);
 

@@ -21,4 +21,18 @@ describe("Check If Two String Arrays are Equivalent", () => {
     const result = arrayStringsAreEqual(word1, word2);
     expect(result).toBeTrue();
   });
+
+  it('arrayStringsAreEqual should return false for word1  = ["abc","d","defg"], word2 = ["abcddef"]', () => {
+    const word1 = ["abc", "d", "defg"];
+    const word2 = ["abcddef"];
+    const result = arrayStringsAreEqual(word1, word2);
+    expect(result).toBeFalse();
+  });
+
+  it('arrayStringsAreEqual should return false for word1  = ["abc","d","efg"], word2 = ["zbcdefg"]', () => {
+    const word1 = ["abc", "d", "efg"];
+    const word2 = ["zbcdefg"];
+    const result = arrayStringsAreEqual(word1, word2);
+    expect(result).toBeFalse();
+  });
 });

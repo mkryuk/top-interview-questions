@@ -6,8 +6,8 @@ export function ambiguousCoordinates(s: string): string[] {
     let left = str.substring(0, i);
     let right = str.substring(i);
 
-    let leftCombinations = insertDecimal(left);
-    let rightCombinations = insertDecimal(right);
+    let leftCombinations = dotCombinations(left);
+    let rightCombinations = dotCombinations(right);
 
     for (let l of leftCombinations) {
       for (let r of rightCombinations) {
@@ -19,9 +19,9 @@ export function ambiguousCoordinates(s: string): string[] {
   return result;
 }
 
-function insertDecimal(s: string): string[] {
+function dotCombinations(s: string): string[] {
   let result: string[] = [];
-  if (isValid(s, true)) {
+  if (isValidInteger(s)) {
     result.push(s); // Push s if it is valid without decimal point
   }
   if (s !== "0") {
@@ -29,7 +29,7 @@ function insertDecimal(s: string): string[] {
     for (let i = 1; i < s.length; i++) {
       let integerPart = s.substring(0, i);
       let decimalPart = s.substring(i);
-      if (isValid(integerPart, true) && isValid(decimalPart, false)) {
+      if (isValidInteger(integerPart) && isValidDecimal(decimalPart)) {
         result.push(integerPart + "." + decimalPart);
       }
     }
@@ -38,12 +38,10 @@ function insertDecimal(s: string): string[] {
   return result;
 }
 
-function isValid(s: string, isIntegerPart: boolean): boolean {
-  if (isIntegerPart && s.length > 1 && s[0] === "0") {
-    return false;
-  } else if (!isIntegerPart && s[s.length - 1] === "0") {
-    return false;
-  }
+function isValidInteger(s: string): boolean {
+  return !(s.length > 1 && s[0] === "0");
+}
 
-  return true;
+function isValidDecimal(s: string): boolean {
+  return !(s[s.length - 1] === "0");
 }

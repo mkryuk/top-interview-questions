@@ -1,4 +1,4 @@
-import { KthLargest } from "./solution";
+import { KthLargest } from "./solution-heap";
 
 describe("Kth Largest Element in a Stream:", () => {
   it("should return [null, 4, 5, 5, 8, 8] for [[3, [4, 5, 8, 2]], [3], [5], [10], [9], [4]]", () => {

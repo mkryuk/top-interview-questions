@@ -1,7 +1,14 @@
 export class KthLargest {
-  constructor(k: number, nums: number[]) {}
+  kIndex: number;
+  nums: number[];
+  constructor(k: number, nums: number[]) {
+    this.kIndex = k - 1;
+    this.nums = nums;
+  }
 
   add(val: number): number {
-    return val;
+    this.nums.push(val);
+    this.nums.sort((a, b) => b - a);
+    return this.nums[this.kIndex];
   }
 }

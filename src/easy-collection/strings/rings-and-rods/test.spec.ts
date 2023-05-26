@@ -16,6 +16,6 @@ describe("Rings and Rods", () => {
   it('countPoints should return 0 for rings = "G4"', () => {
     const rings = "G4";
     const result = countPoints(rings);
-    expect(result).toEqual(1);
+    expect(result).toEqual(0);
   });
 });

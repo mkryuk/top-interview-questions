@@ -12,13 +12,13 @@ describe("Walking Robot Simulation:", () => {
     const commands = [4, -1, 4, -2, 4];
     const obstacles = [[2, 4]];
     const result = robotSim(commands, obstacles);
-    expect(result).toEqual(25);
+    expect(result).toEqual(65);
   });
 
   it("robotSim should return 36 for commands = [6,-1,-1,6], obstacles = []", () => {
     const commands = [6, -1, -1, 6];
     const obstacles: number[][] = [];
     const result = robotSim(commands, obstacles);
-    expect(result).toEqual(25);
+    expect(result).toEqual(36);
   });
 });

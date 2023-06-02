@@ -29,4 +29,17 @@ describe("Shortest Path in Binary Matrix:", () => {
     const result = shortestPathBinaryMatrix(grid);
     expect(result).toEqual(-1);
   });
+
+  it("shortestPathBinaryMatrix should return 8 for test 4", () => {
+    const grid = [
+      [0, 0, 1, 1, 0, 0],
+      [0, 0, 0, 0, 1, 1],
+      [1, 0, 1, 1, 0, 0],
+      [0, 0, 1, 1, 0, 0],
+      [0, 0, 0, 0, 0, 0],
+      [0, 0, 1, 0, 0, 0],
+    ];
+    const result = shortestPathBinaryMatrix(grid);
+    expect(result).toEqual(8);
+  });
 });

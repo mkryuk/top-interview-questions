@@ -1,4 +1,4 @@
-import { minFlips } from "./solution";
+import { minFlips } from "./solution-bit";
 
 describe("Minimum Flips to Make a OR b Equal to c:", () => {
   it("minFlips should return 3 for a = 2, b = 6, c = 5", () => {

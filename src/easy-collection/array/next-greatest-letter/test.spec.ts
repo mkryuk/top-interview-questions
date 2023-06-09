@@ -21,4 +21,11 @@ describe("Find Smallest Letter Greater Than Target:", () => {
     const result = nextGreatestLetter(letters, target);
     expect(result).toEqual("x");
   });
+
+  it('nextGreatestLetter should return "x" for letters = ["c","f","j"], target = "g"', () => {
+    const letters = ["c", "f", "j"];
+    const target = "g";
+    const result = nextGreatestLetter(letters, target);
+    expect(result).toEqual("j");
+  });
 });

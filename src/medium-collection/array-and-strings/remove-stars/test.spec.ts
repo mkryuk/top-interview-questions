@@ -12,4 +12,10 @@ describe("Removing Stars From a String:", () => {
     const result = removeStars(s);
     expect(result).toEqual("");
   });
+
+  it('removeStars should return "de" for s = "a*bc**def*g*"', () => {
+    const s = "a*bc**def*g*";
+    const result = removeStars(s);
+    expect(result).toEqual("de");
+  });
 });

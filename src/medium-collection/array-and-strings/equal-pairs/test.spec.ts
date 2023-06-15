@@ -11,7 +11,7 @@ describe("Equal Row and Column Pairs:", () => {
     expect(result).toEqual(1);
   });
 
-  it("equalPairs should return 2 for grid = [[3,1,2,2],[1,4,4,5],[2,4,2,2],[2,4,2,2]]", () => {
+  it("equalPairs should return 3 for grid = [[3,1,2,2],[1,4,4,5],[2,4,2,2],[2,4,2,2]]", () => {
     const grid = [
       [3, 1, 2, 2],
       [1, 4, 4, 5],
@@ -19,6 +19,15 @@ describe("Equal Row and Column Pairs:", () => {
       [2, 4, 2, 2],
     ];
     const result = equalPairs(grid);
-    expect(result).toEqual(1);
+    expect(result).toEqual(3);
+  });
+
+  it("equalPairs should return 2 for [[11,1],[1,11]]", () => {
+    const grid = [
+      [11, 1],
+      [1, 11],
+    ];
+    const result = equalPairs(grid);
+    expect(result).toEqual(2);
   });
 });

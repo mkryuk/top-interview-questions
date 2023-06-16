@@ -15,4 +15,11 @@ describe("Minimum Absolute Difference in BST:", () => {
     const result = getMinimumDifference(root);
     expect(result).toEqual(1);
   });
+
+  it("getMinimumDifference should return 1 for root = [11,9,47,null,null,12,49]", () => {
+    const nodes = [11, 9, 47, null, null, 12, 49];
+    const root = arrayToTreeNode(nodes);
+    const result = getMinimumDifference(root);
+    expect(result).toEqual(1);
+  });
 });

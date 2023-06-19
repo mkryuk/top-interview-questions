@@ -15,4 +15,18 @@ describe("Maximum Level Sum of a Binary Tree:", () => {
     const result = maxLevelSum(root);
     expect(result).toEqual(2);
   });
+
+  it("maxLevelSum should return 3 for root = [-100,-200,-300,-20,-5,-10,null]", () => {
+    const nodes = [-100, -200, -300, -20, -5, -10, null];
+    const root = arrayToTreeNode(nodes);
+    const result = maxLevelSum(root);
+    expect(result).toEqual(3);
+  });
+
+  it("maxLevelSum should return 1 for root = [1]", () => {
+    const nodes = [1];
+    const root = arrayToTreeNode(nodes);
+    const result = maxLevelSum(root);
+    expect(result).toEqual(1);
+  });
 });

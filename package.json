@@ -6,15 +6,28 @@
   "scripts": {
     "build": "webpack --config=webpack.config.js",
     "test": "jasmine-ts --config=jasmine.json",
-    "pretty": "prettier --write ."
+    "pretty": "prettier --write .",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write .",
+      "git add"
+    ],
+    "*.md": [
+      "prettier --write .",
+      "git add"
+    ]
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "@types/jasmine": "^3.10.2",
+    "husky": "^8.0.3",
     "jasmine": "^3.10.0",
     "jasmine-spec-reporter": "^7.0.0",
     "jasmine-ts": "^0.4.0",
+    "lint-staged": "^13.2.2",
     "prettier": "2.4.1",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.4.0",

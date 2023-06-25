@@ -2,8 +2,9 @@ import { arrayToTreeNode } from "../common";
 import { pathSum } from "./solution";
 
 describe("", () => {
-  it("pathSum should return [[5,4,11,2],[5,8,4,5]] for root = [5,4,8,11,null,13,4,7,2,null,null,5,1], targetSum = 22", () => {
-    const nodes = [5, 4, 8, 11, null, 13, 4, 7, 2, null, null, 5, 1];
+  it("pathSum should return [[5,4,11,2],[5,8,4,5]] for root = [5,4,8,11,null,13,4,7,2,null,null,null,null,5,1], targetSum = 22", () => {
+    // prettier-ignore
+    const nodes = [5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, null, 5, 1];
     const root = arrayToTreeNode(nodes);
     const targetSum = 22;
     const result = pathSum(root, targetSum);

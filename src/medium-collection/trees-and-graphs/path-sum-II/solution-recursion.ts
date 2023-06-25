@@ -1,9 +1,6 @@
 import { TreeNode } from "../common";
 
 export function pathSum(root: TreeNode | null, targetSum: number): number[][] {
-  if (root === null) {
-    return [];
-  }
   let result: number[][] = [];
   dfs(root, targetSum, 0, [], result);
   return result;
@@ -12,7 +9,7 @@ export function pathSum(root: TreeNode | null, targetSum: number): number[][] {
 function dfs(
   root: TreeNode | null,
   targetSum: number,
-  branshSum: number,
+  branchSum: number,
   branchNodes: number[],
   result: number[][],
 ) {
@@ -20,14 +17,14 @@ function dfs(
     return;
   }
   branchNodes.push(root.val);
-  branshSum += root.val;
+  branchSum += root.val;
   if (root.left !== null) {
-    dfs(root.left, targetSum, branshSum, branchNodes, result);
+    dfs(root.left, targetSum, branchSum, branchNodes, result);
   }
   if (root.right !== null) {
-    dfs(root.right, targetSum, branshSum, branchNodes, result);
+    dfs(root.right, targetSum, branchSum, branchNodes, result);
   }
-  if (!root.left && !root.right && branshSum === targetSum) {
+  if (!root.left && !root.right && branchSum === targetSum) {
     result.push([...branchNodes]);
   }
   branchNodes.pop();

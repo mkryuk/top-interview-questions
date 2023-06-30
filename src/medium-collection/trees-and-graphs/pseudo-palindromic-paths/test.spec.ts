@@ -22,4 +22,11 @@ describe("Pseudo-Palindromic Paths in a Binary Tree:", () => {
     const result = pseudoPalindromicPaths(root);
     expect(result).toEqual(1);
   });
+
+  it("pseudoPalindromicPaths should return 8 for root = [2,2,2,1,2,2,2,1,1,2,2,2,2,2,2]", () => {
+    const nodes = [2, 2, 2, 1, 2, 2, 2, 1, 1, 2, 2, 2, 2, 2, 2];
+    const root = arrayToTreeNode(nodes);
+    const result = pseudoPalindromicPaths(root);
+    expect(result).toEqual(8);
+  });
 });

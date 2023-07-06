@@ -21,4 +21,11 @@ describe("Minimum Size Subarray Sum:", () => {
     const result = minSubArrayLen(target, nums);
     expect(result).toEqual(0);
   });
+
+  it("minSubArrayLen should return 8 for target = 213, nums = [12,28,83,4,25,26,25,2,25,25,25,12]", () => {
+    const target = 213;
+    const nums = [12, 28, 83, 4, 25, 26, 25, 2, 25, 25, 25, 12];
+    const result = minSubArrayLen(target, nums);
+    expect(result).toEqual(8);
+  });
 });

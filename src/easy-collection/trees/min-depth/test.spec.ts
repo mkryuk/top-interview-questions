@@ -9,9 +9,9 @@ describe("Minimum Depth of Binary Tree:", () => {
     expect(result).toEqual(2);
   });
 
-  it("minDepth should return 4 for root = [1,null,2,null,null,null,3,null,null,null,null,null,4]", () => {
+  it("minDepth should return 4 for root = [1,null,2,null,null,null,3,null,null,null,null,null,null,4]", () => {
     //prettier-ignore
-    const nodes = [1, null, 2, null, null, null, 3, null, null ,null ,null ,null, 4];
+    const nodes = [1, null, 2, null, null, null, 3, null, null, null, null, null, null, 4];
     const root = arrayToTreeNode(nodes);
     const result = minDepth(root);
     expect(result).toEqual(4);

@@ -21,4 +21,11 @@ describe("Longest Arithmetic Subsequence of Given Difference:", () => {
     const result = longestSubsequence(arr, difference);
     expect(result).toEqual(4);
   });
+
+  it("longestSubsequence should return 2 for arr = [4,12,10,0,-2,7,-8,9,-9,-12,-12,8,8], difference = 0", () => {
+    const arr = [4, 12, 10, 0, -2, 7, -8, 9, -9, -12, -12, 8, 8];
+    const difference = 0;
+    const result = longestSubsequence(arr, difference);
+    expect(result).toEqual(2);
+  });
 });

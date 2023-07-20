@@ -28,6 +28,6 @@ describe("Non-overlapping Intervals:", () => {
       [2, 3],
     ];
     const result = eraseOverlapIntervals(intervals);
-    expect(result).toEqual(1);
+    expect(result).toEqual(0);
   });
 });

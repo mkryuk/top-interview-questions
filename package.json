@@ -11,12 +11,10 @@
   },
   "lint-staged": {
     "*.ts": [
-      "prettier --write .",
-      "git add"
+      "prettier --write ."
     ],
     "*.md": [
-      "prettier --write .",
-      "git add"
+      "prettier --write ."
     ]
   },
   "author": "",

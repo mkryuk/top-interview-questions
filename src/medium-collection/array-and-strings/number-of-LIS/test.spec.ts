@@ -12,4 +12,10 @@ describe("Number of Longest Increasing Subsequence:", () => {
     const result = findNumberOfLIS(nums);
     expect(result).toEqual(5);
   });
+
+  it("findNumberOfLIS should return 3 for nums = [1,2,4,3,5,4,7,2]", () => {
+    const nums = [1, 2, 4, 3, 5, 4, 7, 2];
+    const result = findNumberOfLIS(nums);
+    expect(result).toEqual(3);
+  });
 });

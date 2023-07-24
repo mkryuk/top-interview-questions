@@ -27,6 +27,20 @@ describe("All Possible Full Binary Trees:", () => {
     });
     expect(compareArrays(resultArrays, [[0, 0, 0]])).toBeTrue();
   });
+
+  it("allPossibleFBT should return correct result for n = 5", () => {
+    const n = 5;
+    const result = allPossibleFBT(n);
+    const resultArrays = result.map((tree) => {
+      return treeNodeToArray(tree);
+    });
+    expect(
+      compareArrays(resultArrays, [
+        [0, 0, 0, null, null, 0, 0],
+        [0, 0, 0, 0, 0],
+      ]),
+    ).toBeTrue();
+  });
 });
 
 function compareArrays(
@@ -39,5 +53,8 @@ function compareArrays(
   let leftStrings = left.map((item) => item.join(","));
   let rightStrings = right.map((item) => item.join(","));
 
-  return leftStrings.every((l) => rightStrings.includes(l));
+  return (
+    leftStrings.every((l) => rightStrings.includes(l)) &&
+    rightStrings.every((r) => leftStrings.includes(r))
+  );
 }

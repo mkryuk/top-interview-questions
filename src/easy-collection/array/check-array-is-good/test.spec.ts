@@ -24,4 +24,10 @@ describe("Check if Array is Good:", () => {
     const result = isGood(nums);
     expect(result).toBeFalse();
   });
+
+  it("isGood should return false for nums = [1, 3, 5, 97, 5]", () => {
+    const nums = [1, 3, 5, 97, 5];
+    const result = isGood(nums);
+    expect(result).toBeFalse();
+  });
 });

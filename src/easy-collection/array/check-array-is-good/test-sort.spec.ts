@@ -1,4 +1,4 @@
-import { isGood } from "./solution";
+import { isGood } from "./solution-sort";
 
 describe("Check if Array is Good:", () => {
   it("isGood should return false for nums = [2, 1, 3]", () => {

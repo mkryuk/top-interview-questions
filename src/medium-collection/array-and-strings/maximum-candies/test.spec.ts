@@ -12,7 +12,7 @@ describe("Maximum Candies Allocated to K Children:", () => {
     const candies = [2, 5];
     const k = 11;
     const result = maximumCandies(candies, k);
-    expect(result).toEqual(5);
+    expect(result).toEqual(0);
   });
 
   it("maximumCandies should return 2 for candies = [2,2,3,4,5], k = 5", () => {
@@ -27,5 +27,19 @@ describe("Maximum Candies Allocated to K Children:", () => {
     const k = 3;
     const result = maximumCandies(candies, k);
     expect(result).toEqual(4);
+  });
+
+  it("maximumCandies should return 3 for candies = [4,7,5], k = 4", () => {
+    const candies = [4, 7, 5];
+    const k = 4;
+    const result = maximumCandies(candies, k);
+    expect(result).toEqual(3);
+  });
+
+  it("maximumCandies should return 2 for candies = [1,2,3,4,5] k = 5", () => {
+    const candies = [1, 2, 3, 4, 5];
+    const k = 5;
+    const result = maximumCandies(candies, k);
+    expect(result).toEqual(2);
   });
 });

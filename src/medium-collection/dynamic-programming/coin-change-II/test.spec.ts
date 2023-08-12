@@ -21,4 +21,11 @@ describe("Coin Change II:", () => {
     const result = change(amount, coins);
     expect(result).toEqual(1);
   });
+
+  it("change should return 35502874 for amount = 500, coins = [3,5,7,8,9,10,11]", () => {
+    const amount = 500;
+    const coins = [3, 5, 7, 8, 9, 10, 11];
+    const result = change(amount, coins);
+    expect(result).toEqual(35502874);
+  });
 });

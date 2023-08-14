@@ -2,6 +2,7 @@ export function change(amount: number, coins: number[]): number {
   let memo = Array.from({ length: coins.length + 1 }, () =>
     new Array(amount + 1).fill(0),
   );
+  //  we can always make up the amount 0 by not selecting any coins.
   for (let i = 0; i < coins.length; i++) {
     memo[i][0] = 1;
   }

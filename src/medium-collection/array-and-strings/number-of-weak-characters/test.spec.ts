@@ -41,4 +41,19 @@ describe("The Number of Weak Characters in the Game:", () => {
     const result = numberOfWeakCharacters(properties);
     expect(result).toEqual(3);
   });
+
+  it("numberOfWeakCharacters should return 3 for properties = [[1,5],[1,4],[3,2],[1,3],[2,6],[5,2],[2,7],[1,11]]", () => {
+    const properties = [
+      [1, 5],
+      [1, 4],
+      [3, 2],
+      [1, 3],
+      [2, 6],
+      [5, 2],
+      [2, 7],
+      [1, 11],
+    ];
+    const result = numberOfWeakCharacters(properties);
+    expect(result).toEqual(3);
+  });
 });

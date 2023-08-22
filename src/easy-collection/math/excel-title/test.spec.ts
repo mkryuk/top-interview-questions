@@ -18,4 +18,22 @@ describe("Excel Sheet Column Title:", () => {
     const result = convertToTitle(columnNumber);
     expect(result).toEqual("ZY");
   });
+
+  it("convertToTitle should return 'ZZ' for columnNumber = 702", () => {
+    const columnNumber = 702;
+    const result = convertToTitle(columnNumber);
+    expect(result).toEqual("ZZ");
+  });
+
+  it("convertToTitle should return 'YZ' for columnNumber = 676", () => {
+    const columnNumber = 676;
+    const result = convertToTitle(columnNumber);
+    expect(result).toEqual("YZ");
+  });
+
+  it("convertToTitle should return 'ZZZ' for columnNumber = 18278", () => {
+    const columnNumber = 18278;
+    const result = convertToTitle(columnNumber);
+    expect(result).toEqual("ZZZ");
+  });
 });

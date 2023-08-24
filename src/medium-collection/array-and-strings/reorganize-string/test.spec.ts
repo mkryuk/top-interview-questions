@@ -12,4 +12,22 @@ describe("Reorganize String", () => {
     const result = reorganizeString(s);
     expect(result).toEqual("");
   });
+
+  it('reorganizeString should return "vlvov" for s = "vvvlo"', () => {
+    const s = "vvvlo";
+    const result = reorganizeString(s);
+    expect(result).toEqual("vlvov");
+  });
+
+  it('reorganizeString should return "fpfsf" for s = "sfffp"', () => {
+    const s = "sfffp";
+    const result = reorganizeString(s);
+    expect(result).toEqual("fsfpf");
+  });
+
+  it('reorganizeString should return "abcabcabcabcdabcdea" for s = "aaaaaabbbbbcccccdde"', () => {
+    const s = "aaaaaabbbbbcccccdde";
+    const result = reorganizeString(s);
+    expect(result).toEqual("abcabcabcabcdabcdea");
+  });
 });

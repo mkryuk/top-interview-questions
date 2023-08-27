@@ -52,4 +52,26 @@ describe("Remove Covered Intervals:", () => {
     const result = removeCoveredIntervals(intervals);
     expect(result).toEqual(2);
   });
+
+  it("removeCoveredIntervals should return 4 for intervals = [[1,3],[2,4],[3,5],[4,6]]", () => {
+    const intervals = [
+      [1, 3],
+      [2, 4],
+      [3, 5],
+      [4, 6],
+    ];
+    const result = removeCoveredIntervals(intervals);
+    expect(result).toEqual(4);
+  });
+
+  it("removeCoveredIntervals should return 4 for intervals = [[5,7],[4,6],[3,5],[2,4]]", () => {
+    const intervals = [
+      [5, 7],
+      [4, 6],
+      [3, 5],
+      [2, 4],
+    ];
+    const result = removeCoveredIntervals(intervals);
+    expect(result).toEqual(4);
+  });
 });

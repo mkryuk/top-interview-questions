@@ -1,22 +1,18 @@
 export function removeCoveredIntervals(intervals: number[][]): number {
-  let sortedByLeft = [...intervals].sort((a, b) => b[0] - a[0] || a[1] - b[1]);
-  let sortedByRight = [...intervals].sort((a, b) => b[1] - a[1] || a[0] - b[0]);
+  // Sort intervals by their start points, then by end points in descending order
+  intervals.sort((a, b) => a[0] - b[0] || b[1] - a[1]);
+
   let result = 0;
-  let lIndex = 0;
-  let rIndex = 0;
-  while (lIndex < sortedByLeft.length && rIndex < sortedByRight.length) {
-    if (
-      sortedByLeft[lIndex][0] === sortedByRight[rIndex][0] &&
-      sortedByLeft[lIndex][1] === sortedByRight[rIndex][1]
-    ) {
+  let end = 0; // Keep track of the maximum end point so far
+
+  for (let i = 0; i < intervals.length; i++) {
+    // If the end point of the current interval is greater than the maximum so far,
+    // then this interval is not covered by any previous one
+    if (intervals[i][1] > end) {
       result++;
-      lIndex++;
-      rIndex++;
-    } else if (sortedByLeft[lIndex][0] < sortedByRight[rIndex][0]) {
-      rIndex++;
-    } else {
-      lIndex++;
+      end = intervals[i][1];
     }
   }
+
   return result;
 }

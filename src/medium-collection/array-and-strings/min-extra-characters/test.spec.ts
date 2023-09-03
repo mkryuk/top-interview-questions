@@ -8,10 +8,24 @@ describe("Extra Characters in a String:", () => {
     expect(result).toEqual(1);
   });
 
-  it('minExtraChar should return 3 for s = "leetscode", dictionary = ["leet","code","leetcode"]', () => {
+  it('minExtraChar should return 3 for s = "sayhelloworld", dictionary = ["hello", "world"]', () => {
     const s = "sayhelloworld";
     const dictionary = ["hello", "world"];
     const result = minExtraChar(s, dictionary);
     expect(result).toEqual(3);
+  });
+
+  it('minExtraChar should return 0 for s = "sayhelloworld", dictionary = ["hello", "world"]', () => {
+    const s = "sayhelloworld";
+    const dictionary = ["hello", "world", "say"];
+    const result = minExtraChar(s, dictionary);
+    expect(result).toEqual(0);
+  });
+
+  it('minExtraChar should return 2 for s = "sayhelloworld", dictionary = ["hello", "world", "a"]', () => {
+    const s = "sayhelloworld";
+    const dictionary = ["hello", "world", "a"];
+    const result = minExtraChar(s, dictionary);
+    expect(result).toEqual(2);
   });
 });

@@ -28,4 +28,18 @@ describe("Extra Characters in a String:", () => {
     const result = minExtraChar(s, dictionary);
     expect(result).toEqual(2);
   });
+
+  it('minExtraChar should return 3 for s = "sayhelloworldagain", dictionary = ["hello","world", "a","in"]', () => {
+    const s = "sayhelloworldagain";
+    const dictionary = ["hello", "world", "a", "in"];
+    const result = minExtraChar(s, dictionary);
+    expect(result).toEqual(3);
+  });
+
+  it('minExtraChar should return 0 for s = "sayhelloworld", dictionary = ["ayhelloworl","say","hello","world"]', () => {
+    const s = "sayhelloworld";
+    const dictionary = ["ayhelloworl", "say", "hello", "world"];
+    const result = minExtraChar(s, dictionary);
+    expect(result).toEqual(0);
+  });
 });

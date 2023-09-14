@@ -1,15 +1,13 @@
 export function waysToSplitArray(nums: number[]): number {
   let result = 0;
-  let leftSum = new Array(nums.length);
-  let rightSum = new Array(nums.length);
-  leftSum[0] = nums[0];
-  rightSum[nums.length - 1] = 0;
-  for (let i = 1, j = nums.length - 2; i < nums.length; i++, j--) {
-    leftSum[i] = leftSum[i - 1] + nums[i];
-    rightSum[j] = rightSum[j + 1] + nums[j + 1];
-  }
-  for (let i = 0; i < nums.length - 1; i++) {
-    if (leftSum[i] >= rightSum[i]) {
+  const n = nums.length;
+  let totalSum = nums.reduce((sum, num) => sum + num, 0);
+  const halfSum = totalSum / 2;
+  let leftSum = 0;
+  for (let i = 0; i < n - 1; i++) {
+    leftSum += nums[i];
+    totalSum -= nums[i];
+    if (leftSum >= totalSum) {
       result++;
     }
   }

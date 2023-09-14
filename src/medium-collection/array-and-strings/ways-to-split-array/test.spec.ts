@@ -12,4 +12,10 @@ describe("Number of Ways to Split Array:", () => {
     const result = waysToSplitArray(nums);
     expect(result).toEqual(2);
   });
+
+  it("waysToSplitArray should return 0 for nums = [-2,-1]", () => {
+    const nums = [-2, -1];
+    const result = waysToSplitArray(nums);
+    expect(result).toEqual(0);
+  });
 });

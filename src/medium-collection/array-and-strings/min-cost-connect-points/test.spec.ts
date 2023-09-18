@@ -41,7 +41,7 @@ describe("Min Cost to Connect All Points:", () => {
     expect(result).toEqual(0);
   });
 
-  it("minCostConnectPoints should return 0 for points = [[0,0], [1,1], [2,2], [3,3], [4,4]]", () => {
+  it("minCostConnectPoints should return 8 for points = [[0,0], [1,1], [2,2], [3,3], [4,4]]", () => {
     const points = [
       [0, 0],
       [1, 1],
@@ -50,7 +50,7 @@ describe("Min Cost to Connect All Points:", () => {
       [4, 4],
     ];
     const result = minCostConnectPoints(points);
-    expect(result).toEqual(4);
+    expect(result).toEqual(8);
   });
 
   it("minCostConnectPoints should return 20 for points = [[3,0], [3,5], [3,10], [3,15], [3,20]]", () => {
@@ -88,7 +88,7 @@ describe("Min Cost to Connect All Points:", () => {
     expect(result).toEqual(15);
   });
 
-  it("minCostConnectPoints should return 24 for points = [[0,0], [0,7], [5,7], [5,0]]", () => {
+  it("minCostConnectPoints should return 17 for points = [[0,0], [0,7], [5,7], [5,0]]", () => {
     const points = [
       [0, 0],
       [0, 7],
@@ -96,6 +96,6 @@ describe("Min Cost to Connect All Points:", () => {
       [5, 0],
     ];
     const result = minCostConnectPoints(points);
-    expect(result).toEqual(15);
+    expect(result).toEqual(17);
   });
 });

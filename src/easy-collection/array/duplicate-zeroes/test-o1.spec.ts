@@ -1,4 +1,4 @@
-import { duplicateZeros } from "./solution";
+import { duplicateZeros } from "./solution-o1";
 
 describe("Duplicate Zeros", () => {
   it("duplicateZeros should return [1,0,0,2,3,0,0,4] for arr = [1,0,2,3,0,4,5,0]", () => {

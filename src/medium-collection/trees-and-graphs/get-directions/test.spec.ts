@@ -47,21 +47,39 @@ describe("Step-By-Step Directions From a Binary Tree Node to Another:", () => {
     expect(result).toEqual("UULL");
   });
 
-  it('getDirections should return "LLL" for root = [1,2,2,4,null,5,6], startValue = 1, destValue = 4', () => {
-    const nodes = [1, 2, 2, 4, null, 5, 6];
+  it('getDirections should return "LL" for root = [1,2,3,4,null,5,6], startValue = 1, destValue = 4', () => {
+    const nodes = [1, 2, 3, 4, null, 5, 6];
     const startValue = 1;
     const destValue = 4;
     const root = arrayToTreeNode(nodes);
     const result = getDirections(root, startValue, destValue);
-    expect(result).toEqual("LLL");
+    expect(result).toEqual("LL");
   });
 
-  it('getDirections should return "RRR" for root = [1,2,2,4,null,5,6], startValue = 1, destValue = 6', () => {
+  it('getDirections should return "RR" for root = [1,2,3,4,null,5,6], startValue = 1, destValue = 6', () => {
     const nodes = [1, 2, 3, 4, null, 5, 6];
     const startValue = 1;
     const destValue = 6;
     const root = arrayToTreeNode(nodes);
     const result = getDirections(root, startValue, destValue);
-    expect(result).toEqual("RRR");
+    expect(result).toEqual("RR");
+  });
+
+  it('getDirections should return "RRR" for root = [1,2,3,4,5,6,7], startValue = 6, destValue = 7', () => {
+    const nodes = [1, 2, 3, 4, 5, 6, 7];
+    const startValue = 6;
+    const destValue = 7;
+    const root = arrayToTreeNode(nodes);
+    const result = getDirections(root, startValue, destValue);
+    expect(result).toEqual("UR");
+  });
+
+  it('getDirections should return "RRR" for root = [1,2,3,4,5,6,7], startValue = 7, destValue = 6', () => {
+    const nodes = [1, 2, 3, 4, 5, 6, 7];
+    const startValue = 7;
+    const destValue = 6;
+    const root = arrayToTreeNode(nodes);
+    const result = getDirections(root, startValue, destValue);
+    expect(result).toEqual("UL");
   });
 });

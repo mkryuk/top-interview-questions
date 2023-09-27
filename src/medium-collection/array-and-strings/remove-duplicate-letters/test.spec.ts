@@ -30,4 +30,10 @@ describe("Remove Duplicate Letters:", () => {
     const result = removeDuplicateLetters(s);
     expect(result).toEqual("acb");
   });
+
+  it('removeDuplicateLetters should return "abcd" for s = "cdacbcbd"', () => {
+    const s = "cdacbcbd";
+    const result = removeDuplicateLetters(s);
+    expect(result).toEqual("abcd");
+  });
 });

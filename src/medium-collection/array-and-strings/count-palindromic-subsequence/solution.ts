@@ -12,7 +12,7 @@ export function countPalindromicSubsequence(s: string): number {
     let [_, positions] = arr[i];
     let first = positions[0];
     let last = positions[positions.length - 1];
-    result += new Set(s.slice(first + 1, last)).size;
+    result += new Set(s.slice(first + 1, last).split("")).size;
   }
   return result;
 }

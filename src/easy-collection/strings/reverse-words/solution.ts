@@ -1,3 +1,6 @@
 export function reverseWords(s: string): string {
-  return "";
+  return s
+    .split(" ")
+    .map((v) => v.split("").reverse().join(""))
+    .join(" ");
 }

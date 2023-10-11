@@ -1,4 +1,4 @@
-import { findLongestChain } from "./solution";
+import { findLongestChain } from "./solution-one-pass";
 
 describe("Maximum Length of Pair Chain:", () => {
   it("findLongestChain should return 2 for pairs = [[1,2],[2,3],[3,4]]", () => {

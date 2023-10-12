@@ -17,4 +17,12 @@ describe("Find in Mountain Array:", () => {
     const result = findInMountainArray(target, mountainArray);
     expect(result).toEqual(-1);
   });
+
+  it("findInMountainArray should return -1 for array = [1,5,2], target = 0", () => {
+    const array = [1, 5, 2];
+    const target = 0;
+    const mountainArray = new MountainArray(array);
+    const result = findInMountainArray(target, mountainArray);
+    expect(result).toEqual(-1);
+  });
 });

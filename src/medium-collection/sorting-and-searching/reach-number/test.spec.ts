@@ -12,4 +12,10 @@ describe("Reach a Number:", () => {
     const result = reachNumber(target);
     expect(result).toEqual(2);
   });
+
+  it("reachNumber should return 2 for target = -3", () => {
+    const target = -3;
+    const result = reachNumber(target);
+    expect(result).toEqual(2);
+  });
 });

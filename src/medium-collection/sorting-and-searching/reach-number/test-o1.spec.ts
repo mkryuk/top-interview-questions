@@ -1,4 +1,4 @@
-import { reachNumber } from "./solution";
+import { reachNumber } from "./solution-o1";
 
 describe("Reach a Number:", () => {
   it("reachNumber should return 3 for target = 2", () => {

@@ -15,4 +15,12 @@ describe("Count Nodes Equal to Average of Subtree:", () => {
     const result = averageOfSubtree(root);
     expect(result).toEqual(1);
   });
+
+  it("averageOfSubtree should return 1 for root = [1,null,3,null,1,null,3]", () => {
+    //prettier-ignore
+    const nodes = [1, null, 3, null, null, null, 1, null, null, null , null, null, null, null, 3];
+    const root = arrayToTreeNode(nodes);
+    const result = averageOfSubtree(root);
+    expect(result).toEqual(1);
+  });
 });

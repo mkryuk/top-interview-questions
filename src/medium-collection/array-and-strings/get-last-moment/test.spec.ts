@@ -24,4 +24,12 @@ describe("Last Moment Before All Ants Fall Out of a Plank:", () => {
     const result = getLastMoment(n, left, right);
     expect(result).toEqual(7);
   });
+
+  it("getLastMoment should return 17 for n = 20, left = [4,7,15], right = [9,3,13,10]", () => {
+    const n = 20;
+    const left = [4, 7, 15];
+    const right = [9, 3, 13, 10];
+    const result = getLastMoment(n, left, right);
+    expect(result).toEqual(17);
+  });
 });

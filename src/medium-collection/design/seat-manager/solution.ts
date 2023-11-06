@@ -1,9 +1,19 @@
-export class SeatManager {
-  constructor(n: number) {}
+import { Heap } from "../../../hard-collection/design/heap/heap";
 
-  reserve(): number {
-    return 0;
+export class SeatManager {
+  heap: Heap<number>;
+  constructor(n: number) {
+    this.heap = new Heap((left, right) => left - right);
+    for (let i = 1; i <= n; i++) {
+      this.heap.push(i);
+    }
   }
 
-  unreserve(seatNumber: number): void {}
+  reserve(): number {
+    return this.heap.pop()!;
+  }
+
+  unreserve(seatNumber: number): void {
+    this.heap.push(seatNumber);
+  }
 }

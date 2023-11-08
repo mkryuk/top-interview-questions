@@ -30,4 +30,14 @@ describe("Determine if a Cell Is Reachable at a Given Time:", () => {
     const result = isReachableAtTime(sx, sy, fx, fy, t);
     expect(result).toBeTrue();
   });
+
+  it("isReachableAtTime should return false for sx = 1, sy = 2, fx = 1, fy = 2, t = 1", () => {
+    const sx = 1;
+    const sy = 2;
+    const fx = 1;
+    const fy = 2;
+    const t = 1;
+    const result = isReachableAtTime(sx, sy, fx, fy, t);
+    expect(result).toBeFalse();
+  });
 });

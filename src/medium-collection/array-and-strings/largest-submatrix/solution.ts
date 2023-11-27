@@ -15,7 +15,6 @@ export function largestSubmatrix(matrix: number[][]): number {
   // Sort each row in non-increasing order
   for (let i = 0; i < m; i++) {
     matrix[i].sort((a, b) => b - a);
-
     // Calculate the maximum area for each position in the sorted row
     for (let j = 0; j < n; j++) {
       // The area is the height of the bar multiplied by its width

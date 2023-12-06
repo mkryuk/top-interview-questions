@@ -18,4 +18,10 @@ describe("Calculate Money in Leetcode Bank:", () => {
     const result = totalMoney(n);
     expect(result).toEqual(96);
   });
+
+  it("totalMoney should return 135 for n = 26", () => {
+    const n = 26;
+    const result = totalMoney(n);
+    expect(result).toEqual(135);
+  });
 });

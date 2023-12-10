@@ -21,4 +21,11 @@ describe("Check If a Word Occurs As a Prefix of Any Word in a Sentence:", () => 
     const result = isPrefixOfWord(sentence, searchWord);
     expect(result).toEqual(-1);
   });
+
+  it('isPrefixOfWord should return -1 for sentence = "hello from the other side", searchWord = "they"', () => {
+    const sentence = "hello from the other side";
+    const searchWord = "they";
+    const result = isPrefixOfWord(sentence, searchWord);
+    expect(result).toEqual(-1);
+  });
 });

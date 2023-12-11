@@ -1,3 +1,10 @@
 export function countSeniors(details: string[]): number {
-  return 0;
+  let result = 0;
+  for (const person of details) {
+    let age = parseInt(person.slice(11, 13), 10);
+    if (age > 60) {
+      result++;
+    }
+  }
+  return result;
 }

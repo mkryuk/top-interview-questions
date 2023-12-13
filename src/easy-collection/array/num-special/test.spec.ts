@@ -20,4 +20,26 @@ describe("Special Positions in a Binary Matrix:", () => {
     const result = numSpecial(mat);
     expect(result).toEqual(3);
   });
+
+  it("numSpecial should return 1 for mat = [[0,0],[0,0],[1,0]]", () => {
+    const mat = [
+      [0, 0],
+      [0, 0],
+      [1, 0],
+    ];
+    const result = numSpecial(mat);
+    expect(result).toEqual(1);
+  });
+
+  it("numSpecial should return 1 for mat = [[0,0,0,0,0,1,0,0],[0,0,0,0,1,0,0,1],[0,0,0,0,1,0,0,0],[1,0,0,0,1,0,0,0],[0,0,1,1,0,0,0,0]]", () => {
+    const mat = [
+      [0, 0, 0, 0, 0, 1, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 1],
+      [0, 0, 0, 0, 1, 0, 0, 0],
+      [1, 0, 0, 0, 1, 0, 0, 0],
+      [0, 0, 1, 1, 0, 0, 0, 0],
+    ];
+    const result = numSpecial(mat);
+    expect(result).toEqual(1);
+  });
 });

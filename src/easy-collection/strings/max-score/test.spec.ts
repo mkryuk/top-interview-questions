@@ -18,4 +18,10 @@ describe("Maximum Score After Splitting a String:", () => {
     const result = maxScore(s);
     expect(result).toEqual(3);
   });
+
+  it('maxScore should return 1 for s = "00"', () => {
+    const s = "00";
+    const result = maxScore(s);
+    expect(result).toEqual(1);
+  });
 });

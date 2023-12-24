@@ -18,4 +18,10 @@ describe("Minimum Changes To Make Alternating Binary String:", () => {
     const result = minOperations(s);
     expect(result).toEqual(2);
   });
+
+  it('minOperations should return 2 for s = "110010"', () => {
+    const s = "110010";
+    const result = minOperations(s);
+    expect(result).toEqual(2);
+  });
 });

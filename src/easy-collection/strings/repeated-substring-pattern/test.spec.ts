@@ -18,4 +18,10 @@ describe("Repeated Substring Pattern:", () => {
     const result = repeatedSubstringPattern(s);
     expect(result).toBeTrue();
   });
+
+  it('repeatedSubstringPattern should return true for s = "abcabcabc"', () => {
+    const s = "abcabcabc";
+    const result = repeatedSubstringPattern(s);
+    expect(result).toBeTrue();
+  });
 });

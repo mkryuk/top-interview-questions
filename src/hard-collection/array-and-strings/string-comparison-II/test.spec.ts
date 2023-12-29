@@ -21,4 +21,11 @@ describe("String Compression II:", () => {
     const result = getLengthOfOptimalCompression(s, k);
     expect(result).toEqual(3);
   });
+
+  it('getLengthOfOptimalCompression should return 2 for s = "aaaaaaaaaaa", k = 2', () => {
+    const s = "aaaaaaaaaaa";
+    const k = 2;
+    const result = getLengthOfOptimalCompression(s, k);
+    expect(result).toEqual(2);
+  });
 });

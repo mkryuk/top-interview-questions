@@ -19,6 +19,13 @@ describe("Minimum Difficulty of a Job Schedule:", () => {
     const jobDifficulty = [1, 1, 1];
     const d = 3;
     const result = minDifficulty(jobDifficulty, d);
-    expect(result).toEqual(7);
+    expect(result).toEqual(3);
+  });
+
+  it("minDifficulty should return 15 for jobDifficulty = [7,1,7,1,7,1], d = 3", () => {
+    const jobDifficulty = [7, 1, 7, 1, 7, 1];
+    const d = 3;
+    const result = minDifficulty(jobDifficulty, d);
+    expect(result).toEqual(15);
   });
 });

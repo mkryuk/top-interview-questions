@@ -1,5 +1,4 @@
-import { arrayToTreeNode } from "../common";
-import { amountOfTime } from "./solution";
+import { amountOfTime, arrayToTreeNode } from "./solution";
 
 describe("Amount of Time for Binary Tree to Be Infected:", () => {
   it("amountOfTime should return 4 for root = [1,5,3,null,4,10,6,9,2], start = 3", () => {

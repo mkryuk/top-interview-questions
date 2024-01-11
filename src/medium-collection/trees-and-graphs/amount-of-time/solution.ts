@@ -1,20 +1,19 @@
 import { TreeNode } from "../common";
 
 export function amountOfTime(root: TreeNode | null, start: number): number {
-  let graph = new Map<number, TreeNode[]>();
-  let startNode: TreeNode[] = [];
-  createGraph(root, null, start, startNode, graph);
+  let graph = new Map<number, number[]>();
+  createGraph(root, null, graph);
   let result = -1;
-  let queue: TreeNode[] = startNode;
-  let visited = new Set<number>(startNode.map((s) => s.val));
+  let queue: number[] = [start];
+  let visited = new Set<number>(queue);
   while (queue.length > 0) {
     result++;
     let size = queue.length;
     for (let i = 0; i < size; i++) {
       let node = queue.shift()!;
-      for (let neighbor of graph.get(node.val)!) {
-        if (!visited.has(neighbor.val)) {
-          visited.add(neighbor.val);
+      for (let neighbor of graph.get(node)!) {
+        if (!visited.has(neighbor)) {
+          visited.add(neighbor);
           queue.push(neighbor);
         }
       }
@@ -26,9 +25,7 @@ export function amountOfTime(root: TreeNode | null, start: number): number {
 function createGraph(
   node: TreeNode | null,
   parent: TreeNode | null,
-  start: number,
-  startNode: TreeNode[],
-  graph: Map<number, TreeNode[]>,
+  graph: Map<number, number[]>,
 ) {
   if (node === null) {
     return;
@@ -36,15 +33,12 @@ function createGraph(
   if (!graph.has(node.val)) {
     graph.set(node.val, []);
   }
-  if (node.val === start) {
-    startNode.push(node);
-  }
   if (parent !== null) {
-    graph.get(node.val)?.push(parent);
-    graph.get(parent.val)?.push(node);
+    graph.get(node.val)?.push(parent.val);
+    graph.get(parent.val)?.push(node.val);
   }
-  createGraph(node.left, node, start, startNode, graph);
-  createGraph(node.right, node, start, startNode, graph);
+  createGraph(node.left, node, graph);
+  createGraph(node.right, node, graph);
 }
 
 export function arrayToTreeNode(arr: (number | null)[]): TreeNode | null {

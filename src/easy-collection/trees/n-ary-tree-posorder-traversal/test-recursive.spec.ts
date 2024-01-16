@@ -1,4 +1,5 @@
-import { nAryTreeFromArray, postorder } from "./solution";
+import { nAryTreeFromArray } from "./node";
+import { postorder } from "./solution-recursive";
 
 describe("N-ary Tree Postorder Traversal", () => {
   it("postorder should return [5,6,3,2,4,1] for root = [1,null,3,2,4,null,5,6]", () => {

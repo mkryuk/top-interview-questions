@@ -18,4 +18,10 @@ describe("Maximum Length of a Concatenated String with Unique Characters:", () =
     const result = maxLength(arr);
     expect(result).toEqual(26);
   });
+
+  it('maxLength should return 0 for ["aa","bb"]', () => {
+    const arr = ["aa", "bb"];
+    const result = maxLength(arr);
+    expect(result).toEqual(0);
+  });
 });

@@ -8,6 +8,13 @@ describe("Longest Common Subsequence:", () => {
     expect(result).toEqual(3);
   });
 
+  it('longestCommonSubsequence should return 3 for text1 = "abcde", text2 = "aceb"', () => {
+    const text1 = "abcde";
+    const text2 = "aceb";
+    const result = longestCommonSubsequence(text1, text2);
+    expect(result).toEqual(3);
+  });
+
   it('longestCommonSubsequence should return 3 for text1 = "abc", text2 = "abc"', () => {
     const text1 = "abc";
     const text2 = "abc";

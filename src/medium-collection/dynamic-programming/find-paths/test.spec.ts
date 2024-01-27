@@ -18,6 +18,26 @@ describe("Out of Boundary Paths:", () => {
     const startRow = 0;
     const startColumn = 1;
     const result = findPaths(m, n, maxMove, startRow, startColumn);
-    expect(result).toEqual(6);
+    expect(result).toEqual(12);
+  });
+
+  it("findPaths should return 102984580 for m = 8, n = 7, maxMove = 16, startRow = 1, startColumn = 5", () => {
+    const m = 8;
+    const n = 7;
+    const maxMove = 16;
+    const startRow = 1;
+    const startColumn = 5;
+    const result = findPaths(m, n, maxMove, startRow, startColumn);
+    expect(result).toEqual(102984580);
+  });
+
+  it("findPaths should return 390153306 for m = 36, n = 5, maxMove = 50, startRow = 15, startColumn = 3", () => {
+    const m = 36;
+    const n = 5;
+    const maxMove = 50;
+    const startRow = 15;
+    const startColumn = 3;
+    const result = findPaths(m, n, maxMove, startRow, startColumn);
+    expect(result).toEqual(390153306);
   });
 });

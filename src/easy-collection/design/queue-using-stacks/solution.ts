@@ -1,17 +1,31 @@
 export class MyQueue {
+  readStack: number[] = [];
+  writeStack: number[] = [];
   constructor() {}
 
-  push(x: number): void {}
+  push(x: number): void {
+    this.writeStack.push(x);
+  }
 
   pop(): number {
-    return 0;
+    this.requeueStacks();
+    return this.readStack.pop()!;
   }
 
   peek(): number {
-    return 0;
+    this.requeueStacks();
+    return this.readStack[this.readStack.length - 1];
   }
 
   empty(): boolean {
-    return false;
+    return this.readStack.length === 0 && this.writeStack.length === 0;
+  }
+
+  requeueStacks() {
+    if (this.readStack.length === 0) {
+      while (this.writeStack.length > 0) {
+        this.readStack.push(this.writeStack.pop()!);
+      }
+    }
   }
 }

@@ -28,4 +28,15 @@ describe("Number of Submatrices That Sum to Target:", () => {
     const result = numSubmatrixSumTarget(matrix, target);
     expect(result).toEqual(0);
   });
+
+  it("numSubmatrixSumTarget should return 7 for matrix = [[1,1,1], [2,2,2],[3,3,3]], target = 3", () => {
+    const matrix = [
+      [1, 1, 1],
+      [2, 2, 2],
+      [3, 3, 3],
+    ];
+    const target = 3;
+    const result = numSubmatrixSumTarget(matrix, target);
+    expect(result).toEqual(7);
+  });
 });

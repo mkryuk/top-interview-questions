@@ -19,6 +19,6 @@ describe("Partition Array for Maximum Sum:", () => {
     const arr = [1];
     const k = 1;
     const result = maxSumAfterPartitioning(arr, k);
-    expect(result).toEqual(84);
+    expect(result).toEqual(1);
   });
 });

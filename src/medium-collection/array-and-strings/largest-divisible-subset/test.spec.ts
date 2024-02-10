@@ -12,4 +12,10 @@ describe("Largest Divisible Subset:", () => {
     const result = largestDivisibleSubset(nums);
     expect(result).toEqual([1, 2, 4, 8]);
   });
+
+  it("largestDivisibleSubset should return [4,8,16] for nums = [3,4,16,8]", () => {
+    const nums = [3, 4, 16, 8];
+    const result = largestDivisibleSubset(nums);
+    expect(result).toEqual([4, 8, 16]);
+  });
 });

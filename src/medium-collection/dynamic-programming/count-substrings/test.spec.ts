@@ -12,4 +12,10 @@ describe("Palindromic Substrings:", () => {
     const result = countSubstrings(s);
     expect(result).toEqual(6);
   });
+
+  it('countSubstrings should return 7 for s = "abcba"', () => {
+    const s = "abcba";
+    const result = countSubstrings(s);
+    expect(result).toEqual(7);
+  });
 });

@@ -19,4 +19,10 @@ describe("Reformat The String:", () => {
     const result = reformat(s);
     expect(result).toEqual("");
   });
+
+  it('reformat should return "c2o0v1i9d" for s = "covid2019"', () => {
+    const s = "covid2019";
+    const result = reformat(s);
+    expect(result).toEqual("c2o0v1i9d");
+  });
 });

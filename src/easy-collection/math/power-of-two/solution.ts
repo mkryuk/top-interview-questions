@@ -1,3 +1,3 @@
 export function isPowerOfTwo(n: number): boolean {
-  return false;
+  return n > 0 && (n & (n - 1)) === 0;
 }

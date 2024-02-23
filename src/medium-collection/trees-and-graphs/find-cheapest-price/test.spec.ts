@@ -44,4 +44,20 @@ describe("Cheapest Flights Within K Stops:", () => {
     const result = findCheapestPrice(n, flights, src, dst, k);
     expect(result).toEqual(500);
   });
+
+  it("findCheapestPrice should return 400 for test 4", () => {
+    const n = 4;
+    const flights = [
+      [0, 1, 100],
+      [1, 2, 100],
+      [2, 0, 100],
+      [1, 3, 600],
+      [2, 3, 200],
+    ];
+    const src = 0;
+    const dst = 3;
+    const k = 2;
+    const result = findCheapestPrice(n, flights, src, dst, k);
+    expect(result).toEqual(400);
+  });
 });

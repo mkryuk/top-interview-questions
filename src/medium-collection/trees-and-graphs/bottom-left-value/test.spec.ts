@@ -1,5 +1,4 @@
-import { arrayToTreeNode } from "../common";
-import { findBottomLeftValue } from "./solution";
+import { arrayToTreeNode, findBottomLeftValue } from "./solution";
 
 describe("Find Bottom Left Tree Value:", () => {
   it("findBottomLeftValue should return 1 for root = [2,1,3]", () => {
@@ -13,6 +12,6 @@ describe("Find Bottom Left Tree Value:", () => {
     const nodes = [1, 2, 3, 4, null, 5, 6, null, null, 7];
     const root = arrayToTreeNode(nodes);
     const result = findBottomLeftValue(root);
-    expect(result).toEqual(1);
+    expect(result).toEqual(7);
   });
 });

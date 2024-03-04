@@ -21,4 +21,18 @@ describe("Bag of Tokens:", () => {
     const result = bagOfTokensScore(tokens, power);
     expect(result).toEqual(2);
   });
+
+  it("bagOfTokensScore should return 1 for tokens = [26], power = 51", () => {
+    const tokens = [26];
+    const power = 51;
+    const result = bagOfTokensScore(tokens, power);
+    expect(result).toEqual(1);
+  });
+
+  it("bagOfTokensScore should return 0 for tokens = [71,55,82], power = 54", () => {
+    const tokens = [71, 55, 82];
+    const power = 54;
+    const result = bagOfTokensScore(tokens, power);
+    expect(result).toEqual(0);
+  });
 });

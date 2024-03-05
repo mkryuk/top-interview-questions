@@ -18,4 +18,11 @@ describe("Minimum Length of String After Deleting Similar Ends:", () => {
     const result = minimumLength(s);
     expect(result).toEqual(3);
   });
+
+  it("minimumLength should return 109 for test 4", () => {
+    const s =
+      "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbacccabbabccaccbacaaccacacccaccbbbacaabbccbbcbcbcacacccccccbcbbabccaacaabacbbaccccbabbcbccccaccacaccbcbbcbcccabaaaabbbbbbbbbbbbbbb";
+    const result = minimumLength(s);
+    expect(result).toEqual(109);
+  });
 });

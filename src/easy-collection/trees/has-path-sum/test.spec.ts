@@ -24,4 +24,12 @@ describe("Path Sum:", () => {
     const result = hasPathSum(root, targetSum);
     expect(result).toBeFalse();
   });
+
+  it("hasPathSum should return false for root = [1,2], targetSum = 1", () => {
+    const nodes = [1, 2];
+    const targetSum = 1;
+    const root = arrayToTreeNode(nodes);
+    const result = hasPathSum(root, targetSum);
+    expect(result).toBeFalse();
+  });
 });

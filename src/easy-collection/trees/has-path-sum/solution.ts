@@ -1,7 +1,16 @@
 import { TreeNode } from "../common";
 
 export function hasPathSum(root: TreeNode | null, targetSum: number): boolean {
-  return false;
+  if (root === null) {
+    return false;
+  }
+
+  targetSum -= root.val;
+  if (root.left === null && root.right === null) {
+    return targetSum === 0;
+  }
+
+  return hasPathSum(root.left, targetSum) || hasPathSum(root.right, targetSum);
 }
 
 export function arrayToTreeNode(arr: (number | null)[]): TreeNode | null {
@@ -16,13 +25,13 @@ export function arrayToTreeNode(arr: (number | null)[]): TreeNode | null {
   while (queue.length > 0 && i < arr.length) {
     const currentNode = queue.shift();
 
-    if (currentNode !== undefined && arr[i] !== null) {
+    if (currentNode !== undefined && arr[i] !== undefined) {
       currentNode.left = new TreeNode(arr[i]!);
       queue.push(currentNode.left);
     }
     i++;
 
-    if (currentNode !== undefined && arr[i] !== null) {
+    if (currentNode !== undefined && arr[i] !== undefined) {
       currentNode.right = new TreeNode(arr[i]!);
       queue.push(currentNode.right);
     }

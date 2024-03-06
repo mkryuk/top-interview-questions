@@ -1,4 +1,4 @@
-import { TreeNode, arrayToTreeNode } from "../common";
+import { TreeNode, arrayToTreeNodeLevel } from "../common";
 import { distanceK } from "./solution";
 
 describe("All Nodes Distance K in Binary Tree:", () => {
@@ -6,7 +6,7 @@ describe("All Nodes Distance K in Binary Tree:", () => {
     const nodes = [3, 5, 1, 6, 2, 0, 8, null, null, 7, 4];
     const target = 5;
     const k = 2;
-    const root = arrayToTreeNode(nodes);
+    const root = arrayToTreeNodeLevel(nodes);
     const targetNode = findTarget(root, target);
     const result = distanceK(root, targetNode, k);
     expect(arrayEquals([7, 4, 1], result)).toBeTrue();
@@ -16,7 +16,7 @@ describe("All Nodes Distance K in Binary Tree:", () => {
     const nodes = [1];
     const target = 1;
     const k = 3;
-    const root = arrayToTreeNode(nodes);
+    const root = arrayToTreeNodeLevel(nodes);
     const targetNode = findTarget(root, target);
     const result = distanceK(root, targetNode, k);
     expect(arrayEquals([], result)).toBeTrue();

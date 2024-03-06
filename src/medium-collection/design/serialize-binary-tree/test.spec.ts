@@ -1,4 +1,4 @@
-import { arrayToTreeNode } from "../../trees-and-graphs/common";
+import { arrayToTreeNodeLevel } from "../../trees-and-graphs/common";
 import { deserialize, serialize } from "./solution";
 
 it('should serialize deserialize "1,2,3,null,null,4,null,null,5,null,null,"', () => {

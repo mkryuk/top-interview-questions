@@ -1,4 +1,5 @@
-import { arrayToTreeNode, findBottomLeftValue } from "./solution";
+import { arrayToTreeNode } from "../common";
+import { findBottomLeftValue } from "./solution";
 
 describe("Find Bottom Left Tree Value:", () => {
   it("findBottomLeftValue should return 1 for root = [2,1,3]", () => {

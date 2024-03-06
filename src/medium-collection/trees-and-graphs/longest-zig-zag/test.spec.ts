@@ -1,4 +1,5 @@
-import { longestZigZag, arrayToTreeNode } from "./solution";
+import { arrayToTreeNode } from "../common";
+import { longestZigZag } from "./solution";
 
 describe("Longest ZigZag Path in a Binary Tree", () => {
   it("longestZigZag should return 3 for root = [1,null,2,3,4,null,null,5,6,null,7,null,null,null,8,null,9]", () => {

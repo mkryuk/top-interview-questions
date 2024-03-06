@@ -1,4 +1,5 @@
-import { arrayToTreeNode, hasPathSum } from "./solution";
+import { arrayToTreeNode } from "../common";
+import { hasPathSum } from "./solution";
 
 describe("Path Sum:", () => {
   it("hasPathSum should return true for root = [5,4,8,11,null,13,4,7,2,null,null,null,1], targetSum = 22", () => {

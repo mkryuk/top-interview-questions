@@ -1,4 +1,4 @@
-import { arrayToTreeNode } from "../common";
+import { arrayToTreeNodeLevel } from "../common";
 import { getDirections } from "./solution";
 
 describe("Step-By-Step Directions From a Binary Tree Node to Another:", () => {
@@ -6,7 +6,7 @@ describe("Step-By-Step Directions From a Binary Tree Node to Another:", () => {
     const nodes = [5, 1, 2, 3, null, 6, 4];
     const startValue = 3;
     const destValue = 6;
-    const root = arrayToTreeNode(nodes);
+    const root = arrayToTreeNodeLevel(nodes);
     const result = getDirections(root, startValue, destValue);
     expect(result).toEqual("UURL");
   });
@@ -15,7 +15,7 @@ describe("Step-By-Step Directions From a Binary Tree Node to Another:", () => {
     const nodes = [2, 1];
     const startValue = 2;
     const destValue = 1;
-    const root = arrayToTreeNode(nodes);
+    const root = arrayToTreeNodeLevel(nodes);
     const result = getDirections(root, startValue, destValue);
     expect(result).toEqual("L");
   });
@@ -24,7 +24,7 @@ describe("Step-By-Step Directions From a Binary Tree Node to Another:", () => {
     const nodes = [2, null, 1];
     const startValue = 2;
     const destValue = 1;
-    const root = arrayToTreeNode(nodes);
+    const root = arrayToTreeNodeLevel(nodes);
     const result = getDirections(root, startValue, destValue);
     expect(result).toEqual("R");
   });
@@ -33,7 +33,7 @@ describe("Step-By-Step Directions From a Binary Tree Node to Another:", () => {
     const nodes = [5, 1, 2, 3, null, 6, 4];
     const startValue = 3;
     const destValue = 1;
-    const root = arrayToTreeNode(nodes);
+    const root = arrayToTreeNodeLevel(nodes);
     const result = getDirections(root, startValue, destValue);
     expect(result).toEqual("U");
   });
@@ -42,7 +42,7 @@ describe("Step-By-Step Directions From a Binary Tree Node to Another:", () => {
     const nodes = [5, 1, 2, 3, null, 6, 4];
     const startValue = 4;
     const destValue = 3;
-    const root = arrayToTreeNode(nodes);
+    const root = arrayToTreeNodeLevel(nodes);
     const result = getDirections(root, startValue, destValue);
     expect(result).toEqual("UULL");
   });
@@ -51,7 +51,7 @@ describe("Step-By-Step Directions From a Binary Tree Node to Another:", () => {
     const nodes = [1, 2, 3, 4, null, 5, 6];
     const startValue = 1;
     const destValue = 4;
-    const root = arrayToTreeNode(nodes);
+    const root = arrayToTreeNodeLevel(nodes);
     const result = getDirections(root, startValue, destValue);
     expect(result).toEqual("LL");
   });
@@ -60,7 +60,7 @@ describe("Step-By-Step Directions From a Binary Tree Node to Another:", () => {
     const nodes = [1, 2, 3, 4, null, 5, 6];
     const startValue = 1;
     const destValue = 6;
-    const root = arrayToTreeNode(nodes);
+    const root = arrayToTreeNodeLevel(nodes);
     const result = getDirections(root, startValue, destValue);
     expect(result).toEqual("RR");
   });
@@ -69,7 +69,7 @@ describe("Step-By-Step Directions From a Binary Tree Node to Another:", () => {
     const nodes = [1, 2, 3, 4, 5, 6, 7];
     const startValue = 6;
     const destValue = 7;
-    const root = arrayToTreeNode(nodes);
+    const root = arrayToTreeNodeLevel(nodes);
     const result = getDirections(root, startValue, destValue);
     expect(result).toEqual("UR");
   });
@@ -78,7 +78,7 @@ describe("Step-By-Step Directions From a Binary Tree Node to Another:", () => {
     const nodes = [1, 2, 3, 4, 5, 6, 7];
     const startValue = 7;
     const destValue = 6;
-    const root = arrayToTreeNode(nodes);
+    const root = arrayToTreeNodeLevel(nodes);
     const result = getDirections(root, startValue, destValue);
     expect(result).toEqual("UL");
   });

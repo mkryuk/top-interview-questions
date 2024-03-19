@@ -33,4 +33,18 @@ describe("Minimum Number of Arrows to Burst Balloons:", () => {
     const result = findMinArrowShots(points);
     expect(result).toEqual(2);
   });
+
+  it("findMinArrowShots should return 2 for points = [[9,12],[1,10],[4,11],[8,12],[3,9],[6,9],[6,7]]", () => {
+    const points = [
+      [9, 12],
+      [1, 10],
+      [4, 11],
+      [8, 12],
+      [3, 9],
+      [6, 9],
+      [6, 7],
+    ];
+    const result = findMinArrowShots(points);
+    expect(result).toEqual(2);
+  });
 });

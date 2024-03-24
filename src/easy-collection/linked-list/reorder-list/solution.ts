@@ -1,6 +1,5 @@
 import { ListNode } from "../common";
 
-let first: ListNode | null = null;
 export function reorderList(head: ListNode | null): void {
   if (head === null) {
     return;

@@ -14,4 +14,11 @@ describe("Subarray Product Less Than K", () => {
     const result = numSubarrayProductLessThanK(nums, k);
     expect(result).toEqual(0);
   });
+
+  it("numSubarrayProductLessThanK should return 0 for nums = [1,1,1], k = 1", () => {
+    const nums = [1, 1, 1];
+    const k = 1;
+    const result = numSubarrayProductLessThanK(nums, k);
+    expect(result).toEqual(0);
+  });
 });

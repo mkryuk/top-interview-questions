@@ -16,4 +16,12 @@ describe("Count Subarrays With Fixed Bounds", () => {
     const result = countSubarrays(nums, minK, maxK);
     expect(result).toEqual(10);
   });
+
+  it("countSubarrays should return 4 for nums = [1,3,5,2,7,5], minK = 3, maxK = 5", () => {
+    const nums = [3, 1, 5, 2, 7, 5];
+    const minK = 1;
+    const maxK = 5;
+    const result = countSubarrays(nums, minK, maxK);
+    expect(result).toEqual(4);
+  });
 });

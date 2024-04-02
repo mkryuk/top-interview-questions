@@ -21,4 +21,18 @@ describe("Isomorphic Strings", () => {
     const result = isIsomorphic(s, t);
     expect(result).toBeTrue();
   });
+
+  it('isIsomorphic should return false for s = "bbbaaaba", t = "aaabbbba"', () => {
+    const s = "bbbaaaba";
+    const t = "aaabbbba";
+    const result = isIsomorphic(s, t);
+    expect(result).toBeFalse();
+  });
+
+  it('isIsomorphic should return false for s = "badc", t = "baba"', () => {
+    const s = "badc";
+    const t = "baba";
+    const result = isIsomorphic(s, t);
+    expect(result).toBeFalse();
+  });
 });

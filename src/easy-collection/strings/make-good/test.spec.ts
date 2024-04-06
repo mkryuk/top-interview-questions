@@ -18,4 +18,16 @@ describe("Make The String Great", () => {
     const result = makeGood(s);
     expect(result).toEqual("s");
   });
+
+  it('makeGood should return "" for s = "leEeTtEDdL"', () => {
+    const s = "leEeTtEDdL";
+    const result = makeGood(s);
+    expect(result).toEqual("");
+  });
+
+  it('makeGood should return "o" for s = "qFxXfQo"', () => {
+    const s = "qFxXfQo";
+    const result = makeGood(s);
+    expect(result).toEqual("o");
+  });
 });

@@ -21,4 +21,14 @@ describe("Add One Row to Tree", () => {
     const resultArray = treeNodeToArray(result);
     expect(resultArray).toEqual([4, 2, null, 1, 1, 3, null, null, 1]);
   });
+
+  it("addOneRow should return [4,2,6,1,1,1,1,3,null,null,1,5] for root = [4,2,6,3,1,5], val = 1, depth = 3", () => {
+    const nodes = [4, 2, 6, 3, 1, 5];
+    const val = 1;
+    const depth = 3;
+    const root = arrayToTreeNode(nodes);
+    const result = addOneRow(root, val, depth);
+    const resultArray = treeNodeToArray(result);
+    expect(resultArray).toEqual([4, 2, 6, 1, 1, 1, 1, 3, null, null, 1, 5]);
+  });
 });

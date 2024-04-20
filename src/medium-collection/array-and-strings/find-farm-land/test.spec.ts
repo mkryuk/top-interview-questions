@@ -28,4 +28,16 @@ describe("Find All Groups of Farmland", () => {
     const result = findFarmland(land);
     expect(result).toEqual([]);
   });
+
+  it("findFarmland should return [[0,0,1,1],[0,5,0,5]] for land = [[1,1,0,0,0,1],[1,1,0,0,0,0]]", () => {
+    const land = [
+      [1, 1, 0, 0, 0, 1],
+      [1, 1, 0, 0, 0, 0],
+    ];
+    const result = findFarmland(land);
+    expect(result).toEqual([
+      [0, 0, 1, 1],
+      [0, 5, 0, 5],
+    ]);
+  });
 });

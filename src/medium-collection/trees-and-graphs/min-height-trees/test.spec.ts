@@ -24,4 +24,11 @@ describe("Minimum Height Trees", () => {
     const result = findMinHeightTrees(n, edges);
     expect(result).toEqual([3, 4]);
   });
+
+  it("findMinHeightTrees should return [0] for n = 1, edges = []", () => {
+    const n = 1;
+    const edges: number[][] = [];
+    const result = findMinHeightTrees(n, edges);
+    expect(result).toEqual([0]);
+  });
 });

@@ -14,4 +14,18 @@ describe("Longest Ideal Subsequence", () => {
     const result = longestIdealString(s, k);
     expect(result).toEqual(4);
   });
+
+  it('longestIdealString should return 6 for s = "znrkjnk", k = 8', () => {
+    const s = "znrkjnk";
+    const k = 8;
+    const result = longestIdealString(s, k);
+    expect(result).toEqual(6);
+  });
+
+  it('longestIdealString should return 5 for s = "azaza", k = 25', () => {
+    const s = "azaza";
+    const k = 25;
+    const result = longestIdealString(s, k);
+    expect(result).toEqual(5);
+  });
 });

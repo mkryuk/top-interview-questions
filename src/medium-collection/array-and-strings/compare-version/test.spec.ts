@@ -21,4 +21,11 @@ describe("Compare Version Numbers", () => {
     const result = compareVersion(version1, version2);
     expect(result).toEqual(-1);
   });
+
+  it('compareVersion should return -1 for version1 = "1", version2 = "1.1"', () => {
+    const version1 = "1";
+    const version2 = "1.1";
+    const result = compareVersion(version1, version2);
+    expect(result).toEqual(-1);
+  });
 });

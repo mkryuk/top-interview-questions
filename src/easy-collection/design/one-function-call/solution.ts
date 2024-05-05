@@ -8,9 +8,13 @@ type JSONValue =
 type OnceFn = (...args: JSONValue[]) => JSONValue | undefined;
 
 export function once(fn: Function): OnceFn {
-  var called = false;
-
+  let called = false;
   return function (...args) {
-    return undefined;
+    if (called === false) {
+      called = true;
+      return fn(...args);
+    } else {
+      return undefined;
+    }
   };
 }

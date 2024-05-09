@@ -21,4 +21,11 @@ describe("Maximize Happiness of Selected Children", () => {
     const result = maximumHappinessSum(happiness, k);
     expect(result).toEqual(5);
   });
+
+  it("maximumHappinessSum should return 5 for happiness = [12,1,42], k = 3", () => {
+    const happiness = [12, 1, 42];
+    const k = 3;
+    const result = maximumHappinessSum(happiness, k);
+    expect(result).toEqual(53);
+  });
 });

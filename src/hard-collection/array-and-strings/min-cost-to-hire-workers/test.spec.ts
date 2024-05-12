@@ -14,6 +14,7 @@ describe("Minimum Cost to Hire K Workers", () => {
     const wage = [4, 8, 2, 2, 7];
     const k = 3;
     const result = mincostToHireWorkers(quality, wage, k);
-    expect(result).toEqual(30.66667);
+    const epsilon = 0.00001;
+    expect(Math.abs(result - 30.66667)).toBeLessThanOrEqual(epsilon);
   });
 });

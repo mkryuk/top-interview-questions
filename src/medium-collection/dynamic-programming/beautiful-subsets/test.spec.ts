@@ -14,4 +14,11 @@ describe("The Number of Beautiful Subsets", () => {
     const result = beautifulSubsets(nums, k);
     expect(result).toEqual(1);
   });
+
+  it("beautifulSubsets should return 23 for nums = [10,4,5,7,2,1], k = 3", () => {
+    const nums = [10, 4, 5, 7, 2, 1];
+    const k = 3;
+    const result = beautifulSubsets(nums, k);
+    expect(result).toEqual(23);
+  });
 });

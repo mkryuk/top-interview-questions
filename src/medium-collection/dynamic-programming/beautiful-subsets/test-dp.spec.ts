@@ -1,4 +1,4 @@
-import { beautifulSubsets } from "./solution";
+import { beautifulSubsets } from "./solution-dp";
 
 describe("The Number of Beautiful Subsets", () => {
   it("beautifulSubsets should return 4 for nums = [2,4,6], k = 2", () => {

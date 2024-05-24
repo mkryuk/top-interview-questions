@@ -33,4 +33,26 @@ describe("Maximum Score Words Formed by Letters", () => {
     const result = maxScoreWords(words, letters, score);
     expect(result).toEqual(0);
   });
+
+  it("maxScoreWords should solve test 4", () => {
+    const words = ["dad", "dad", "good"];
+    const letters = ["a", "a", "c", "d", "d", "d", "d", "o", "o"];
+    const score = [
+      2, 0, 9, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0,
+    ];
+    const result = maxScoreWords(words, letters, score);
+    expect(result).toEqual(24);
+  });
+
+  it("maxScoreWords should solve test 5", () => {
+    const words = ["da", "ac", "aba", "abcc", "cadc"];
+    const letters = ["a", "a", "a", "a", "b", "c", "c", "c", "d", "d", "d"];
+    const score = [
+      3, 7, 9, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0,
+    ];
+    const result = maxScoreWords(words, letters, score);
+    expect(result).toEqual(49);
+  });
 });

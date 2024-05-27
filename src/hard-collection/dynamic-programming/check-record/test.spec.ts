@@ -4,7 +4,7 @@ describe("Student Attendance Record II", () => {
   it("checkRecord should return 8 n = 2", () => {
     const n = 2;
     const result = checkRecord(n);
-    expect(result).toEqual(2);
+    expect(result).toEqual(8);
   });
 
   it("checkRecord should return 3 n = 1", () => {

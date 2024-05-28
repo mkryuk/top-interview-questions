@@ -24,4 +24,20 @@ describe("Get Equal Substrings Within Budget", () => {
     const result = equalSubstring(s, t, maxCost);
     expect(result).toEqual(1);
   });
+
+  it('equalSubstring should return 2 for s = "krrgw", t = "zjxss", maxCost = 19', () => {
+    const s = "krrgw";
+    const t = "zjxss";
+    const maxCost = 19;
+    const result = equalSubstring(s, t, maxCost);
+    expect(result).toEqual(2);
+  });
+
+  it('equalSubstring should return 2 for s = "krpgjbjjznpzdfy", t = "nxargkbydxmsgby", maxCost = 14', () => {
+    const s = "krpgjbjjznpzdfy";
+    const t = "nxargkbydxmsgby";
+    const maxCost = 14;
+    const result = equalSubstring(s, t, maxCost);
+    expect(result).toEqual(4);
+  });
 });

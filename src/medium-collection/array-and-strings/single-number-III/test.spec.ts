@@ -18,4 +18,10 @@ describe("Single Number III", () => {
     const result = singleNumber(nums);
     expect(result.sort((a, b) => a - b)).toEqual([0, 1]);
   });
+
+  it("singleNumber should return [3,4] for nums = [2,1,2,3,4,1]", () => {
+    const nums = [2, 1, 2, 3, 4, 1];
+    const result = singleNumber(nums);
+    expect(result.sort((a, b) => a - b)).toEqual([3, 4]);
+  });
 });

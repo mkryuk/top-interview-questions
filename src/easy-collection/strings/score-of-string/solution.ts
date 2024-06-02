@@ -1,3 +1,7 @@
 export function scoreOfString(s: string): number {
-  return 0;
+  let result = 0;
+  for (let i = 1; i < s.length; i++) {
+    result += Math.abs(s.charCodeAt(i) - s.charCodeAt(i - 1));
+  }
+  return result;
 }

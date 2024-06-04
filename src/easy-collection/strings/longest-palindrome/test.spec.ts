@@ -12,4 +12,10 @@ describe("Longest Palindrome", () => {
     const result = longestPalindrome(s);
     expect(result).toEqual(1);
   });
+
+  it('longestPalindrome should return 9 for "aaabbbcccdd"', () => {
+    const s = "aaabbbcccdd";
+    const result = longestPalindrome(s);
+    expect(result).toEqual(9);
+  });
 });

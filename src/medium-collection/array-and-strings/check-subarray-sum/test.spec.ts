@@ -21,4 +21,11 @@ describe("Continuous Subarray Sum", () => {
     const result = checkSubarraySum(nums, k);
     expect(result).toBeFalse();
   });
+
+  it("checkSubarraySum should return false for nums = [23,2,4,6,6], k = 7", () => {
+    const nums = [23, 2, 4, 6, 6];
+    const k = 7;
+    const result = checkSubarraySum(nums, k);
+    expect(result).toBeTrue();
+  });
 });

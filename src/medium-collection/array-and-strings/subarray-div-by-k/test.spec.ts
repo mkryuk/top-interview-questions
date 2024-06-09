@@ -14,4 +14,11 @@ describe("Subarray Sums Divisible by K", () => {
     const result = subarraysDivByK(nums, k);
     expect(result).toEqual(0);
   });
+
+  it("subarraysDivByK should return 2 for nums = [-1,2,9], k = 2", () => {
+    const nums = [-1, 2, 9];
+    const k = 2;
+    const result = subarraysDivByK(nums, k);
+    expect(result).toEqual(2);
+  });
 });

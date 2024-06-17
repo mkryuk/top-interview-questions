@@ -12,4 +12,22 @@ describe("Sum of Square Numbers", () => {
     const result = judgeSquareSum(c);
     expect(result).toBeFalse();
   });
+
+  it("judgeSquareSum should return true for c = 4", () => {
+    const c = 4;
+    const result = judgeSquareSum(c);
+    expect(result).toBeTrue();
+  });
+
+  it("judgeSquareSum should return true for c = 18", () => {
+    const c = 18;
+    const result = judgeSquareSum(c);
+    expect(result).toBeTrue();
+  });
+
+  it("judgeSquareSum should return true for c = 2147482647", () => {
+    const c = 2147482647;
+    const result = judgeSquareSum(c);
+    expect(result).toBeFalse();
+  });
 });

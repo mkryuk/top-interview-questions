@@ -7,7 +7,7 @@ describe("Merge Nodes in Between Zeros", () => {
     const head = arrayToList(nodes);
     const result = mergeNodes(head);
     const resultArray = listToArray(result);
-    expect(resultArray).toEqual([4, 1]);
+    expect(resultArray).toEqual([4, 11]);
   });
 
   it("mergeNodes should return [1,3,4] for head = [0,1,0,3,0,2,2,0]", () => {

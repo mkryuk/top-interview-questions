@@ -18,4 +18,10 @@ describe("Crawler Log Folder", () => {
     const result = minOperations(logs);
     expect(result).toEqual(0);
   });
+
+  it('minOperations should return 0 for logs = ["./","../","./"]', () => {
+    const logs = ["./", "../", "./"];
+    const result = minOperations(logs);
+    expect(result).toEqual(0);
+  });
 });

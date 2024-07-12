@@ -18,4 +18,16 @@ describe("Reverse Substrings Between Each Pair of Parentheses", () => {
     const result = reverseParentheses(s);
     expect(result).toEqual("leetcode");
   });
+
+  it('reverseParentheses should return "eqkh" for s = "((eqk((h))))"', () => {
+    const s = "((eqk((h))))";
+    const result = reverseParentheses(s);
+    expect(result).toEqual("eqkh");
+  });
+
+  it('reverseParentheses should return "tauswa" for s = "ta()usw((((a))))"', () => {
+    const s = "ta()usw((((a))))";
+    const result = reverseParentheses(s);
+    expect(result).toEqual("tauswa");
+  });
 });

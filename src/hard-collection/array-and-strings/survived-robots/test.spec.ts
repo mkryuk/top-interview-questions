@@ -24,4 +24,12 @@ describe("Robot Collisions", () => {
     const result = survivedRobotsHealths(positions, healths, directions);
     expect(result).toEqual([]);
   });
+
+  it('survivedRobotsHealths should return [2] for positions = [2, healths = [2], directions = "L"', () => {
+    const positions = [2];
+    const healths = [2];
+    const directions = "L";
+    const result = survivedRobotsHealths(positions, healths, directions);
+    expect(result).toEqual([2]);
+  });
 });

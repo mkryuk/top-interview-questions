@@ -19,4 +19,13 @@ describe("Delete Nodes And Return Forest", () => {
     const resultArray = [...result.map((n) => treeNodeToArray(n))];
     expect(resultArray).toEqual([[1, 2, 4]]);
   });
+
+  it("delNodes should return [[1],[4]] for root = [1,2,null,4,3], to_delete = [2,3]", () => {
+    const nodes = [1, 2, null, 4, 3];
+    const to_delete = [2, 3];
+    const root = arrayToTreeNode(nodes);
+    const result = delNodes(root, to_delete);
+    const resultArray = [...result.map((n) => treeNodeToArray(n))];
+    expect(resultArray).toEqual([[1], [4]]);
+  });
 });

@@ -20,6 +20,16 @@ describe("Find Valid Matrix Given Row and Column Sums", () => {
     expect(rowSum).toEqual(resultRowSum);
     expect(colSum).toEqual(resultColSum);
   });
+
+  it("restoreMatrix should return valid matrix for rowSum = [1,0], colSum = [1]", () => {
+    const rowSum = [1, 0];
+    const colSum = [1];
+    const result = restoreMatrix(rowSum, colSum);
+    const resultRowSum = findRowSum(result);
+    const resultColSum = findColSum(result);
+    expect(rowSum).toEqual(resultRowSum);
+    expect(colSum).toEqual(resultColSum);
+  });
 });
 
 function findRowSum(matrix: number[][]): number[] {

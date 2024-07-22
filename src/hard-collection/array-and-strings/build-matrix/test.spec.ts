@@ -1,7 +1,7 @@
 import { buildMatrix } from "./solution";
 
 describe("Build a Matrix With Conditions", () => {
-  it("buildMatrix should return [[3,0,0],[0,0,1],[0,2,0]] for k = 3, rowConditions = [[1,2],[3,2]], colConditions = [[2,1],[3,2]]", () => {
+  it("buildMatrix should return [[0,0,1],[3,0,0],[0,2,0]] for k = 3, rowConditions = [[1,2],[3,2]], colConditions = [[2,1],[3,2]]", () => {
     const k = 3;
     const rowConditions = [
       [1, 2],
@@ -13,8 +13,8 @@ describe("Build a Matrix With Conditions", () => {
     ];
     const result = buildMatrix(k, rowConditions, colConditions);
     expect(result).toEqual([
-      [3, 0, 0],
       [0, 0, 1],
+      [3, 0, 0],
       [0, 2, 0],
     ]);
   });

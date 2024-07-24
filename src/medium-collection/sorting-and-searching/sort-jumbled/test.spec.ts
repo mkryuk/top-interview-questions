@@ -14,4 +14,11 @@ describe("Sort the Jumbled Numbers", () => {
     const result = sortJumbled(mapping, nums);
     expect(result).toEqual([123, 456, 789]);
   });
+
+  it("sortJumbled should return [9,8,7,6,5,4,3,2,1,0] for mapping = [9,8,7,6,5,4,3,2,1,0], nums = [0,1,2,3,4,5,6,7,8,9]", () => {
+    const mapping = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
+    const nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const result = sortJumbled(mapping, nums);
+    expect(result).toEqual([9, 8, 7, 6, 5, 4, 3, 2, 1, 0]);
+  });
 });

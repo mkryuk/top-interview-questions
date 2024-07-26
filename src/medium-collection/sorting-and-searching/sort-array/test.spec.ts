@@ -12,4 +12,10 @@ describe("Sort an Array", () => {
     const result = sortArray(nums);
     expect(result).toEqual([0, 0, 1, 1, 2, 5]);
   });
+
+  it("sortArray should return [0,0,1,1,2,5] for nums = [-2,3,-5]", () => {
+    const nums = [-2, 3, -5];
+    const result = sortArray(nums);
+    expect(result).toEqual([-5, -2, 3]);
+  });
 });

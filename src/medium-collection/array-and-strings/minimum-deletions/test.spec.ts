@@ -12,4 +12,11 @@ describe("Minimum Deletions to Make String Balanced", () => {
     const result = minimumDeletions(s);
     expect(result).toEqual(2);
   });
+
+  it('minimumDeletions should return 25 for s = "ababaaaabbbbbaaababbbbbbaaabbaababbabbbbaabbbbaabbabbabaabbbababaa"', () => {
+    const s =
+      "ababaaaabbbbbaaababbbbbbaaabbaababbabbbbaabbbbaabbabbabaabbbababaa";
+    const result = minimumDeletions(s);
+    expect(result).toEqual(25);
+  });
 });

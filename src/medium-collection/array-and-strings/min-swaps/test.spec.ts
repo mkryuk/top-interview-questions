@@ -19,9 +19,9 @@ describe("Minimum Swaps to Group All 1's Together II", () => {
     expect(result).toEqual(0);
   });
 
-  it("minSwaps should return 3 for nums = [0,1,1,0,0,1,0,1]", () => {
+  it("minSwaps should return 2 for nums = [0,1,1,0,0,1,0,1]", () => {
     const nums = [0, 1, 1, 0, 0, 1, 0, 1, 0];
     const result = minSwaps(nums);
-    expect(result).toEqual(3);
+    expect(result).toEqual(2);
   });
 });

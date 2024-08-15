@@ -1,4 +1,4 @@
-import { lemonadeChange } from "./solution";
+import { lemonadeChange } from "./solution-simple";
 
 describe("Lemonade Change", () => {
   it("lemonadeChange should return true for bills = [5,5,5,10,20]", () => {

@@ -1,4 +1,4 @@
-import { maxPoints } from "../../../hard-collection/math/max-points/solution";
+import { maxPoints } from "./solution";
 
 describe("Maximum Number of Points with Cost", () => {
   it("maxPoints should return 9 for points = [[1,2,3],[1,5,1],[3,1,1]]", () => {

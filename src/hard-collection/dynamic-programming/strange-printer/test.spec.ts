@@ -12,4 +12,10 @@ describe("Strange Printer", () => {
     const result = strangePrinter(s);
     expect(result).toEqual(2);
   });
+
+  it('strangePrinter should return 5 for  s = "abcabc"', () => {
+    const s = "abcabc";
+    const result = strangePrinter(s);
+    expect(result).toEqual(5);
+  });
 });

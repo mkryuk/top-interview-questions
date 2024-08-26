@@ -8,9 +8,9 @@ export function nearestPalindromic(n: string): string {
   // case 1: Palindromes with the same length
   const half = n.slice(0, Math.ceil(length / 2));
   const halfNum = BigInt(half);
-  candidates.push(generatePalindrome(half));
-  candidates.push(generatePalindrome((halfNum - BigInt(1)).toString()));
-  candidates.push(generatePalindrome((halfNum + BigInt(1)).toString()));
+  candidates.push(generatePalindrome(half, length));
+  candidates.push(generatePalindrome((halfNum - BigInt(1)).toString(), length));
+  candidates.push(generatePalindrome((halfNum + BigInt(1)).toString(), length));
 
   // case 2: Palindrome with length + 1
   candidates.push(BigInt("1" + "0".repeat(length - 1) + "1"));
@@ -38,7 +38,7 @@ export function nearestPalindromic(n: string): string {
 }
 
 // helper function to generate palindrome
-function generatePalindrome(half: string): bigint {
+function generatePalindrome(half: string, length: number): bigint {
   const reverseHalf = half
     .slice(0, length % 2 ? -1 : undefined)
     .split("")

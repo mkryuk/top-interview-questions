@@ -38,4 +38,33 @@ describe("Count Sub Islands", () => {
     const result = countSubIslands(grid1, grid2);
     expect(result).toEqual(2);
   });
+
+  it("countSubIslands should return 0 for test3", () => {
+    const grid1 = [
+      [1, 1, 1, 1, 0, 0],
+      [1, 1, 0, 1, 0, 0],
+      [1, 0, 0, 1, 1, 1],
+      [1, 1, 1, 0, 0, 1],
+      [1, 1, 1, 1, 1, 0],
+      [1, 0, 1, 0, 1, 0],
+      [0, 1, 1, 1, 0, 1],
+      [1, 0, 0, 0, 1, 1],
+      [1, 0, 0, 0, 1, 0],
+      [1, 1, 1, 1, 1, 0],
+    ];
+    const grid2 = [
+      [1, 1, 1, 1, 0, 1],
+      [0, 0, 1, 0, 1, 0],
+      [1, 1, 1, 1, 1, 1],
+      [0, 1, 1, 1, 1, 1],
+      [1, 1, 1, 0, 1, 0],
+      [0, 1, 1, 1, 1, 1],
+      [1, 1, 0, 1, 1, 1],
+      [1, 0, 0, 1, 0, 1],
+      [1, 1, 1, 1, 1, 1],
+      [1, 0, 0, 1, 0, 0],
+    ];
+    const result = countSubIslands(grid1, grid2);
+    expect(result).toEqual(0);
+  });
 });

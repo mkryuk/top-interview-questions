@@ -23,7 +23,7 @@ describe("Most Stones Removed with Same Row or Column", () => {
       [2, 2],
     ];
     const result = removeStones(stones);
-    expect(result).toEqual(5);
+    expect(result).toEqual(3);
   });
 
   it("removeStones should return 0 for stones = [[0,0]]", () => {

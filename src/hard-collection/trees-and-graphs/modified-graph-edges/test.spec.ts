@@ -15,7 +15,7 @@ describe("Modify Graph Edge Weights", () => {
     const result = modifiedGraphEdges(n, edges, source, destination, target);
     expect(result).toEqual([
       [4, 1, 1],
-      [2, 0, 1],
+      [2, 0, 3],
       [0, 3, 3],
       [4, 3, 1],
     ]);

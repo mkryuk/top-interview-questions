@@ -27,4 +27,12 @@ describe("Convert 1D Array Into 2D Array", () => {
     const result = construct2DArray(original, m, n);
     expect(result).toEqual([]);
   });
+
+  it("construct2DArray should return [[1],[1],[1],[1]] for original = [1,1,1,1], m = 4, n = 1", () => {
+    const original = [1, 1, 1, 1];
+    const m = 4;
+    const n = 1;
+    const result = construct2DArray(original, m, n);
+    expect(result).toEqual([[1], [1], [1], [1]]);
+  });
 });

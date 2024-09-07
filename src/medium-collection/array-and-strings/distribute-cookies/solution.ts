@@ -4,13 +4,7 @@ export function distributeCookies(cookies: number[], k: number): number {
   return dfs(0, distribute, cookies, k, k);
 }
 
-function dfs(
-  i: number,
-  distribute: number[],
-  cookies: number[],
-  k: number,
-  zeroCount: number,
-): number {
+function dfs(i: number, distribute: number[], cookies: number[], k: number, zeroCount: number): number {
   // If there are not enough cookies remaining, return Number.MAX_SAFE_INTEGER
   // as it leads to an invalid distribution.
   if (cookies.length - i < zeroCount) {

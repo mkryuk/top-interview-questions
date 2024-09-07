@@ -42,9 +42,7 @@ function dfs(grid: number[][], visited: boolean[][], i: number, j: number) {
 function isDisconnected(grid: number[][]): boolean {
   const m = grid.length;
   const n = grid[0].length;
-  const visited: boolean[][] = Array.from({ length: m }, () =>
-    Array(n).fill(false),
-  );
+  const visited: boolean[][] = Array.from({ length: m }, () => Array(n).fill(false));
   let islandCount = 0;
 
   for (let i = 0; i < m; i++) {

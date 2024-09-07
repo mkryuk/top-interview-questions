@@ -12,13 +12,7 @@ export function partition(s: string): string[][] {
   return result;
 }
 
-function dfs(
-  start: number,
-  result: string[][],
-  currentList: string[],
-  s: string,
-  pt: boolean[][],
-): void {
+function dfs(start: number, result: string[][], currentList: string[], s: string, pt: boolean[][]): void {
   if (start >= s.length) {
     result.push([...currentList]);
   }

@@ -1,9 +1,6 @@
 import { TreeNode } from "../common";
 
-export function removeLeafNodes(
-  root: TreeNode | null,
-  target: number,
-): TreeNode | null {
+export function removeLeafNodes(root: TreeNode | null, target: number): TreeNode | null {
   if (root === null) {
     return root;
   }

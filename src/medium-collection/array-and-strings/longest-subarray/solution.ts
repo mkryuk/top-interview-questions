@@ -4,18 +4,12 @@ export function longestSubarray(nums: number[], limit: number): number {
   let left = 0;
   let result = 0;
   for (let right = 0; right < nums.length; right++) {
-    while (
-      maxQueue.length > 0 &&
-      nums[maxQueue[maxQueue.length - 1]] < nums[right]
-    ) {
+    while (maxQueue.length > 0 && nums[maxQueue[maxQueue.length - 1]] < nums[right]) {
       maxQueue.pop();
     }
     maxQueue.push(right);
 
-    while (
-      minQueue.length > 0 &&
-      nums[minQueue[minQueue.length - 1]] > nums[right]
-    ) {
+    while (minQueue.length > 0 && nums[minQueue[minQueue.length - 1]] > nums[right]) {
       minQueue.pop();
     }
     minQueue.push(right);

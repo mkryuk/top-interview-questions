@@ -6,8 +6,7 @@ export function minCost(colors: string, neededTime: number[]): number {
     // When consecutive balloons are of the same color
     if (colors[i] === colors[i - 1]) {
       windowSum = windowSum === 0 ? neededTime[i - 1] : windowSum;
-      maxWindowValue =
-        maxWindowValue === 0 ? neededTime[i - 1] : maxWindowValue;
+      maxWindowValue = maxWindowValue === 0 ? neededTime[i - 1] : maxWindowValue;
       windowSum += neededTime[i];
       maxWindowValue = Math.max(maxWindowValue, neededTime[i]);
     }

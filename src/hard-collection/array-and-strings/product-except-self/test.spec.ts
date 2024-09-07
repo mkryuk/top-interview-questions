@@ -9,9 +9,7 @@ it("productExceptSelf should return [0,0,9,0,0] for nums = [-1,1,0,-3,3]", () =>
 });
 
 it("productExceptSelf should return [1920,960,640,480,384] for nums = [2,4,6,8,10]", () => {
-  expect(productExceptSelf([2, 4, 6, 8, 10])).toEqual([
-    1920, 960, 640, 480, 384,
-  ]);
+  expect(productExceptSelf([2, 4, 6, 8, 10])).toEqual([1920, 960, 640, 480, 384]);
 });
 
 it("productExceptSelf should return [24,30,40,60,120] for nums = [5,4,3,2,1]", () => {

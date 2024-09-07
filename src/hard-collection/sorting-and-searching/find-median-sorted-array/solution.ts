@@ -1,7 +1,4 @@
-export function findMedianSortedArrays(
-  nums1: number[],
-  nums2: number[],
-): number {
+export function findMedianSortedArrays(nums1: number[], nums2: number[]): number {
   let result = [];
   let i = 0;
   let k = 0;

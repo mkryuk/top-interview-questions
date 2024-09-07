@@ -14,10 +14,7 @@ describe("Minimum Number of Operations to Make Array Empty:", () => {
   });
 
   it("minOperations should return 7 for nums = [14,12,14,14,12,14,14,12,12,12,12,14,14,12,14,14,14,12,12]", () => {
-    const nums = [
-      14, 12, 14, 14, 12, 14, 14, 12, 12, 12, 12, 14, 14, 12, 14, 14, 14, 12,
-      12,
-    ];
+    const nums = [14, 12, 14, 14, 12, 14, 14, 12, 12, 12, 12, 14, 14, 12, 14, 14, 14, 12, 12];
     const result = minOperations(nums);
     expect(result).toEqual(7);
   });

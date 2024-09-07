@@ -5,11 +5,7 @@ enum NodeState {
   LEFT_DONE = 1,
   BOTH_PENDING = 2,
 }
-export function lowestCommonAncestor(
-  root: TreeNode | null,
-  p: TreeNode | null,
-  q: TreeNode | null,
-): TreeNode | null {
+export function lowestCommonAncestor(root: TreeNode | null, p: TreeNode | null, q: TreeNode | null): TreeNode | null {
   let stack: [TreeNode | null, NodeState][] = [];
 
   // Initialize the stack with the root node.

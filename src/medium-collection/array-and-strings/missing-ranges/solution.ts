@@ -1,8 +1,4 @@
-export function findMissingRanges(
-  nums: number[],
-  lower: number,
-  upper: number,
-): string[] {
+export function findMissingRanges(nums: number[], lower: number, upper: number): string[] {
   let result: string[] = [];
   if (nums.length === 0) {
     const diff = upper - lower;
@@ -16,17 +12,13 @@ export function findMissingRanges(
   for (let i = 0; i < lastIndex; i++) {
     const diff = nums[i + 1] - nums[i];
     if (diff > 1) {
-      let record =
-        diff === 2 ? `${nums[i] + 1}` : `${nums[i] + 1}->${nums[i + 1] - 1}`;
+      let record = diff === 2 ? `${nums[i] + 1}` : `${nums[i] + 1}->${nums[i + 1] - 1}`;
       result.push(record);
     }
   }
 
   if (upper > nums[lastIndex]) {
-    let record =
-      upper - nums[lastIndex] > 1
-        ? `${nums[lastIndex] + 1}->${upper}`
-        : `${upper}`;
+    let record = upper - nums[lastIndex] > 1 ? `${nums[lastIndex] + 1}->${upper}` : `${upper}`;
     result.push(record);
   }
   return result;

@@ -1,8 +1,4 @@
-export function missingRolls(
-  rolls: number[],
-  mean: number,
-  n: number,
-): number[] {
+export function missingRolls(rolls: number[], mean: number, n: number): number[] {
   const m = rolls.length;
   const totalSum = mean * (n + m);
   const rollsSum = rolls.reduce((prev, curr) => prev + curr, 0);

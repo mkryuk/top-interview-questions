@@ -5,11 +5,7 @@ export function wordBreak(s: string, wordDict: string[]): string[] {
   return result;
 }
 
-function dfs(
-  s: string,
-  wordSet: Set<string>,
-  wordMap: Map<string, string[][]>,
-): string[][] {
+function dfs(s: string, wordSet: Set<string>, wordMap: Map<string, string[][]>): string[][] {
   if (s.length === 0) {
     return [[]];
   }

@@ -28,10 +28,7 @@ export function findRotateSteps(ring: string, key: string): number {
       for (const k of pos[key[i - 1]]) {
         const clockwise = Math.abs(j - k);
         const counterclockwise = n - clockwise;
-        dp[i + 1][j] = Math.min(
-          dp[i + 1][j],
-          dp[i][k] + Math.min(clockwise, counterclockwise) + 1,
-        );
+        dp[i + 1][j] = Math.min(dp[i + 1][j], dp[i][k] + Math.min(clockwise, counterclockwise) + 1);
       }
     }
   }

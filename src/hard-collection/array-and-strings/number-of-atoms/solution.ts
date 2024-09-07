@@ -19,10 +19,7 @@ export function countOfAtoms(formula: string): string {
   }
 
   // helper function to parse the formula recursively
-  function parseFormula(
-    s: string,
-    index: number,
-  ): [{ [key: string]: number }, number] {
+  function parseFormula(s: string, index: number): [{ [key: string]: number }, number] {
     const countMap: { [key: string]: number } = {};
 
     while (index < s.length && s[index] !== ")") {

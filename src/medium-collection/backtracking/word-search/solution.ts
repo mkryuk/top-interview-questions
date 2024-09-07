@@ -9,23 +9,11 @@ export function exist(board: string[][], word: string): boolean {
   return false;
 }
 
-function backtrack(
-  index: number,
-  word: string,
-  i: number,
-  j: number,
-  board: string[][],
-): boolean {
+function backtrack(index: number, word: string, i: number, j: number, board: string[][]): boolean {
   if (index >= word.length) {
     return true;
   }
-  if (
-    i < 0 ||
-    i >= board.length ||
-    j < 0 ||
-    j >= board[0].length ||
-    word[index] !== board[i][j]
-  ) {
+  if (i < 0 || i >= board.length || j < 0 || j >= board[0].length || word[index] !== board[i][j]) {
     return false;
   }
   board[i][j] = "#";

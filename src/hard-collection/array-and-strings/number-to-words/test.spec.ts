@@ -16,8 +16,6 @@ describe("Integer to English Words", () => {
   it('numberToWords should return "One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven" for num = 1234567', () => {
     const num = 1234567;
     const result = numberToWords(num);
-    expect(result).toEqual(
-      "One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven",
-    );
+    expect(result).toEqual("One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven");
   });
 });

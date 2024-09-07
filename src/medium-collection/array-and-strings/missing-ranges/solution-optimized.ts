@@ -1,8 +1,4 @@
-export function findMissingRanges(
-  nums: number[],
-  lower: number,
-  upper: number,
-): string[] {
+export function findMissingRanges(nums: number[], lower: number, upper: number): string[] {
   let result: string[] = [];
   let prev = lower - 1;
   for (let i = 0; i <= nums.length; i++) {

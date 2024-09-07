@@ -29,14 +29,7 @@ export function findWords(board: string[][], words: string[]): string[] {
   return result;
 }
 
-function dfs(
-  word: string,
-  pos: number,
-  board: string[][],
-  i: number,
-  j: number,
-  result: string[],
-): boolean {
+function dfs(word: string, pos: number, board: string[][], i: number, j: number, result: string[]): boolean {
   if (result.length) {
     return false;
   }

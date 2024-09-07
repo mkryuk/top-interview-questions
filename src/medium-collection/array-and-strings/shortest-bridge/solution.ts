@@ -55,8 +55,7 @@ export function shortestBridge(grid: number[][]): number {
 
 // DFS function to mark all cells of the first island
 function dfs(grid: number[][], i: number, j: number, queue: Coordinate[]) {
-  if (i < 0 || j < 0 || i >= grid.length || j >= grid.length || grid[i][j] != 1)
-    return; // Boundary and condition check
+  if (i < 0 || j < 0 || i >= grid.length || j >= grid.length || grid[i][j] != 1) return; // Boundary and condition check
 
   grid[i][j] = 2; // Mark this cell as visited
   queue.push([i, j]); // Add this cell to the queue

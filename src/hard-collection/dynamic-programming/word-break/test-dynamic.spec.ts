@@ -37,18 +37,7 @@ it('wordBreak should return false for s = "abcabcd", wordDict = ["abc","cab","cd
 
 it('wordBreak should return false for s = "aaaaaaa.....b", wordDict = ["a","aa","aaa" ...]', () => {
   const s = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab";
-  const wordDict = [
-    "a",
-    "aa",
-    "aaa",
-    "aaaa",
-    "aaaaa",
-    "aaaaaa",
-    "aaaaaaa",
-    "aaaaaaaa",
-    "aaaaaaaaa",
-    "aaaaaaaaaa",
-  ];
+  const wordDict = ["a", "aa", "aaa", "aaaa", "aaaaa", "aaaaaa", "aaaaaaa", "aaaaaaaa", "aaaaaaaaa", "aaaaaaaaaa"];
   const result = wordBreak(s, wordDict);
   expect(result).toBeFalse();
 });

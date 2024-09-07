@@ -22,20 +22,14 @@ export function modifiedGraphEdges(
   destination: number,
   target: number,
 ): number[][] {
-  const adjacencyList: [number, number][][] = Array.from(
-    { length: n },
-    () => [],
-  );
+  const adjacencyList: [number, number][][] = Array.from({ length: n }, () => []);
   for (let i = 0; i < edges.length; i++) {
     const [nodeA, nodeB] = edges[i];
     adjacencyList[nodeA].push([nodeB, i]);
     adjacencyList[nodeB].push([nodeA, i]);
   }
 
-  const distances: number[][] = Array.from({ length: n }, () => [
-    Infinity,
-    Infinity,
-  ]);
+  const distances: number[][] = Array.from({ length: n }, () => [Infinity, Infinity]);
   distances[source] = [0, 0];
 
   runDijkstra(adjacencyList, edges, distances, source, 0, 0);
@@ -84,8 +78,7 @@ function runDijkstra(
       }
 
       if (run === 1 && edges[edgeIndex][2] === -1) {
-        const newWeight =
-          difference + distances[nextNode][0] - distances[currentNode][1];
+        const newWeight = difference + distances[nextNode][0] - distances[currentNode][1];
         if (newWeight > weight) {
           edges[edgeIndex][2] = weight = newWeight;
         }

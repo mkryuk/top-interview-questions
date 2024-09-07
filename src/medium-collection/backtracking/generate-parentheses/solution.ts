@@ -4,13 +4,7 @@ export function generateParenthesis(n: number): string[] {
   return result;
 }
 
-function backtrack(
-  parenthesis: string,
-  n: number,
-  open: number,
-  close: number,
-  result: string[],
-) {
+function backtrack(parenthesis: string, n: number, open: number, close: number, result: string[]) {
   if (parenthesis.length === n * 2) {
     result.push(parenthesis);
     return;

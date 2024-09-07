@@ -23,8 +23,6 @@ describe("Merge In Between Linked Lists", () => {
     const list2 = arrayToList(nodes2);
     const resultList = mergeInBetween(list1, a, b, list2);
     const result = listToArray(resultList);
-    expect(result).toEqual([
-      0, 1, 1000000, 1000001, 1000002, 1000003, 1000004, 6,
-    ]);
+    expect(result).toEqual([0, 1, 1000000, 1000001, 1000002, 1000003, 1000004, 6]);
   });
 });

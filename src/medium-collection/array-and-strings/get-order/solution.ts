@@ -11,9 +11,7 @@ export function getOrder(tasks: number[][]): number[] {
     .sort((left, right) => left.enqueue - right.enqueue);
 
   let heap = new Heap<ProcessType>((left, right) =>
-    left.processing !== right.processing
-      ? left.processing - right.processing
-      : left.taskId - right.taskId,
+    left.processing !== right.processing ? left.processing - right.processing : left.taskId - right.taskId,
   );
 
   let currentTime = 0;
@@ -25,10 +23,7 @@ export function getOrder(tasks: number[][]): number[] {
       currentTime = processes[taskIndex].enqueue;
     }
     // Take available processes and put them into the heap
-    while (
-      taskIndex < processes.length &&
-      processes[taskIndex].enqueue <= currentTime
-    ) {
+    while (taskIndex < processes.length && processes[taskIndex].enqueue <= currentTime) {
       heap.push(processes[taskIndex++]);
     }
 

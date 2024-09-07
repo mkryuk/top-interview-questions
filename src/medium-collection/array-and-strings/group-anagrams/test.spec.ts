@@ -9,12 +9,7 @@ it('groupAnagrams should return [["bat"],["nat","tan"],["ate","eat","tea"]] for 
 it('groupAnagrams should return [["squad","quads"],["fats","fast"],["bat"],["tea","ate"]] for strs = ["quads","fast","fats","squad","ate","tea","bat"]', function () {
   const strs = ["quads", "fast", "fats", "squad", "ate", "tea", "bat"];
   const result = groupAnagrams(strs);
-  expect(result).toEqual([
-    ["quads", "squad"],
-    ["fast", "fats"],
-    ["ate", "tea"],
-    ["bat"],
-  ]);
+  expect(result).toEqual([["quads", "squad"], ["fast", "fats"], ["ate", "tea"], ["bat"]]);
 });
 
 it('groupAnagrams should return [[""]] for strs = [""]', function () {

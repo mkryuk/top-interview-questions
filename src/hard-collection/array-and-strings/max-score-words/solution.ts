@@ -1,8 +1,4 @@
-export function maxScoreWords(
-  words: string[],
-  letters: string[],
-  score: number[],
-): number {
+export function maxScoreWords(words: string[], letters: string[], score: number[]): number {
   const lettersMap = new Map<string, number>();
   for (const letter of letters) {
     if (!lettersMap.has(letter)) {
@@ -19,9 +15,7 @@ export function maxScoreWords(
     wordsMap.set(word, getWordMap(word));
   }
 
-  words = words.filter((word) =>
-    canTakeWord(new Map(), wordsMap.get(word)!, lettersMap),
-  );
+  words = words.filter((word) => canTakeWord(new Map(), wordsMap.get(word)!, lettersMap));
 
   const wordsScore = new Map<string, number>();
   for (const word of words) {

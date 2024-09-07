@@ -11,12 +11,7 @@ export function crackSafe(n: number, k: number): string {
   return sequences.join("");
 }
 
-function dfs(
-  prefix: string,
-  sequences: string[],
-  visited: Set<string>,
-  k: number,
-): void {
+function dfs(prefix: string, sequences: string[], visited: Set<string>, k: number): void {
   for (let i = 0; i < k; i++) {
     const sequence = prefix + i;
     if (visited.has(sequence)) {

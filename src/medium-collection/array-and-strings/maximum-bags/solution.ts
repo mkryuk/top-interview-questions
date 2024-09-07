@@ -1,8 +1,4 @@
-export function maximumBags(
-  capacity: number[],
-  rocks: number[],
-  additionalRocks: number,
-): number {
+export function maximumBags(capacity: number[], rocks: number[], additionalRocks: number): number {
   const remainingRocks: number[] = [];
   for (let i = 0; i < capacity.length; i++) {
     remainingRocks.push(capacity[i] - rocks[i]);

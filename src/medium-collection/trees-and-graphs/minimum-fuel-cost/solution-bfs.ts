@@ -13,12 +13,7 @@ export function minimumFuelCost(roads: number[][], seats: number): number {
   return calculateFuel(n, tree, degree, seats);
 }
 
-function calculateFuel(
-  n: number,
-  adj: Map<number, number[]>,
-  degree: number[],
-  seats: number,
-): number {
+function calculateFuel(n: number, adj: Map<number, number[]>, degree: number[], seats: number): number {
   const q: number[] = [];
   for (let i = 1; i < n; i++) {
     if (degree[i] === 1) {

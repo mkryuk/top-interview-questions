@@ -4,10 +4,7 @@ export function allPossibleFBT(n: number): Array<TreeNode | null> {
   return dfs(n, new Map());
 }
 
-function dfs(
-  n: number,
-  memo: Map<number, (TreeNode | null)[]>,
-): Array<TreeNode | null> {
+function dfs(n: number, memo: Map<number, (TreeNode | null)[]>): Array<TreeNode | null> {
   if (n % 2 === 0) {
     return [];
   }

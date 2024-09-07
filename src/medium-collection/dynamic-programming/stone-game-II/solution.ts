@@ -11,10 +11,7 @@ export function stoneGameII(piles: number[]): number {
   for (let i = n - 1; i >= 0; i--) {
     for (let m = 1; m <= n; m++) {
       for (let x = 1; x <= 2 * m && i + x <= n; x++) {
-        dp[i][m] = Math.max(
-          dp[i][m],
-          suffixSum[i] - (i + x < n ? dp[i + x][Math.max(m, x)] : 0),
-        );
+        dp[i][m] = Math.max(dp[i][m], suffixSum[i] - (i + x < n ? dp[i + x][Math.max(m, x)] : 0));
       }
     }
   }

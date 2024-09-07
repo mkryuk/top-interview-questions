@@ -19,12 +19,7 @@ export function minDays(bloomDay: number[], m: number, k: number): number {
   return min;
 }
 
-function canMakeBouquets(
-  days: number,
-  bloomDay: number[],
-  m: number,
-  k: number,
-): boolean {
+function canMakeBouquets(days: number, bloomDay: number[], m: number, k: number): boolean {
   let flowers = 0;
   let bouquets = 0;
   for (let i = 0; i < bloomDay.length; i++) {

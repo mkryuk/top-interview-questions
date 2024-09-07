@@ -3,22 +3,14 @@ export function maxLength(arr: string[]): number {
   return result;
 }
 
-function backtrack(
-  arr: string[],
-  index: number,
-  current: string,
-  maxLen: number,
-): number {
+function backtrack(arr: string[], index: number, current: string, maxLen: number): number {
   if (index === arr.length) {
     return Math.max(maxLen, current.length);
   }
 
   maxLen = Math.max(backtrack(arr, index + 1, current, maxLen), maxLen);
   if (isUniqueSubsequence(current, arr[index])) {
-    maxLen = Math.max(
-      backtrack(arr, index + 1, current + arr[index], maxLen),
-      maxLen,
-    );
+    maxLen = Math.max(backtrack(arr, index + 1, current + arr[index], maxLen), maxLen);
   }
   return maxLen;
 }

@@ -40,7 +40,5 @@ export function reorganizeString(s: string): string {
   }
 
   // if we have two similar chars at the end rearrangement is not possible
-  return result[result.length - 1] === result[result.length - 2]
-    ? ""
-    : result.join("");
+  return result[result.length - 1] === result[result.length - 2] ? "" : result.join("");
 }

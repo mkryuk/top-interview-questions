@@ -39,11 +39,7 @@ class UnionFind {
   }
 }
 
-export function findAllPeople(
-  n: number,
-  meetings: number[][],
-  firstPerson: number,
-): number[] {
+export function findAllPeople(n: number, meetings: number[][], firstPerson: number): number[] {
   meetings.sort((a, b) => a[2] - b[2]);
 
   const sameTimeMeetings: Map<number, Array<[number, number]>> = new Map();

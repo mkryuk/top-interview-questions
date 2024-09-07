@@ -32,8 +32,7 @@ export function removeDuplicateLetters(s: string): string {
       stack[stack.length - 1] > char &&
       count[stack[stack.length - 1].charCodeAt(0) - "a".charCodeAt(0)] > 0
     ) {
-      inStack[stack[stack.length - 1].charCodeAt(0) - "a".charCodeAt(0)] =
-        false;
+      inStack[stack[stack.length - 1].charCodeAt(0) - "a".charCodeAt(0)] = false;
       stack.pop();
     }
 

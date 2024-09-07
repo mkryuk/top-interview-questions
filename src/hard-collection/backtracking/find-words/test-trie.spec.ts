@@ -54,18 +54,7 @@ it("findWords should pass test 4", () => {
     ["a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a"],
     ["a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a"],
   ];
-  const words = [
-    "a",
-    "aa",
-    "aaa",
-    "aaaa",
-    "aaaaa",
-    "aaaaaa",
-    "aaaaaaa",
-    "aaaaaaaa",
-    "aaaaaaaaa",
-    "aaaaaaaaaa",
-  ];
+  const words = ["a", "aa", "aaa", "aaaa", "aaaaa", "aaaaaa", "aaaaaaa", "aaaaaaaa", "aaaaaaaaa", "aaaaaaaaaa"];
   const result = findWords(board, words);
   const expected: string[] = [
     "a",
@@ -103,30 +92,8 @@ it("findWords should pass test 61", () => {
     ["i", "h", "k", "r"],
     ["i", "f", "l", "v"],
   ];
-  const words = [
-    "oath",
-    "pea",
-    "eat",
-    "rain",
-    "oathi",
-    "oathk",
-    "oathf",
-    "oate",
-    "oathii",
-    "oathfi",
-    "oathfii",
-  ];
+  const words = ["oath", "pea", "eat", "rain", "oathi", "oathk", "oathf", "oate", "oathii", "oathfi", "oathfii"];
   const result = findWords(board, words);
-  const expected: string[] = [
-    "oath",
-    "oathk",
-    "oathf",
-    "oathfi",
-    "oathfii",
-    "oathi",
-    "oathii",
-    "oate",
-    "eat",
-  ];
+  const expected: string[] = ["oath", "oathk", "oathf", "oathfi", "oathfii", "oathi", "oathii", "oate", "eat"];
   expect(compareArrays(result, expected)).toBeTrue();
 });

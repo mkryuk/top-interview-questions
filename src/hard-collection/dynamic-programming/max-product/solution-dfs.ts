@@ -3,10 +3,7 @@ export function maxProduct(nums: number[]): number {
   return result;
 }
 
-function dfs(
-  nums: number[],
-  i: number,
-): { min: number; max: number; result: number } {
+function dfs(nums: number[], i: number): { min: number; max: number; result: number } {
   let curr = nums[i];
   if (i === nums.length - 1) {
     return {

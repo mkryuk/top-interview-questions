@@ -25,19 +25,7 @@ it("should delete words from trie", () => {
 });
 
 it("should delete similar words from trie", () => {
-  const words = [
-    "oath",
-    "pea",
-    "eat",
-    "rain",
-    "oathi",
-    "oathk",
-    "oathf",
-    "oate",
-    "oathii",
-    "oathfi",
-    "oathfii",
-  ];
+  const words = ["oath", "pea", "eat", "rain", "oathi", "oathk", "oathf", "oate", "oathii", "oathfi", "oathfii"];
   const trie = new Trie();
   words.forEach((word) => {
     trie.insert(word);

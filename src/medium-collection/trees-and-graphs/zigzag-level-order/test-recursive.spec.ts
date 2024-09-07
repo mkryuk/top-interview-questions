@@ -19,12 +19,7 @@ it("zigzagLevelOrder should return [[1],[3,2],[4,5],[9,8,7,6]] for root = [1,2,3
   const root = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
   const rootNode = arrayToTreeNodeLevel(root);
   const result = zigzagLevelOrder(rootNode);
-  expect(result).toEqual([
-    [1],
-    [3, 2],
-    [4, 5, 6, 7],
-    [15, 14, 13, 12, 11, 10, 9, 8],
-  ]);
+  expect(result).toEqual([[1], [3, 2], [4, 5, 6, 7], [15, 14, 13, 12, 11, 10, 9, 8]]);
 });
 
 it("zigzagLevelOrder should return [[1]] for root = [1]", function () {

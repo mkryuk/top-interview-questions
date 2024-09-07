@@ -3,10 +3,7 @@ interface GNode {
   nextNodes: number[];
 }
 
-export function findOrder(
-  numCourses: number,
-  prerequisites: number[][],
-): number[] {
+export function findOrder(numCourses: number, prerequisites: number[][]): number[] {
   const graph = new Map<number, GNode>();
   // init graph
   for (let course = 0; course < numCourses; course++) {

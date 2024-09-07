@@ -10,19 +10,8 @@ export function countSubIslands(grid1: number[][], grid2: number[][]): number {
   return result;
 }
 
-function dfs(
-  row: number,
-  col: number,
-  grid1: number[][],
-  grid2: number[][],
-): boolean {
-  if (
-    row < 0 ||
-    col < 0 ||
-    row > grid2.length - 1 ||
-    col > grid2[0].length - 1 ||
-    grid2[row][col] === 0
-  ) {
+function dfs(row: number, col: number, grid1: number[][], grid2: number[][]): boolean {
+  if (row < 0 || col < 0 || row > grid2.length - 1 || col > grid2[0].length - 1 || grid2[row][col] === 0) {
     return true;
   }
 

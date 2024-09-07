@@ -43,10 +43,7 @@ class MaxHeap {
     }
     // If the largest index is not the current index, swap the current node with the largest child and continue heapifying
     if (largest !== index) {
-      [this.piles[index], this.piles[largest]] = [
-        this.piles[largest],
-        this.piles[index],
-      ];
+      [this.piles[index], this.piles[largest]] = [this.piles[largest], this.piles[index]];
       this.heapify(largest);
     }
   }
@@ -57,10 +54,7 @@ class MaxHeap {
     // Find the index of the newly added item
     let index = this.piles.length - 1;
     // While the item is not at the root and has a higher priority than its parent
-    while (
-      index > 0 &&
-      this.piles[index] > this.piles[Math.floor((index - 1) / 2)]
-    ) {
+    while (index > 0 && this.piles[index] > this.piles[Math.floor((index - 1) / 2)]) {
       // Swap the item with its parent
       [this.piles[index], this.piles[Math.floor((index - 1) / 2)]] = [
         this.piles[Math.floor((index - 1) / 2)],

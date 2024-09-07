@@ -10,11 +10,7 @@ export function isValidSudokuOnePass(board: string[][]): boolean {
         continue;
       }
       const boxIndex = Math.floor(i / 3) * 3 + Math.floor(k / 3);
-      if (
-        rowMap[i].has(element) ||
-        columnMap[k].has(element) ||
-        boxMap[boxIndex].has(element)
-      ) {
+      if (rowMap[i].has(element) || columnMap[k].has(element) || boxMap[boxIndex].has(element)) {
         return false;
       }
       rowMap[i].add(element);

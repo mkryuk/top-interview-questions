@@ -1,8 +1,4 @@
-export function survivedRobotsHealths(
-  positions: number[],
-  healths: number[],
-  directions: string,
-): number[] {
+export function survivedRobotsHealths(positions: number[], healths: number[], directions: string): number[] {
   // Create a list of robots with their properties
   const robots = positions.map((position, index) => ({
     position,

@@ -6,9 +6,7 @@ export function isPalindrome(head: NullableListNode): boolean {
   }
   // Find the end of first half and reverse second half.
   let firstHalfEnd: NullableListNode = endOfFirstHalf(head);
-  let secondHalfStart: NullableListNode = reverseList(
-    firstHalfEnd?.next ?? null,
-  );
+  let secondHalfStart: NullableListNode = reverseList(firstHalfEnd?.next ?? null);
 
   // Check whether or not there is a palindrome.
   let p1: NullableListNode = head;

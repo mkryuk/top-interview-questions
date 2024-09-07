@@ -13,12 +13,7 @@ export function countSmaller(nums: number[]): number[] {
 }
 
 // implement Binary Index Tree
-function update(
-  index: number,
-  value: number,
-  tree: number[],
-  size: number,
-): void {
+function update(index: number, value: number, tree: number[], size: number): void {
   index++; // index in BIT is 1 more than the original index
   while (index < size) {
     tree[index] += value;

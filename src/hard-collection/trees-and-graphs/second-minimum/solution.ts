@@ -1,11 +1,6 @@
 import { Heap } from "../../design/heap/heap";
 
-export function secondMinimum(
-  n: number,
-  edges: number[][],
-  time: number,
-  change: number,
-): number {
+export function secondMinimum(n: number, edges: number[][], time: number, change: number): number {
   const graph: Map<number, number[]> = new Map();
 
   // build the graph
@@ -21,16 +16,11 @@ export function secondMinimum(
   }
 
   // priority queue for the modified Dijkstra's algorithm
-  const pq = new Heap<{ node: number; time: number }>(
-    (a, b) => a.time - b.time,
-  );
+  const pq = new Heap<{ node: number; time: number }>((a, b) => a.time - b.time);
   pq.push({ node: 1, time: 0 });
 
   // array to keep track of the two shortest arrival times at each node
-  const dist: number[][] = Array.from({ length: n + 1 }, () => [
-    Infinity,
-    Infinity,
-  ]);
+  const dist: number[][] = Array.from({ length: n + 1 }, () => [Infinity, Infinity]);
   dist[1][0] = 0;
 
   while (!pq.isEmpty()) {
@@ -50,10 +40,7 @@ export function secondMinimum(
         dist[neighbor][1] = dist[neighbor][0];
         dist[neighbor][0] = arrivalTime;
         pq.push({ node: neighbor, time: arrivalTime });
-      } else if (
-        arrivalTime > dist[neighbor][0] &&
-        arrivalTime < dist[neighbor][1]
-      ) {
+      } else if (arrivalTime > dist[neighbor][0] && arrivalTime < dist[neighbor][1]) {
         dist[neighbor][1] = arrivalTime;
         pq.push({ node: neighbor, time: arrivalTime });
       }

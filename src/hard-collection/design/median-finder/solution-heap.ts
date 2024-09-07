@@ -21,8 +21,6 @@ export class MedianFinder {
   }
 
   findMedian(): number {
-    return this.lo.size() > this.hi.size()
-      ? this.lo.top()!
-      : (this.lo.top()! + this.hi.top()!) * 0.5;
+    return this.lo.size() > this.hi.size() ? this.lo.top()! : (this.lo.top()! + this.hi.top()!) * 0.5;
   }
 }

@@ -1,9 +1,4 @@
-export function numOfMinutes(
-  n: number,
-  headID: number,
-  manager: number[],
-  informTime: number[],
-): number {
+export function numOfMinutes(n: number, headID: number, manager: number[], informTime: number[]): number {
   const subordinatesMap = new Map<number, number[]>();
   for (let i = 0; i < manager.length; i++) {
     const managerId = manager[i];
@@ -15,11 +10,7 @@ export function numOfMinutes(
   return dfs(headID, subordinatesMap, informTime);
 }
 
-function dfs(
-  manager: number,
-  subordinatesMap: Map<number, number[]>,
-  informTime: number[],
-): number {
+function dfs(manager: number, subordinatesMap: Map<number, number[]>, informTime: number[]): number {
   if (!subordinatesMap.has(manager)) {
     return 0;
   }

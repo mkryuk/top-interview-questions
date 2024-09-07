@@ -1,10 +1,6 @@
 import { TreeNode } from "../common";
 
-export function addOneRow(
-  root: TreeNode | null,
-  val: number,
-  depth: number,
-): TreeNode | null {
+export function addOneRow(root: TreeNode | null, val: number, depth: number): TreeNode | null {
   if (depth === 1) {
     return new TreeNode(val, root);
   }

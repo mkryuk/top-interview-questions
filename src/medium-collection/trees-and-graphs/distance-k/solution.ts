@@ -1,10 +1,6 @@
 import { TreeNode } from "../common";
 
-export function distanceK(
-  root: TreeNode | null,
-  target: TreeNode | null,
-  k: number,
-): number[] {
+export function distanceK(root: TreeNode | null, target: TreeNode | null, k: number): number[] {
   if (root === null || target === null) {
     return [];
   }
@@ -16,11 +12,7 @@ export function distanceK(
   return result;
 }
 
-function createMap(
-  node: TreeNode | null,
-  parent: TreeNode | null,
-  parents: Map<number, TreeNode | null>,
-) {
+function createMap(node: TreeNode | null, parent: TreeNode | null, parents: Map<number, TreeNode | null>) {
   if (node === null) {
     return;
   }

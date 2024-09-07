@@ -1,20 +1,12 @@
 import { TreeNode } from "../common";
 
-export function getDirections(
-  root: TreeNode | null,
-  startValue: number,
-  destValue: number,
-): string {
+export function getDirections(root: TreeNode | null, startValue: number, destValue: number): string {
   let startPath: string[] = [];
   let destPath: string[] = [];
   dfs(root, startValue, destValue, [], startPath, destPath);
   let i = 0;
   let j = 0;
-  while (
-    i < startPath.length &&
-    j < destPath.length &&
-    startPath[i] === destPath[j]
-  ) {
+  while (i < startPath.length && j < destPath.length && startPath[i] === destPath[j]) {
     i++;
     j++;
   }

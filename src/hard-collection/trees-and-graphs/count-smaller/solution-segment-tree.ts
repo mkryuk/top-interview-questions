@@ -13,12 +13,7 @@ export function countSmaller(nums: number[]): number[] {
 }
 
 // implement segment tree
-function update(
-  index: number,
-  value: number,
-  tree: number[],
-  size: number,
-): void {
+function update(index: number, value: number, tree: number[], size: number): void {
   index += size; // shift the index to the leaf
   // update from leaf to root
   tree[index] += value;
@@ -28,12 +23,7 @@ function update(
   }
 }
 
-function query(
-  left: number,
-  right: number,
-  tree: number[],
-  size: number,
-): number {
+function query(left: number, right: number, tree: number[], size: number): number {
   // return sum of [left, right)
   let result = 0;
   left += size; // shift the index to the leaf

@@ -11,12 +11,7 @@ export class TreeNode {
   }
 }
 
-function createTreeLevel(
-  nodes: (number | null)[],
-  root: TreeNode | null,
-  i: number,
-  n: number,
-): TreeNode | null {
+function createTreeLevel(nodes: (number | null)[], root: TreeNode | null, i: number, n: number): TreeNode | null {
   if (i < n) {
     const element = nodes[i];
     if (element !== null) {
@@ -31,9 +26,7 @@ function createTreeLevel(
 }
 
 // this is legacy function for array to TreeNode transformation
-export function arrayToTreeNodeLevel(
-  nodes: (number | null)[],
-): TreeNode | null {
+export function arrayToTreeNodeLevel(nodes: (number | null)[]): TreeNode | null {
   let root: TreeNode | null = null;
   root = createTreeLevel(nodes, root, 0, nodes.length);
   return root;
@@ -128,12 +121,7 @@ export function nodeToArray(root: Node | null): (number | string)[] {
   return result;
 }
 
-function createNodeLevel(
-  nodes: (number | null)[],
-  root: Node | null,
-  i: number,
-  n: number,
-): Node | null {
+function createNodeLevel(nodes: (number | null)[], root: Node | null, i: number, n: number): Node | null {
   if (i < n) {
     const element = nodes[i];
     if (element !== null) {
@@ -178,9 +166,7 @@ export class QuadTreeNode {
   }
 }
 
-export function quadTreeNodeToArray(
-  root: QuadTreeNode | null,
-): (number[] | null)[] {
+export function quadTreeNodeToArray(root: QuadTreeNode | null): (number[] | null)[] {
   if (!root) {
     return [];
   }
@@ -191,12 +177,7 @@ export function quadTreeNodeToArray(
     let val = node ? [node.isLeaf ? 1 : 0, node.val ? 1 : 0] : null;
     result.push(val);
 
-    if (
-      node?.topLeft ||
-      node?.topRight ||
-      node?.bottomLeft ||
-      node?.bottomRight
-    ) {
+    if (node?.topLeft || node?.topRight || node?.bottomLeft || node?.bottomRight) {
       queue.push(node?.topLeft || null);
       queue.push(node?.topRight || null);
       queue.push(node?.bottomLeft || null);

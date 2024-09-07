@@ -16,11 +16,7 @@ export function getAncestors(n: number, edges: number[][]): number[][] {
   return result;
 }
 
-function dfs(
-  node: number,
-  ancestorsMap: Map<number, number[]>,
-  revEdges: Map<number, number[]>,
-): number[] {
+function dfs(node: number, ancestorsMap: Map<number, number[]>, revEdges: Map<number, number[]>): number[] {
   if (ancestorsMap.has(node)) {
     return ancestorsMap.get(node)!;
   }

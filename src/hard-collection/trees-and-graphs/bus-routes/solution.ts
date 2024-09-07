@@ -1,8 +1,4 @@
-export function numBusesToDestination(
-  routes: number[][],
-  source: number,
-  target: number,
-): number {
+export function numBusesToDestination(routes: number[][], source: number, target: number): number {
   if (source === target) return 0;
 
   let n = routes.length;

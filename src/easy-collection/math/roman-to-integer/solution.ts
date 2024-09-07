@@ -15,11 +15,7 @@ export function romanToInt(s: string): number {
   ]);
   let result = 0;
   for (let i = 0; i < s.length; i++) {
-    if (
-      exceptions.has(s[i]) &&
-      i < s.length - 1 &&
-      exceptions.get(s[i])?.includes(s[i + 1])
-    ) {
+    if (exceptions.has(s[i]) && i < s.length - 1 && exceptions.get(s[i])?.includes(s[i + 1])) {
       result -= romans.get(s[i]) ?? 0;
     } else {
       result += romans.get(s[i]) ?? 0;

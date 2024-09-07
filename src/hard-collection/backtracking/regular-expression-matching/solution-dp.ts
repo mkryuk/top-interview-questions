@@ -6,13 +6,7 @@ export function isMatch(s: string, p: string): boolean {
   return dp(0, 0, s, p, cache);
 }
 
-function dp(
-  si: number,
-  pi: number,
-  s: string,
-  p: string,
-  cache: boolean[][],
-): boolean {
+function dp(si: number, pi: number, s: string, p: string, cache: boolean[][]): boolean {
   if (cache[si][pi] !== undefined) {
     return cache[si][pi];
   }
@@ -23,9 +17,7 @@ function dp(
   } else {
     const firstMatch = si < s.length && (p[pi] === s[si] || p[pi] === ".");
     if (pi + 1 < p.length && p[pi + 1] === "*") {
-      result =
-        dp(si, pi + 2, s, p, cache) ||
-        (firstMatch && dp(si + 1, pi, s, p, cache));
+      result = dp(si, pi + 2, s, p, cache) || (firstMatch && dp(si + 1, pi, s, p, cache));
     } else {
       result = firstMatch && dp(si + 1, pi + 1, s, p, cache);
     }

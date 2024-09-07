@@ -1,9 +1,6 @@
 import { TreeNode } from "../common";
 
-export function inorderSuccessor(
-  root: TreeNode | null,
-  p: TreeNode | null,
-): TreeNode | null {
+export function inorderSuccessor(root: TreeNode | null, p: TreeNode | null): TreeNode | null {
   if (!root || !p) {
     return null;
   }

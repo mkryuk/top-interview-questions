@@ -1,9 +1,4 @@
-export function validPath(
-  n: number,
-  edges: number[][],
-  source: number,
-  destination: number,
-): boolean {
+export function validPath(n: number, edges: number[][], source: number, destination: number): boolean {
   let hashSet = new Map<number, Set<number>>();
   edges.forEach(([left, right]) => {
     if (!hashSet.has(left)) {
@@ -19,12 +14,7 @@ export function validPath(
   return dfs(source, destination, hashSet, new Set());
 }
 
-function dfs(
-  source: number,
-  destination: number,
-  hashSet: Map<number, Set<number>>,
-  visited: Set<number>,
-): boolean {
+function dfs(source: number, destination: number, hashSet: Map<number, Set<number>>, visited: Set<number>): boolean {
   if (source === destination) {
     return true;
   }

@@ -1,8 +1,4 @@
-export function countSubarrays(
-  nums: number[],
-  minK: number,
-  maxK: number,
-): number {
+export function countSubarrays(nums: number[], minK: number, maxK: number): number {
   let count = 0;
   let lastMinK = -1;
   let lastMaxK = -1;

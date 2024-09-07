@@ -1,9 +1,6 @@
 import { TreeNode } from "../common";
 
-export function flipEquiv(
-  root1: TreeNode | null,
-  root2: TreeNode | null,
-): boolean {
+export function flipEquiv(root1: TreeNode | null, root2: TreeNode | null): boolean {
   if (root1 === null && root2 === null) {
     return true;
   }
@@ -12,8 +9,7 @@ export function flipEquiv(
   }
 
   return (
-    (flipEquiv(root1.left, root2.left) &&
-      flipEquiv(root1.right, root2.right)) ||
+    (flipEquiv(root1.left, root2.left) && flipEquiv(root1.right, root2.right)) ||
     (flipEquiv(root1.left, root2.right) && flipEquiv(root1.right, root2.left))
   );
 }

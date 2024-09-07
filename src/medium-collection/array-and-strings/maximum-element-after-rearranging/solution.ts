@@ -1,6 +1,4 @@
-export function maximumElementAfterDecrementingAndRearranging(
-  arr: number[],
-): number {
+export function maximumElementAfterDecrementingAndRearranging(arr: number[]): number {
   arr.sort((a, b) => a - b);
   arr[0] = 1;
   let result = 1;

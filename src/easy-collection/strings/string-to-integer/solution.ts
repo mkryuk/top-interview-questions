@@ -12,10 +12,7 @@ export function myAtoi(s: string): number {
       }
       sign = "+";
     }
-    if (
-      s.charCodeAt(i) >= "0".charCodeAt(0) &&
-      s.charCodeAt(i) <= "9".charCodeAt(0)
-    ) {
+    if (s.charCodeAt(i) >= "0".charCodeAt(0) && s.charCodeAt(i) <= "9".charCodeAt(0)) {
       if (result === 0) {
         result = parseInt(s[i]);
         continue;

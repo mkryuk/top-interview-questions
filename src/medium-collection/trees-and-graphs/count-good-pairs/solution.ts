@@ -25,9 +25,7 @@ export function countPairs(root: TreeNode | null, distance: number): number {
     }
 
     // return distances incremented by 1 for the parent node
-    const newDistances = [...leftDistances, ...rightDistances].map(
-      (d) => d + 1,
-    );
+    const newDistances = [...leftDistances, ...rightDistances].map((d) => d + 1);
     return newDistances;
   }
 

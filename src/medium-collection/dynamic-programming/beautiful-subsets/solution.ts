@@ -6,12 +6,7 @@ export function beautifulSubsets(nums: number[], k: number): number {
   return result - 1;
 }
 
-function countBeautifulSubsets(
-  nums: number[],
-  difference: number,
-  frequencyMap: number[],
-  index: number,
-): number {
+function countBeautifulSubsets(nums: number[], difference: number, frequencyMap: number[], index: number): number {
   if (index === nums.length) {
     return 1;
   }

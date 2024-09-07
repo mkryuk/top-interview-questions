@@ -1,8 +1,4 @@
-export function construct2DArray(
-  original: number[],
-  m: number,
-  n: number,
-): number[][] {
+export function construct2DArray(original: number[], m: number, n: number): number[][] {
   if (original.length !== m * n) {
     return [];
   }

@@ -1,6 +1,4 @@
-export const knows = function (
-  graph: number[][],
-): (a: number, b: number) => boolean {
+export const knows = function (graph: number[][]): (a: number, b: number) => boolean {
   return function (a: number, b: number): boolean {
     return !!graph[a][b];
   };

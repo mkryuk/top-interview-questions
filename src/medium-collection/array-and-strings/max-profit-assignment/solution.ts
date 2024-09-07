@@ -1,11 +1,5 @@
-export function maxProfitAssignment(
-  difficulty: number[],
-  profit: number[],
-  worker: number[],
-): number {
-  let difficultyProfit = difficulty
-    .map((diff, index) => [diff, profit[index]])
-    .sort((a, b) => b[1] - a[1]);
+export function maxProfitAssignment(difficulty: number[], profit: number[], worker: number[]): number {
+  let difficultyProfit = difficulty.map((diff, index) => [diff, profit[index]]).sort((a, b) => b[1] - a[1]);
   worker.sort((a, b) => b - a);
   let wIndex = 0;
   let dpIndex = 0;

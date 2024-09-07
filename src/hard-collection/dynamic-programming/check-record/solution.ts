@@ -8,9 +8,7 @@ export function checkRecord(n: number): number {
   }
 
   // dp[i][j][k] represents the number of valid sequences of length i, with j 'A's, ending in a sequence of k 'L's.
-  const dp = Array.from({ length: n + 1 }, () =>
-    Array.from({ length: 2 }, () => Array(3).fill(0)),
-  );
+  const dp = Array.from({ length: n + 1 }, () => Array.from({ length: 2 }, () => Array(3).fill(0)));
 
   dp[0][0][0] = 1;
 

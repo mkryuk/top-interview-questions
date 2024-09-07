@@ -1,8 +1,4 @@
-export function ladderLength(
-  beginWord: string,
-  endWord: string,
-  wordList: string[],
-): number {
+export function ladderLength(beginWord: string, endWord: string, wordList: string[]): number {
   let wordMap = new Map<string, Word>();
   let passedWords = new Set<string>();
   let queue: Word[] = [];
@@ -21,8 +17,7 @@ export function ladderLength(
       let neighbors = node.neighbors;
       for (let j = 0; j < neighbors.length; j++) {
         if (!passedWords.has(neighbors[j])) {
-          let word =
-            wordMap.get(neighbors[j]) ?? new Word(neighbors[j], wordList);
+          let word = wordMap.get(neighbors[j]) ?? new Word(neighbors[j], wordList);
           wordMap.set(neighbors[j], word);
           queue.push(word);
         }

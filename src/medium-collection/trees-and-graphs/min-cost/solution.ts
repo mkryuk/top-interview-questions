@@ -11,9 +11,7 @@ export function minimumCost(
   const charCount = 26; // number of lowercase English letters
 
   // create a distance matrix initialized to infinity
-  const dist = Array.from({ length: charCount }, () =>
-    Array(charCount).fill(INF),
-  );
+  const dist = Array.from({ length: charCount }, () => Array(charCount).fill(INF));
 
   // initialize self-distances to 0
   for (let i = 0; i < charCount; i++) {

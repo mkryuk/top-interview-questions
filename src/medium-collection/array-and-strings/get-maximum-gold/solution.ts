@@ -19,13 +19,7 @@ function dfs(grid: number[][], col: number, row: number): number {
   const gold = grid[col][row];
   grid[col][row] = 0;
   const result =
-    gold +
-    Math.max(
-      dfs(grid, col + 1, row),
-      dfs(grid, col - 1, row),
-      dfs(grid, col, row + 1),
-      dfs(grid, col, row - 1),
-    );
+    gold + Math.max(dfs(grid, col + 1, row), dfs(grid, col - 1, row), dfs(grid, col, row + 1), dfs(grid, col, row - 1));
   grid[col][row] = gold;
   return result;
 }

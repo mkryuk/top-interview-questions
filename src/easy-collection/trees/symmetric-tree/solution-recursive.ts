@@ -4,10 +4,7 @@ export function isSymmetric(root: TreeNode | null): boolean {
   return isSymmetricNode(root?.left || null, root?.right || null);
 }
 
-function isSymmetricNode(
-  left: TreeNode | null,
-  right: TreeNode | null,
-): boolean {
+function isSymmetricNode(left: TreeNode | null, right: TreeNode | null): boolean {
   if (left === null && right === null) {
     return true;
   }

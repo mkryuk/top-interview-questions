@@ -6,13 +6,7 @@ export function pathSum(root: TreeNode | null, targetSum: number): number[][] {
   return result;
 }
 
-function dfs(
-  root: TreeNode | null,
-  targetSum: number,
-  branchSum: number,
-  branchNodes: number[],
-  result: number[][],
-) {
+function dfs(root: TreeNode | null, targetSum: number, branchSum: number, branchNodes: number[], result: number[][]) {
   if (root === null) {
     return;
   }

@@ -20,9 +20,7 @@ describe("Element Appearing More Than 25% In Sorted Array", () => {
   });
 
   it("findSpecialInteger should return 3 for arr = [1,1,1,1,1,1,2,3,4,5,6,7,8,9,10,11,12,12,12,12]", () => {
-    const arr = [
-      1, 1, 1, 1, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 12, 12, 12,
-    ];
+    const arr = [1, 1, 1, 1, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 12, 12, 12];
     const result = findSpecialInteger(arr);
     expect(result).toEqual(1);
   });

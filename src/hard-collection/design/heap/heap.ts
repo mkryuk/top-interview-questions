@@ -1,11 +1,7 @@
 export class Heap<T> {
   compare: (left: T, right: T) => number;
   nodes: T[];
-  constructor(
-    compare: (left: T, right: T) => number,
-    values?: T[],
-    private leaf: T | null = null,
-  ) {
+  constructor(compare: (left: T, right: T) => number, values?: T[], private leaf: T | null = null) {
     if (typeof compare !== "function") {
       throw new Error("Heap constructor expects a compare function");
     }
@@ -91,11 +87,7 @@ export class Heap<T> {
   insert(value: T) {
     this.nodes.push(value);
     this.heapifyUp(this.size() - 1);
-    if (
-      this.leaf === null ||
-      this.leaf === undefined ||
-      this.compare(value, this.leaf) > 0
-    ) {
+    if (this.leaf === null || this.leaf === undefined || this.compare(value, this.leaf) > 0) {
       this.leaf = value;
     }
     return this;

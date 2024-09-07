@@ -16,11 +16,7 @@ function bstToArray(node: TreeNode | null, arr: number[]) {
   bstToArray(node.right, arr);
 }
 
-function createBst(
-  arr: number[],
-  left: number,
-  right: number,
-): TreeNode | null {
+function createBst(arr: number[], left: number, right: number): TreeNode | null {
   if (left > right) {
     return null;
   }

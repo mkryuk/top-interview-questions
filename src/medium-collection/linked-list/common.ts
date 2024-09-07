@@ -35,12 +35,7 @@ export function listToArray(list: ListNode | null): number[] {
   return result;
 }
 
-export function composeIntersectionLists(
-  listA: ListNode | null,
-  listB: ListNode | null,
-  skipA: number,
-  skipB: number,
-) {
+export function composeIntersectionLists(listA: ListNode | null, listB: ListNode | null, skipA: number, skipB: number) {
   let tempA = listA;
   let tempB = listB;
   for (let i = 0; i < skipA - 1; i++) {

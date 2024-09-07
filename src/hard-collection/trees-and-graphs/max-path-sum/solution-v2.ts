@@ -5,9 +5,7 @@ export function maxPathSum(root: TreeNode | null): number {
   return result;
 }
 
-function getMaxPathSum(
-  root: TreeNode | null,
-): [branchMaxPathSum: number, maxPathSum: number] {
+function getMaxPathSum(root: TreeNode | null): [branchMaxPathSum: number, maxPathSum: number] {
   if (!root) {
     return [0, Number.MIN_SAFE_INTEGER];
   }

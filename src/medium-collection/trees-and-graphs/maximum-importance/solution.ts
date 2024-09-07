@@ -5,9 +5,7 @@ export function maximumImportance(n: number, roads: number[][]): number {
     degrees[b]++;
   }
 
-  const cityIndices = degrees
-    .map((degree, index) => index)
-    .sort((a, b) => degrees[b] - degrees[a]);
+  const cityIndices = degrees.map((degree, index) => index).sort((a, b) => degrees[b] - degrees[a]);
 
   const importanceValues = new Array(n);
   for (let i = 0; i < n; i++) {

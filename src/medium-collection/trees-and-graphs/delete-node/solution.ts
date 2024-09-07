@@ -1,9 +1,6 @@
 import { TreeNode } from "../common";
 
-export function delNodes(
-  root: TreeNode | null,
-  to_delete: number[],
-): Array<TreeNode | null> {
+export function delNodes(root: TreeNode | null, to_delete: number[]): Array<TreeNode | null> {
   if (!root) return [];
 
   const deleteSet = new Set(to_delete);

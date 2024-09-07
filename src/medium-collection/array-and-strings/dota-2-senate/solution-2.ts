@@ -15,13 +15,9 @@ export function predictPartyVictory(senate: string): string {
   while (radiantCount > 0 && direCount > 0) {
     const s = senateQueue.shift()!;
     if (s === "R") {
-      radiantBanned === 0
-        ? (direBanned++, direCount--, senateQueue.push(s))
-        : radiantBanned--;
+      radiantBanned === 0 ? (direBanned++, direCount--, senateQueue.push(s)) : radiantBanned--;
     } else {
-      direBanned === 0
-        ? (radiantBanned++, radiantCount--, senateQueue.push(s))
-        : direBanned--;
+      direBanned === 0 ? (radiantBanned++, radiantCount--, senateQueue.push(s)) : direBanned--;
     }
   }
   return radiantCount > 0 ? "Radiant" : "Dire";

@@ -1,19 +1,11 @@
 export function paintWalls(cost: number[], time: number[]): number {
   const n: number = cost.length;
-  const memo: number[][] = Array.from({ length: n }, () =>
-    Array(n + 1).fill(-1),
-  );
+  const memo: number[][] = Array.from({ length: n }, () => Array(n + 1).fill(-1));
 
   return dp(0, n, cost, time, memo);
 }
 
-function dp(
-  i: number,
-  remain: number,
-  cost: number[],
-  time: number[],
-  memo: number[][],
-): number {
+function dp(i: number, remain: number, cost: number[], time: number[], memo: number[][]): number {
   // Base cases
   if (remain <= 0) {
     return 0;

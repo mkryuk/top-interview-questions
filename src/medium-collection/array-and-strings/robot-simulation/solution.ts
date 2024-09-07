@@ -47,12 +47,7 @@ function getDirection(direction: number[], turn: number): number[] {
   }
 }
 
-function move(
-  [x, y]: number[],
-  [dx, dy]: number[],
-  steps: number,
-  obstacles: Set<string>,
-): number[] {
+function move([x, y]: number[], [dx, dy]: number[], steps: number, obstacles: Set<string>): number[] {
   for (let i = 0; i < steps; i++) {
     const temp = [x + dx, y + dy];
     if (obstacles.has(temp.toString())) {

@@ -1,10 +1,4 @@
-export function findCheapestPrice(
-  n: number,
-  flights: number[][],
-  src: number,
-  dst: number,
-  k: number,
-): number {
+export function findCheapestPrice(n: number, flights: number[][], src: number, dst: number, k: number): number {
   // Initialize the cost array with Infinity, except for the start point.
   let cost: number[] = new Array(n).fill(Infinity);
   cost[src] = 0;

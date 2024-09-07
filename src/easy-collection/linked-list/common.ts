@@ -24,10 +24,7 @@ export function arrayToList(nodes: number[]): NullableListNode {
   return root;
 }
 
-export function getNodeToDelete(
-  list: ListNode | null,
-  node: number,
-): ListNode | null {
+export function getNodeToDelete(list: ListNode | null, node: number): ListNode | null {
   let step = list;
   while (true) {
     if (step?.val === node) {
@@ -51,10 +48,7 @@ export function listToArray(list: ListNode | null): number[] {
   return result;
 }
 
-export function createLoop(
-  head: ListNode | null,
-  pos: number,
-): ListNode | null {
+export function createLoop(head: ListNode | null, pos: number): ListNode | null {
   if (pos === -1) {
     return head;
   }

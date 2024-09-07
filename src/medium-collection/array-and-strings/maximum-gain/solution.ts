@@ -16,20 +16,11 @@ export function maximumGain(s: string, x: number, y: number): number {
   return result;
 }
 
-function removePairs(
-  s: string,
-  first: string,
-  second: string,
-  points: number,
-): [s: string, score: number] {
+function removePairs(s: string, first: string, second: string, points: number): [s: string, score: number] {
   const stack: string[] = [];
   let score = 0;
   for (const char of s) {
-    if (
-      stack.length > 0 &&
-      stack[stack.length - 1] === first &&
-      char === second
-    ) {
+    if (stack.length > 0 && stack[stack.length - 1] === first && char === second) {
       stack.pop();
       score += points;
     } else {

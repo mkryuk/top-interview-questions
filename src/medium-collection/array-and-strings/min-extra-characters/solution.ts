@@ -5,12 +5,7 @@ export function minExtraChar(s: string, dictionary: string[]): number {
   return result;
 }
 
-function dp(
-  start: number,
-  s: string,
-  set: Set<string>,
-  memo: Map<number, number>,
-): number {
+function dp(start: number, s: string, set: Set<string>, memo: Map<number, number>): number {
   if (start === s.length) {
     return 0;
   }

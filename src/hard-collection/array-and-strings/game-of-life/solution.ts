@@ -23,13 +23,7 @@ function checkCell(i: number, j: number, board: number[][]) {
   for (let n = i - 1; n <= i + 1; n++) {
     for (let m = j - 1; m <= j + 1; m++) {
       // skip checking out of borders ot current cell
-      if (
-        n < 0 ||
-        n >= board.length ||
-        (n === i && m === j) ||
-        m < 0 ||
-        m >= board[0].length
-      ) {
+      if (n < 0 || n >= board.length || (n === i && m === j) || m < 0 || m >= board[0].length) {
         continue;
       }
       if (Math.abs(board[n][m]) === 1) {

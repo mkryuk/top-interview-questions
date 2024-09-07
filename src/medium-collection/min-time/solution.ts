@@ -1,8 +1,4 @@
-export function minTime(
-  n: number,
-  edges: number[][],
-  hasApple: boolean[],
-): number {
+export function minTime(n: number, edges: number[][], hasApple: boolean[]): number {
   // Create a map to store the adjacency list of the tree
   const adjacent = new Map<number, number[]>();
 
@@ -24,12 +20,7 @@ export function minTime(
   return dfs(0, -1, adjacent, hasApple);
 }
 
-function dfs(
-  node: number,
-  parent: number,
-  adjacent: Map<number, number[]>,
-  hasApple: boolean[],
-): number {
+function dfs(node: number, parent: number, adjacent: Map<number, number[]>, hasApple: boolean[]): number {
   //Check if current node is parent node and return 0 if true
   if (node === parent) {
     return 0;

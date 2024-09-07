@@ -1,8 +1,4 @@
-export function getLastMoment(
-  n: number,
-  left: number[],
-  right: number[],
-): number {
+export function getLastMoment(n: number, left: number[], right: number[]): number {
   // The key insight here is that when two ants meet and change directions,
   // it is the same as if they just passed through each other.
   // So, we just need to find the maximum time it would take for each ant to fall off the plank.

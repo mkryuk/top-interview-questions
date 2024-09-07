@@ -6,11 +6,7 @@ export function zigzagLevelOrder(root: TreeNode | null): number[][] {
   return result;
 }
 
-function addLevel(
-  node: TreeNode | null,
-  levels: number[][],
-  level: number,
-): void {
+function addLevel(node: TreeNode | null, levels: number[][], level: number): void {
   if (!node) {
     return;
   }

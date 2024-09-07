@@ -14,12 +14,7 @@ export function longestIncreasingPath(matrix: number[][]): number {
   return result;
 }
 
-function getNodePath(
-  i: number,
-  j: number,
-  matrix: number[][],
-  pathMatrix: number[][],
-): number {
+function getNodePath(i: number, j: number, matrix: number[][], pathMatrix: number[][]): number {
   if (i < 0 || j < 0 || i >= matrix.length || j >= matrix[0].length) {
     return 0;
   }

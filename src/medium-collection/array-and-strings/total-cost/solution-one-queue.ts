@@ -5,30 +5,20 @@ const enum SECTION {
   RIGHT,
 }
 
-export function totalCost(
-  costs: number[],
-  k: number,
-  candidates: number,
-): number {
-  let priorityQueue = new Heap<number[]>(
-    ([leftCost, leftSection], [rightCost, rightSection]) => {
-      if (leftCost === rightCost) {
-        return leftSection - rightSection;
-      }
-      return leftCost - rightCost;
-    },
-  );
+export function totalCost(costs: number[], k: number, candidates: number): number {
+  let priorityQueue = new Heap<number[]>(([leftCost, leftSection], [rightCost, rightSection]) => {
+    if (leftCost === rightCost) {
+      return leftSection - rightSection;
+    }
+    return leftCost - rightCost;
+  });
 
   // add left candidates to the queue
   for (let i = 0; i < candidates; i++) {
     priorityQueue.insert([costs[i], SECTION.LEFT]);
   }
   // add right candidates to the queue
-  for (
-    let i = Math.max(candidates, costs.length - candidates);
-    i < costs.length;
-    i++
-  ) {
+  for (let i = Math.max(candidates, costs.length - candidates); i < costs.length; i++) {
     priorityQueue.insert([costs[i], SECTION.RIGHT]);
   }
 

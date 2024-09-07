@@ -31,13 +31,7 @@ export function nodesBetweenCriticalPoints(head: ListNode | null): number[] {
 
 function isLocalMinMax(prev: number, node: ListNode): boolean {
   return (
-    (node !== null &&
-      node.next !== null &&
-      node.val < prev &&
-      node.val < node.next.val) ||
-    (node !== null &&
-      node.next !== null &&
-      node.val > prev &&
-      node.val > node.next.val)
+    (node !== null && node.next !== null && node.val < prev && node.val < node.next.val) ||
+    (node !== null && node.next !== null && node.val > prev && node.val > node.next.val)
   );
 }

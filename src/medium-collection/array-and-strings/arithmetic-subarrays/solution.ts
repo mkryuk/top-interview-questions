@@ -1,8 +1,4 @@
-export function checkArithmeticSubarrays(
-  nums: number[],
-  l: number[],
-  r: number[],
-): boolean[] {
+export function checkArithmeticSubarrays(nums: number[], l: number[], r: number[]): boolean[] {
   let result = [];
   for (let i = 0; i < l.length; i++) {
     let slice = nums.slice(l[i], r[i] + 1);

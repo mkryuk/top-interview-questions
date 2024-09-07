@@ -24,11 +24,7 @@ export function possibleBipartition(n: number, dislikes: number[][]): boolean {
   return true;
 }
 
-function bfs(
-  person: number,
-  groups: number[],
-  relations: Map<number, number[]>,
-): boolean {
+function bfs(person: number, groups: number[], relations: Map<number, number[]>): boolean {
   const stack = [person];
   // let's move our person to 0 group
   groups[person] = 0;

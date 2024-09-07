@@ -1,8 +1,4 @@
-export function maximumValueSum(
-  nums: number[],
-  k: number,
-  edges: number[][],
-): number {
+export function maximumValueSum(nums: number[], k: number, edges: number[][]): number {
   let result: number = 0;
   let changes: number = 0;
 

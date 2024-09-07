@@ -6,7 +6,5 @@ export function reverse(x: number): number {
     x = Math.trunc(x / 10);
   }
 
-  return reverse > Math.pow(2, 31) - 1 || reverse < Math.pow(-2, 31)
-    ? 0
-    : reverse;
+  return reverse > Math.pow(2, 31) - 1 || reverse < Math.pow(-2, 31) ? 0 : reverse;
 }

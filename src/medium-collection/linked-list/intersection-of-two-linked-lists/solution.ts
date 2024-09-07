@@ -1,9 +1,6 @@
 import { ListNode } from "../common";
 
-export function getIntersectionNode(
-  headA: ListNode | null,
-  headB: ListNode | null,
-): ListNode | null {
+export function getIntersectionNode(headA: ListNode | null, headB: ListNode | null): ListNode | null {
   let pA = headA;
   let pB = headB;
   // we treat two linked lists as a one

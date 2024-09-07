@@ -15,10 +15,7 @@ export class Vector2D {
   }
 
   goToNextItem() {
-    while (
-      this.outer < this.vec.length &&
-      this.inner === this.vec[this.outer].length
-    ) {
+    while (this.outer < this.vec.length && this.inner === this.vec[this.outer].length) {
       this.outer++;
       this.inner = 0;
     }
@@ -26,8 +23,6 @@ export class Vector2D {
 
   hasNext(): boolean {
     this.goToNextItem();
-    return (
-      this.outer < this.vec.length && this.inner < this.vec[this.outer].length
-    );
+    return this.outer < this.vec.length && this.inner < this.vec[this.outer].length;
   }
 }

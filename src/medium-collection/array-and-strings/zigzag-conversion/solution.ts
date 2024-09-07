@@ -5,9 +5,7 @@ export function convert(s: string, numRows: number): string {
   let n = s.length;
   let sections = Math.ceil(n / (2 * numRows - 2));
   let numCols = sections * (numRows - 1);
-  let matrix = new Array(numRows)
-    .fill(0)
-    .map(() => new Array(numCols).fill(" "));
+  let matrix = new Array(numRows).fill(0).map(() => new Array(numCols).fill(" "));
 
   let currRow = 0;
   let currCol = 0;

@@ -14,12 +14,7 @@ export class NumArray {
     return this.queryValue(0, 0, this.nLen, left, right);
   }
 
-  private buildSegmentTree(
-    nums: number[],
-    treeIndex: number,
-    lo: number,
-    hi: number,
-  ): void {
+  private buildSegmentTree(nums: number[], treeIndex: number, lo: number, hi: number): void {
     if (lo == hi) {
       // leaf node. store value in node.
       this.tree[treeIndex] = nums[lo];
@@ -31,19 +26,10 @@ export class NumArray {
     this.buildSegmentTree(nums, 2 * treeIndex + 2, mid + 1, hi);
 
     // merge build results
-    this.tree[treeIndex] = this.merge(
-      this.tree[2 * treeIndex + 1],
-      this.tree[2 * treeIndex + 2],
-    );
+    this.tree[treeIndex] = this.merge(this.tree[2 * treeIndex + 1], this.tree[2 * treeIndex + 2]);
   }
 
-  private queryValue(
-    treeIndex: number,
-    lo: number,
-    hi: number,
-    i: number,
-    j: number,
-  ): number {
+  private queryValue(treeIndex: number, lo: number, hi: number, i: number, j: number): number {
     // query for arr[i..j]
     if (lo > j || hi < i) {
       // segment completely outside range
@@ -72,13 +58,7 @@ export class NumArray {
     return this.merge(leftQuery, rightQuery);
   }
 
-  private updateValue(
-    treeIndex: number,
-    lo: number,
-    hi: number,
-    numIndex: number,
-    val: number,
-  ) {
+  private updateValue(treeIndex: number, lo: number, hi: number, numIndex: number, val: number) {
     if (lo == hi) {
       // leaf node. update element.
       this.tree[treeIndex] = val;
@@ -87,16 +67,11 @@ export class NumArray {
 
     const mid = lo + Math.trunc((hi - lo) / 2); // recurse deeper for appropriate child
 
-    if (numIndex > mid)
-      this.updateValue(2 * treeIndex + 2, mid + 1, hi, numIndex, val);
-    else if (numIndex <= mid)
-      this.updateValue(2 * treeIndex + 1, lo, mid, numIndex, val);
+    if (numIndex > mid) this.updateValue(2 * treeIndex + 2, mid + 1, hi, numIndex, val);
+    else if (numIndex <= mid) this.updateValue(2 * treeIndex + 1, lo, mid, numIndex, val);
 
     // merge updates
-    this.tree[treeIndex] = this.merge(
-      this.tree[2 * treeIndex + 1],
-      this.tree[2 * treeIndex + 2],
-    );
+    this.tree[treeIndex] = this.merge(this.tree[2 * treeIndex + 1], this.tree[2 * treeIndex + 2]);
   }
 
   private merge(left: number, right: number): number {

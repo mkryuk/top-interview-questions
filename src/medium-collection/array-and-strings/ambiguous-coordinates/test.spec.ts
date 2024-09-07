@@ -18,14 +18,7 @@ describe("Ambiguous Coordinates", () => {
   it('ambiguousCoordinates should return ["(0, 1.23)","(0, 12.3)","(0, 123)","(0.1, 2.3)","(0.1, 23)","(0.12, 3)"] for s = "(0123)"', () => {
     const s = "(0123)";
     const result = ambiguousCoordinates(s);
-    const expected = [
-      "(0, 1.23)",
-      "(0, 12.3)",
-      "(0, 123)",
-      "(0.1, 2.3)",
-      "(0.1, 23)",
-      "(0.12, 3)",
-    ];
+    const expected = ["(0, 1.23)", "(0, 12.3)", "(0, 123)", "(0.1, 2.3)", "(0.1, 23)", "(0.12, 3)"];
     expect(compareArrays(result, expected)).toBeTrue();
   });
 

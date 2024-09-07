@@ -1,10 +1,6 @@
 import { Heap } from "../../../hard-collection/design/heap/heap";
 
-export function totalCost(
-  costs: number[],
-  k: number,
-  candidates: number,
-): number {
+export function totalCost(costs: number[], k: number, candidates: number): number {
   let leftQueue = new Heap<number>((a, b) => a - b);
   let rightQueue = new Heap<number>((a, b) => a - b);
 
@@ -13,11 +9,7 @@ export function totalCost(
   for (let i = 0; i < candidates; i++) {
     leftQueue.insert(costs[i]);
   }
-  for (
-    let i = Math.max(candidates, costs.length - candidates);
-    i < costs.length;
-    i++
-  ) {
+  for (let i = Math.max(candidates, costs.length - candidates); i < costs.length; i++) {
     rightQueue.insert(costs[i]);
   }
 
@@ -26,10 +18,7 @@ export function totalCost(
   let rightIndex = costs.length - 1 - candidates;
 
   for (let i = 0; i < k; i++) {
-    if (
-      rightQueue.isEmpty() ||
-      (!leftQueue.isEmpty() && leftQueue.top()! <= rightQueue.top()!)
-    ) {
+    if (rightQueue.isEmpty() || (!leftQueue.isEmpty() && leftQueue.top()! <= rightQueue.top()!)) {
       result += leftQueue.pop()!;
 
       // Only refill the queue if there are workers outside the two queues.

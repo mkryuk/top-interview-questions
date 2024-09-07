@@ -1,10 +1,6 @@
 import { Heap } from "../../design/heap/heap";
 
-export function mincostToHireWorkers(
-  quality: number[],
-  wage: number[],
-  k: number,
-): number {
+export function mincostToHireWorkers(quality: number[], wage: number[], k: number): number {
   const heap = new Heap<number>((a, b) => b - a);
   const workers = quality.map((q, i) => ({
     quality: q,

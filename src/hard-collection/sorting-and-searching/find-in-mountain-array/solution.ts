@@ -1,9 +1,6 @@
 import { MountainArray } from "./mountain-array";
 
-export function findInMountainArray(
-  target: number,
-  mountainArr: MountainArray,
-): number {
+export function findInMountainArray(target: number, mountainArr: MountainArray): number {
   let n = mountainArr.length();
   let left = 0;
   let right = n;

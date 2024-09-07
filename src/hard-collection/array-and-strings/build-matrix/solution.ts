@@ -1,8 +1,4 @@
-export function buildMatrix(
-  k: number,
-  rowConditions: number[][],
-  colConditions: number[][],
-): number[][] {
+export function buildMatrix(k: number, rowConditions: number[][], colConditions: number[][]): number[][] {
   function topologicalSort(k: number, conditions: number[][]): number[] | null {
     const inDegree = new Array(k).fill(0);
     const graph = Array.from({ length: k }, () => [] as number[]);

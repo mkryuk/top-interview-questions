@@ -1,9 +1,6 @@
 import { ListNode } from "../common";
 
-export function modifiedList(
-  nums: number[],
-  head: ListNode | null,
-): ListNode | null {
+export function modifiedList(nums: number[], head: ListNode | null): ListNode | null {
   let numsSet = new Set(nums);
   let result = new ListNode();
   result.next = head;

@@ -12,11 +12,7 @@ export class Robot {
     return directions[this.directionIdx];
   }
 
-  constructor(
-    private room: number[][],
-    private row: number,
-    private col: number,
-  ) {}
+  constructor(private room: number[][], private row: number, private col: number) {}
   // Returns true if the cell in front is open and robot moves into the cell.
   // Returns false if the cell in front is blocked and robot stays in the current cell.
   move(): boolean {

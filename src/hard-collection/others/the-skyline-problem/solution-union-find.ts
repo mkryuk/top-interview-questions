@@ -67,8 +67,7 @@ export function getSkyline(buildings: number[][]): number[][] {
   // add every skyline key point to 'answer'.
   let answer: number[][] = [];
   for (let i = 0; i < n; ++i) {
-    if (i == 0 || heights[i] != heights[i - 1])
-      answer.push([edges[i], heights[i]]);
+    if (i == 0 || heights[i] != heights[i - 1]) answer.push([edges[i], heights[i]]);
   }
   return answer;
 }

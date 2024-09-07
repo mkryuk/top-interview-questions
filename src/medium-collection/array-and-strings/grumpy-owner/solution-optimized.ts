@@ -1,15 +1,9 @@
-export function maxSatisfied(
-  customers: number[],
-  grumpy: number[],
-  minutes: number,
-): number {
+export function maxSatisfied(customers: number[], grumpy: number[], minutes: number): number {
   let fromIndex = 0;
   let toIndex = minutes - 1;
 
   // Calculate the sum of customers for the first "minutes" interval
-  let customersSum = customers
-    .slice(0, minutes)
-    .reduce((acc, current) => current + acc, 0);
+  let customersSum = customers.slice(0, minutes).reduce((acc, current) => current + acc, 0);
 
   // Calculate the sum of satisfied customers for the first "minutes" interval
   let satisfiedCustomersSum = customers
@@ -31,8 +25,7 @@ export function maxSatisfied(
 
     // Update the satisfiedCustomersSum based on the leaving customer's grumpy state
     if (!grumpy[index - minutes]) {
-      satisfiedCustomersSum =
-        satisfiedCustomersSum - customers[index - minutes];
+      satisfiedCustomersSum = satisfiedCustomersSum - customers[index - minutes];
     }
 
     // Check if the current grumpy difference is greater than the previous one

@@ -1,8 +1,5 @@
 export function commonChars(words: string[]): string[] {
-  const wordsMap: Map<string, number>[] = Array.from(
-    { length: words.length },
-    () => new Map<string, number>(),
-  );
+  const wordsMap: Map<string, number>[] = Array.from({ length: words.length }, () => new Map<string, number>());
   const charSet = new Set<string>();
   for (let i = 0; i < words.length; i++) {
     for (const char of words[i]) {

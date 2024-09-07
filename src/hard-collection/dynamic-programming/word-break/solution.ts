@@ -3,12 +3,7 @@ export function wordBreak(s: string, wordDict: string[]): boolean {
   return result;
 }
 
-function stringHasWord(
-  s: string,
-  pos: number,
-  wordDict: string[],
-  map: Map<number, boolean>,
-): boolean {
+function stringHasWord(s: string, pos: number, wordDict: string[], map: Map<number, boolean>): boolean {
   if (pos === s.length) {
     return true;
   }

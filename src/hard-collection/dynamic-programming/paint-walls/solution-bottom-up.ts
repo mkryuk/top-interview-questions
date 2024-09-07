@@ -1,8 +1,6 @@
 export function paintWalls(cost: number[], time: number[]): number {
   const n: number = cost.length;
-  const dp: number[][] = Array.from({ length: n + 1 }, () =>
-    Array(n + 1).fill(0),
-  );
+  const dp: number[][] = Array.from({ length: n + 1 }, () => Array(n + 1).fill(0));
   for (let i = 1; i <= n; i++) {
     dp[n][i] = Infinity;
   }

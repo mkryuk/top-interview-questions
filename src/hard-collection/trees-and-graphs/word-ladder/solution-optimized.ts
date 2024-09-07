@@ -1,8 +1,4 @@
-export function ladderLength(
-  beginWord: string,
-  endWord: string,
-  wordList: string[],
-): number {
+export function ladderLength(beginWord: string, endWord: string, wordList: string[]): number {
   const wordMap = new Map();
   for (let word of wordList) {
     for (let i = 0; i < word.length; i++) {

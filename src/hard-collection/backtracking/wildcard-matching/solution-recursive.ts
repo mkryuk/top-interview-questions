@@ -18,11 +18,7 @@ function cleanupPattern(p: string): string {
   return result.join("");
 }
 
-function isMatchRecursive(
-  s: string,
-  p: string,
-  cache: Map<string, boolean>,
-): boolean {
+function isMatchRecursive(s: string, p: string, cache: Map<string, boolean>): boolean {
   let key = `${s}:${p}`;
   if (cache.has(key)) {
     return cache.get(key)!;
@@ -35,9 +31,7 @@ function isMatchRecursive(
     const result = isMatchRecursive(s.substring(1), p.substring(1), cache);
     cache.set(key, result);
   } else if (p[0] === "*") {
-    const result =
-      isMatchRecursive(s, p.substring(1), cache) ||
-      isMatchRecursive(s.substring(1), p, cache);
+    const result = isMatchRecursive(s, p.substring(1), cache) || isMatchRecursive(s.substring(1), p, cache);
     cache.set(key, result);
   } else {
     cache.set(key, false);

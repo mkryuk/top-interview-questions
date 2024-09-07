@@ -1,7 +1,4 @@
-export function canFinish(
-  numCourses: number,
-  prerequisites: number[][],
-): boolean {
+export function canFinish(numCourses: number, prerequisites: number[][]): boolean {
   // create a map of course -> prerequisites
   const map = new Map<number, number[]>();
   prerequisites.forEach((edge) => {
@@ -22,12 +19,7 @@ export function canFinish(
   return true;
 }
 
-function hasCycle(
-  course: number,
-  map: Map<number, number[]>,
-  path: boolean[],
-  checked: boolean[],
-): boolean {
+function hasCycle(course: number, map: Map<number, number[]>, path: boolean[], checked: boolean[]): boolean {
   if (checked[course]) {
     return false;
   }

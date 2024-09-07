@@ -1,9 +1,6 @@
 import { ListNode } from "../common";
 
-export function addTwoNumbers(
-  l1: ListNode | null,
-  l2: ListNode | null,
-): ListNode | null {
+export function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | null {
   let l1Stack = createStack(l1);
   let l2Stack = createStack(l2);
   let head = new ListNode();

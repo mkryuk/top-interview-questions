@@ -1,24 +1,9 @@
-export function findPaths(
-  m: number,
-  n: number,
-  maxMove: number,
-  startRow: number,
-  startColumn: number,
-): number {
-  const dp = Array.from({ length: m }, () =>
-    Array.from({ length: n }, () => new Array(maxMove + 1).fill(-1)),
-  );
+export function findPaths(m: number, n: number, maxMove: number, startRow: number, startColumn: number): number {
+  const dp = Array.from({ length: m }, () => Array.from({ length: n }, () => new Array(maxMove + 1).fill(-1)));
   return countPaths(startRow, startColumn, m, n, maxMove, dp);
 }
 
-function countPaths(
-  x: number,
-  y: number,
-  m: number,
-  n: number,
-  move: number,
-  dp: number[][][],
-): number {
+function countPaths(x: number, y: number, m: number, n: number, move: number, dp: number[][][]): number {
   if (x < 0 || y < 0 || x >= m || y >= n) {
     return 1;
   }

@@ -1,7 +1,5 @@
 export function restoreMatrix(rowSum: number[], colSum: number[]): number[][] {
-  const result = Array.from({ length: rowSum.length }, () =>
-    Array(colSum.length).fill(0),
-  );
+  const result = Array.from({ length: rowSum.length }, () => Array(colSum.length).fill(0));
 
   const rowSumCopy = [...rowSum];
   const colSumCopy = [...colSum];

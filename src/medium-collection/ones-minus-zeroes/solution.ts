@@ -16,8 +16,7 @@ export function onesMinusZeros(grid: number[][]): number[][] {
   for (let row = 0; row < m; row++) {
     let rowItems = new Array(n);
     for (let col = 0; col < n; col++) {
-      rowItems[col] =
-        onesRow[row] + onesCol[col] - (m - onesRow[row]) - (n - onesCol[col]);
+      rowItems[col] = onesRow[row] + onesCol[col] - (m - onesRow[row]) - (n - onesCol[col]);
     }
     result.push(rowItems);
   }

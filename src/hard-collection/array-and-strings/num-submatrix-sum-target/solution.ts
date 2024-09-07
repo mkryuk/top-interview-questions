@@ -1,7 +1,4 @@
-export function numSubmatrixSumTarget(
-  matrix: number[][],
-  target: number,
-): number {
+export function numSubmatrixSumTarget(matrix: number[][], target: number): number {
   let rows = matrix.length;
   let cols = matrix[0].length;
   let count = 0;
@@ -21,8 +18,7 @@ export function numSubmatrixSumTarget(
       let sum = 0;
 
       for (let row = 0; row < rows; row++) {
-        sum +=
-          matrix[row][colEnd] - (colStart > 0 ? matrix[row][colStart - 1] : 0);
+        sum += matrix[row][colEnd] - (colStart > 0 ? matrix[row][colStart - 1] : 0);
         count += sumMap.get(sum - target) || 0;
         sumMap.set(sum, (sumMap.get(sum) || 0) + 1);
       }

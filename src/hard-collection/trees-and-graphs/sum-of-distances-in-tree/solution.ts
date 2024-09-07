@@ -16,13 +16,7 @@ export function sumOfDistancesInTree(n: number, edges: number[][]): number[] {
 }
 
 // DFS to calculate subtree sizes and initial distances for root
-function calculateSubtrees(
-  node: number,
-  parent: number,
-  graph: number[][],
-  count: number[],
-  result: number[],
-): void {
+function calculateSubtrees(node: number, parent: number, graph: number[][], count: number[], result: number[]): void {
   for (let neighbor of graph[node]) {
     if (neighbor === parent) {
       continue;

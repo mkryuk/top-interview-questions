@@ -28,7 +28,5 @@ it('decodeString should return correct result for s = "100[leetcode]"', () => {
 it('decodeString should return correct result for s = "3[z]2[2[y]pq4[2[jk]e1[f]]]ef"', () => {
   const s = "3[z]2[2[y]pq4[2[jk]e1[f]]]ef";
   const result = decodeString(s);
-  expect(result).toEqual(
-    "zzzyypqjkjkefjkjkefjkjkefjkjkefyypqjkjkefjkjkefjkjkefjkjkefef",
-  );
+  expect(result).toEqual("zzzyypqjkjkefjkjkefjkjkefjkjkefyypqjkjkefjkjkefjkjkefjkjkefef");
 });

@@ -3,10 +3,7 @@ interface GNode {
   nextNodes: number[];
 }
 
-export function canFinish(
-  numCourses: number,
-  prerequisites: number[][],
-): boolean {
+export function canFinish(numCourses: number, prerequisites: number[][]): boolean {
   if (prerequisites.length === 0) {
     return true;
   }

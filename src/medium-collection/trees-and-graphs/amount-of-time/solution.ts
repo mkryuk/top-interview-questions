@@ -22,11 +22,7 @@ export function amountOfTime(root: TreeNode | null, start: number): number {
   return result;
 }
 
-function createGraph(
-  node: TreeNode | null,
-  parent: TreeNode | null,
-  graph: Map<number, number[]>,
-) {
+function createGraph(node: TreeNode | null, parent: TreeNode | null, graph: Map<number, number[]>) {
   if (node === null) {
     return;
   }

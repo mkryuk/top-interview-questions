@@ -8,13 +8,7 @@ export function removeInvalidParentheses(s: string): string[] {
   return result;
 }
 
-function dfs(
-  left: number,
-  right: number,
-  s: string,
-  result: string[],
-  checked: Set<string>,
-): void {
+function dfs(left: number, right: number, s: string, result: string[], checked: Set<string>): void {
   checked.add(s);
   // if we already removed required number of left and right parenthesis
   // this can be a right solution, so we check it

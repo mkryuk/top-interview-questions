@@ -9,12 +9,7 @@ it('leastInterval should return 6 for tasks = ["A","A","A","B","B","B"], n = 0',
 });
 
 it('leastInterval should return 16 for tasks = ["A","A","A","A","A","A","B","C","D","E","F","G"], n = 2', () => {
-  expect(
-    leastInterval(
-      ["A", "A", "A", "A", "A", "A", "B", "C", "D", "E", "F", "G"],
-      2,
-    ),
-  ).toBe(16);
+  expect(leastInterval(["A", "A", "A", "A", "A", "A", "B", "C", "D", "E", "F", "G"], 2)).toBe(16);
 });
 
 it('leastInterval should return 6 for tasks = ["A","A","A","B","B","B"], n = 1', () => {

@@ -1,9 +1,6 @@
 import { TreeNode } from "../common";
 
-export function leafSimilar(
-  root1: TreeNode | null,
-  root2: TreeNode | null,
-): boolean {
+export function leafSimilar(root1: TreeNode | null, root2: TreeNode | null): boolean {
   let tree1Leafs: number[] = getTreeLeafs(root1);
   let tree2Leafs: number[] = getTreeLeafs(root2);
 

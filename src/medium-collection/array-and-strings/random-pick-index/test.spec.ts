@@ -30,9 +30,7 @@ describe("Random Pick Index", () => {
       .fill(0)
       .map(() => solution.pick(target));
     const uniqueResults = Array.from(new Set(results));
-    const resultCounts = uniqueResults.map(
-      (result) => results.filter((r) => r === result).length,
-    );
+    const resultCounts = uniqueResults.map((result) => results.filter((r) => r === result).length);
     resultCounts.forEach((count) => expect(count).toBeGreaterThan(0));
   });
 });

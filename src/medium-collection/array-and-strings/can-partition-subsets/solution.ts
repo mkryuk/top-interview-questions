@@ -15,12 +15,7 @@ export function canPartitionKSubsets(nums: number[], k: number): boolean {
   return partition(0, nums, subsets, target);
 }
 
-function partition(
-  index: number,
-  nums: number[],
-  subsets: number[],
-  target: number,
-): boolean {
+function partition(index: number, nums: number[], subsets: number[], target: number): boolean {
   if (index === nums.length) {
     // If we reach the end of the array, check if all subsets are equal to target.
     return subsets.every((subset) => subset === target);

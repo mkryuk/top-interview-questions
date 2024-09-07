@@ -15,15 +15,11 @@ export class FoodRatings {
       this.foodMap.set(foods[i], { cuisine: cuisines[i], rating: ratings[i] });
       if (!this.cuisineMap.has(cuisines[i])) {
         const pq = new Heap<FoodObj>((a: FoodObj, b: FoodObj) => {
-          return a.rating !== b.rating
-            ? b.rating - a.rating
-            : a.food.localeCompare(b.food);
+          return a.rating !== b.rating ? b.rating - a.rating : a.food.localeCompare(b.food);
         });
         this.cuisineMap.set(cuisines[i], pq);
       }
-      this.cuisineMap
-        .get(cuisines[i])
-        ?.push({ food: foods[i], rating: ratings[i] });
+      this.cuisineMap.get(cuisines[i])?.push({ food: foods[i], rating: ratings[i] });
     }
   }
 

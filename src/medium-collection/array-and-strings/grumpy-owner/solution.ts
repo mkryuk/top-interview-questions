@@ -1,8 +1,4 @@
-export function maxSatisfied(
-  customers: number[],
-  grumpy: number[],
-  minutes: number,
-): number {
+export function maxSatisfied(customers: number[], grumpy: number[], minutes: number): number {
   let result = 0;
   let windowIndex = 0;
   let windowValue = 0;

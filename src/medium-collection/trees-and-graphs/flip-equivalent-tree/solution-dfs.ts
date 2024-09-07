@@ -1,9 +1,6 @@
 import { TreeNode } from "../common";
 
-export function flipEquiv(
-  root1: TreeNode | null,
-  root2: TreeNode | null,
-): boolean {
+export function flipEquiv(root1: TreeNode | null, root2: TreeNode | null): boolean {
   let root1Nodes: (number | null)[] = [];
   let root2Nodes: (number | null)[] = [];
   dfs(root1, root1Nodes);

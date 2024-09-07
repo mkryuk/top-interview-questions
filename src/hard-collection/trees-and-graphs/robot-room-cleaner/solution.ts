@@ -13,13 +13,7 @@ export function cleanRoom(robot: Robot) {
   dfs(robot, visited, 0, 0, 0);
 }
 
-function dfs(
-  robot: Robot,
-  visited: Set<string>,
-  row: number,
-  col: number,
-  direction: number,
-) {
+function dfs(robot: Robot, visited: Set<string>, row: number, col: number, direction: number) {
   visited.add(`${row}_${col}`);
   robot.clean();
   for (let i = 0; i < 4; i++) {

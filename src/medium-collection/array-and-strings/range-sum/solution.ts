@@ -1,9 +1,4 @@
-export function rangeSum(
-  nums: number[],
-  n: number,
-  left: number,
-  right: number,
-): number {
+export function rangeSum(nums: number[], n: number, left: number, right: number): number {
   const MOD = 1e9 + 7;
   let subarraySums: number[] = [];
 

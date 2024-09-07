@@ -3,9 +3,7 @@ import { TreeNode } from "../common";
 export function smallestFromLeaf(root: TreeNode | null): string {
   if (root === null) return "";
 
-  let queue: [TreeNode, string[]][] = [
-    [root, [String.fromCharCode("a".charCodeAt(0) + root.val)]],
-  ];
+  let queue: [TreeNode, string[]][] = [[root, [String.fromCharCode("a".charCodeAt(0) + root.val)]]];
   // Using "{" to ensure it is lexicographically higher than any valid character.
   let result = "{";
 

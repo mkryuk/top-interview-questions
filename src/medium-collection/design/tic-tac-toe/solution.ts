@@ -26,23 +26,13 @@ export class TicTacToe {
   }
 
   checkWin(row: number, col: number, player: number): boolean {
-    if (
-      (!this.playerRow[row] || this.playerRow[row] === player) &&
-      this.checkRow(row, player)
-    ) {
+    if ((!this.playerRow[row] || this.playerRow[row] === player) && this.checkRow(row, player)) {
       return true;
     }
-    if (
-      (!this.playerCol[col] || this.playerCol[col] === player) &&
-      this.checkCol(col, player)
-    ) {
+    if ((!this.playerCol[col] || this.playerCol[col] === player) && this.checkCol(col, player)) {
       return true;
     }
-    if (
-      col === row &&
-      (!this.playerDiagL || this.playerDiagL === player) &&
-      this.checkDiagonalL(player)
-    ) {
+    if (col === row && (!this.playerDiagL || this.playerDiagL === player) && this.checkDiagonalL(player)) {
       return true;
     }
     if (
@@ -99,11 +89,7 @@ export class TicTacToe {
   }
 
   checkDiagonalR(player: number): boolean {
-    for (
-      let i = 0, j = this.board.length - 1;
-      i < this.board.length;
-      i++, j--
-    ) {
+    for (let i = 0, j = this.board.length - 1; i < this.board.length; i++, j--) {
       if (this.board[i][j] !== player) {
         if (this.board[i][j] === 0) {
           this.playerDiagR = player;

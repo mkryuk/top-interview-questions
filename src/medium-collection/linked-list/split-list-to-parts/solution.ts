@@ -1,9 +1,6 @@
 import { ListNode } from "../common";
 
-export function splitListToParts(
-  head: ListNode | null,
-  k: number,
-): Array<ListNode | null> {
+export function splitListToParts(head: ListNode | null, k: number): Array<ListNode | null> {
   let count = 0;
   let currentNode = head;
   while (currentNode) {

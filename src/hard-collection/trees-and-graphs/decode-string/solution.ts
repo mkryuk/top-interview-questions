@@ -10,8 +10,7 @@ export function decodeString(s: string): string {
     const substr = s.substring(openBraceIdx + 1, closeBraceIdx);
     const parsedSubstr = decodeString(substr);
     const repeatedSubstr = parsedSubstr.repeat(num);
-    s =
-      s.substring(0, numIdx) + repeatedSubstr + s.substring(closeBraceIdx + 1);
+    s = s.substring(0, numIdx) + repeatedSubstr + s.substring(closeBraceIdx + 1);
     openBraceIdx = s.indexOf("[");
   }
   return s;

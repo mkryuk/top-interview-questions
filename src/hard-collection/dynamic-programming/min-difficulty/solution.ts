@@ -5,9 +5,7 @@ export function minDifficulty(jobDifficulty: number[], d: number): number {
   if (n < d) return -1;
 
   // Initialize the dp array. dp[i][j] will represent the minimum difficulty to schedule the first i jobs in j days.
-  const dp: number[][] = Array.from({ length: n + 1 }, () =>
-    Array(d + 1).fill(Infinity),
-  );
+  const dp: number[][] = Array.from({ length: n + 1 }, () => Array(d + 1).fill(Infinity));
   dp[0][0] = 0;
 
   for (let i = 1; i <= n; i++) {

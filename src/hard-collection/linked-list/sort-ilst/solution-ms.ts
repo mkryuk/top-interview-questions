@@ -24,10 +24,7 @@ function splitList(head: ListNode | null): ListNode | null {
   return mid;
 }
 
-function mergeLists(
-  left: ListNode | null,
-  right: ListNode | null,
-): ListNode | null {
+function mergeLists(left: ListNode | null, right: ListNode | null): ListNode | null {
   let head = new ListNode();
   let tail = head;
   while (left && right) {

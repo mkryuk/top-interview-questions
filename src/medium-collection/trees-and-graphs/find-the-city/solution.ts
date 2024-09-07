@@ -1,8 +1,4 @@
-export function findTheCity(
-  n: number,
-  edges: number[][],
-  distanceThreshold: number,
-): number {
+export function findTheCity(n: number, edges: number[][], distanceThreshold: number): number {
   const edgesMap = new Map<number, { to: number; weight: number }[]>();
   for (const [from, to, weight] of edges) {
     if (!edgesMap.has(from)) {
@@ -59,13 +55,7 @@ function getPathsNumber(
   const toNodes = edges.get(from) ?? [];
   for (const { to, weight } of toNodes) {
     if (weight <= distanceThreshold && !visitedPath.has(to)) {
-      getPathsNumber(
-        to,
-        edges,
-        distanceThreshold - weight,
-        visitedPath,
-        visitedNodes,
-      );
+      getPathsNumber(to, edges, distanceThreshold - weight, visitedPath, visitedNodes);
     }
   }
 

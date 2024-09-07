@@ -1,7 +1,5 @@
 export function findRelativeRanks(score: number[]): string[] {
-  const positionMap = new Map(
-    [...score].sort((a, b) => b - a).map((v, i) => [v, i + 1]),
-  );
+  const positionMap = new Map([...score].sort((a, b) => b - a).map((v, i) => [v, i + 1]));
   const result: string[] = [];
   for (const s of score) {
     const position = positionMap.get(s)!;

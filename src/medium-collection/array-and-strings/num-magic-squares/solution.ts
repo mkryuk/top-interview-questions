@@ -16,11 +16,7 @@ function isMagic(i: number, j: number, grid: number[][]): boolean {
   const uniqueValues = new Set<number>();
   for (let col = i; col < i + 3; col++) {
     for (let row = j; row < j + 3; row++) {
-      if (
-        grid[col][row] < 0 ||
-        grid[col][row] > 9 ||
-        uniqueValues.has(grid[col][row])
-      ) {
+      if (grid[col][row] < 0 || grid[col][row] > 9 || uniqueValues.has(grid[col][row])) {
         return false;
       }
       uniqueValues.add(grid[i][j]);
@@ -37,14 +33,5 @@ function isMagic(i: number, j: number, grid: number[][]): boolean {
   const s7 = grid[i][j] + grid[i + 1][j + 1] + grid[i + 2][j + 2];
   const s8 = grid[i][j + 2] + grid[i + 1][j + 1] + grid[i + 2][j];
 
-  return (
-    s1 === 15 &&
-    s2 === 15 &&
-    s3 === 15 &&
-    s4 === 15 &&
-    s5 === 15 &&
-    s6 === 15 &&
-    s7 === 15 &&
-    s8 === 15
-  );
+  return s1 === 15 && s2 === 15 && s3 === 15 && s4 === 15 && s5 === 15 && s6 === 15 && s7 === 15 && s8 === 15;
 }

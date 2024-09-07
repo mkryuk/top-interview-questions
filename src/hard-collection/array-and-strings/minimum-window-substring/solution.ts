@@ -40,8 +40,7 @@ export function minWindow(s: string, t: string): string {
       map.set(key, item);
       mapLen--;
       const tempResult = s.substring(startIdx, i + 1);
-      result =
-        result && result.length < tempResult.length ? result : tempResult;
+      result = result && result.length < tempResult.length ? result : tempResult;
     }
   }
   return result;

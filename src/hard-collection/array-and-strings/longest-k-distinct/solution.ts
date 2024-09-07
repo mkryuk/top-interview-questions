@@ -1,7 +1,4 @@
-export function lengthOfLongestSubstringKDistinct(
-  s: string,
-  k: number,
-): number {
+export function lengthOfLongestSubstringKDistinct(s: string, k: number): number {
   let map = new Map<string, number>();
   let start = 0;
   let result = 0;

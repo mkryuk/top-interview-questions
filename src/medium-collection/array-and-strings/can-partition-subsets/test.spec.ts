@@ -16,10 +16,7 @@ describe("Partition to K Equal Sum Subsets:", () => {
   });
 
   it("canPartitionKSubsets should return false for nums = [3522,181,521,515,304,123,2512,312,922,407,146,1932,4037,2646,3871,269], k = 5", () => {
-    const nums = [
-      3522, 181, 521, 515, 304, 123, 2512, 312, 922, 407, 146, 1932, 4037, 2646,
-      3871, 269,
-    ];
+    const nums = [3522, 181, 521, 515, 304, 123, 2512, 312, 922, 407, 146, 1932, 4037, 2646, 3871, 269];
     const k = 5;
     const result = canPartitionKSubsets(nums, k);
     expect(result).toBeTrue();

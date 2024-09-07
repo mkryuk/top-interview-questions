@@ -11,13 +11,7 @@ export function countSmaller(nums: number[]): number[] {
   return result;
 }
 
-function mergeSort(
-  indices: number[],
-  start: number,
-  end: number,
-  result: number[],
-  nums: number[],
-) {
+function mergeSort(indices: number[], start: number, end: number, result: number[], nums: number[]) {
   if (end - start <= 1) {
     return;
   }
@@ -27,14 +21,7 @@ function mergeSort(
   merge(indices, start, mid, end, result, nums);
 }
 
-function merge(
-  indices: number[],
-  start: number,
-  mid: number,
-  end: number,
-  result: number[],
-  nums: number[],
-) {
+function merge(indices: number[], start: number, mid: number, end: number, result: number[], nums: number[]) {
   // merge [start, mid) and [mid, end)
   let i = start; // current index for the left array
   let j = mid; // current index for the right array

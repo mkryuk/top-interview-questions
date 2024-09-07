@@ -4,9 +4,7 @@ export function isMatch(s: string, p: string): boolean {
   }
   const firstMatch = s.length !== 0 && (p[0] === s[0] || p[0] === ".");
   if (p.length >= 2 && p[1] === "*") {
-    return (
-      isMatch(s, p.substring(2)) || (firstMatch && isMatch(s.substring(1), p))
-    );
+    return isMatch(s, p.substring(2)) || (firstMatch && isMatch(s.substring(1), p));
   } else {
     return firstMatch && isMatch(s.substring(1), p.substring(1));
   }

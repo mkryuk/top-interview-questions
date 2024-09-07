@@ -11,11 +11,7 @@ it('wordBreak should return ["cats and dog","cat sand dog"]', () => {
 it('wordBreak should return ["pine apple pen apple","pineapple pen apple","pine applepen apple"]', () => {
   const s = "pineapplepenapple";
   const wordDict = ["apple", "pen", "applepen", "pine", "pineapple"];
-  const expected = [
-    "pine apple pen apple",
-    "pineapple pen apple",
-    "pine applepen apple",
-  ];
+  const expected = ["pine apple pen apple", "pineapple pen apple", "pine applepen apple"];
   const result = wordBreak(s, wordDict);
   expect(compareArrays(expected, result)).toBeTrue();
 });

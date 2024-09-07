@@ -27,8 +27,7 @@ export function longestIncreasingPath(matrix: number[][]): number {
         directions.forEach(([rowShift, colShift]) => {
           const x = row + rowShift;
           const y = col + colShift;
-          const inBoundaries =
-            0 <= x && x < matrix.length && 0 <= y && y < matrix[0].length;
+          const inBoundaries = 0 <= x && x < matrix.length && 0 <= y && y < matrix[0].length;
           // if we are out of boundaries or next node is not greater than current node
           if (!inBoundaries || matrix[x][y] <= matrix[row][col]) {
             return;

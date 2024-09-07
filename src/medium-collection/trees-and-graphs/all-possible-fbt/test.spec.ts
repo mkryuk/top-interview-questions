@@ -43,18 +43,12 @@ describe("All Possible Full Binary Trees:", () => {
   });
 });
 
-function compareArrays(
-  left: (number | null)[][],
-  right: (number | null)[][],
-): boolean {
+function compareArrays(left: (number | null)[][], right: (number | null)[][]): boolean {
   if (left.length !== right.length) {
     return false;
   }
   let leftStrings = left.map((item) => item.join(","));
   let rightStrings = right.map((item) => item.join(","));
 
-  return (
-    leftStrings.every((l) => rightStrings.includes(l)) &&
-    rightStrings.every((r) => leftStrings.includes(r))
-  );
+  return leftStrings.every((l) => rightStrings.includes(l)) && rightStrings.every((r) => leftStrings.includes(r));
 }

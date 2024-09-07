@@ -1,9 +1,4 @@
-export function spiralMatrixIII(
-  rows: number,
-  cols: number,
-  rStart: number,
-  cStart: number,
-): number[][] {
+export function spiralMatrixIII(rows: number, cols: number, rStart: number, cStart: number): number[][] {
   const result: number[][] = [];
   const totalCells = rows * cols;
   const directions = [
@@ -26,12 +21,7 @@ export function spiralMatrixIII(
         currentRow += directions[directionIndex][0];
         currentCol += directions[directionIndex][1];
 
-        if (
-          currentRow >= 0 &&
-          currentRow < rows &&
-          currentCol >= 0 &&
-          currentCol < cols
-        ) {
+        if (currentRow >= 0 && currentRow < rows && currentCol >= 0 && currentCol < cols) {
           result.push([currentRow, currentCol]);
         }
       }

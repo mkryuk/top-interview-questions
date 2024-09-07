@@ -1,20 +1,11 @@
-export function combinationSum2(
-  candidates: number[],
-  target: number,
-): number[][] {
+export function combinationSum2(candidates: number[], target: number): number[][] {
   candidates.sort((a, b) => a - b);
   const result: number[][] = [];
   backtrack(candidates, 0, target, [], result);
   return result;
 }
 
-function backtrack(
-  candidates: number[],
-  start: number,
-  target: number,
-  combination: number[],
-  result: number[][],
-) {
+function backtrack(candidates: number[], start: number, target: number, combination: number[], result: number[][]) {
   if (target === 0) {
     result.push([...combination]);
     return;

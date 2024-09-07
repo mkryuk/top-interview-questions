@@ -1,8 +1,4 @@
-export function jobScheduling(
-  startTime: number[],
-  endTime: number[],
-  profit: number[],
-): number {
+export function jobScheduling(startTime: number[], endTime: number[], profit: number[]): number {
   const n = startTime.length;
   let jobs: { start: number; end: number; profit: number }[] = [];
   for (let i = 0; i < n; i++) {
@@ -22,10 +18,7 @@ export function jobScheduling(
   return dp[n - 1];
 }
 
-function prevNonConflictingJobIndex(
-  jobs: { start: number; end: number; profit: number }[],
-  index: number,
-): number {
+function prevNonConflictingJobIndex(jobs: { start: number; end: number; profit: number }[], index: number): number {
   let firstIndex = 0;
   let lastIndex = index - 1;
   while (firstIndex <= lastIndex) {

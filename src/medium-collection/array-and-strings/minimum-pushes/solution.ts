@@ -7,9 +7,7 @@ export function minimumPushes(word: string): number {
     countMap.set(char, countMap.get(char)! + 1);
   }
 
-  const sortedCounts = Array.from(countMap.values()).sort(
-    (count1, count2) => count2 - count1,
-  );
+  const sortedCounts = Array.from(countMap.values()).sort((count1, count2) => count2 - count1);
 
   let result = 0;
   let keyIndex = 0;

@@ -34,12 +34,7 @@ function calculateFuelCost(
     if (visited.has(neighbors[i])) {
       continue;
     }
-    let nodeResult = calculateFuelCost(
-      initialSeats,
-      neighbors[i],
-      visited,
-      tree,
-    );
+    let nodeResult = calculateFuelCost(initialSeats, neighbors[i], visited, tree);
     result.seatsLeft += nodeResult.seatsLeft;
     result.fuelSpent += nodeResult.fuelSpent;
     result.cars += nodeResult.cars;

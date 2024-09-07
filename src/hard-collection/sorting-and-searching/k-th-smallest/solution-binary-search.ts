@@ -23,11 +23,7 @@ export function kthSmallest(matrix: number[][], k: number): number {
   return start;
 }
 
-function countLessEqual(
-  matrix: number[][],
-  mid: number,
-  smallLargePair: number[],
-): number {
+function countLessEqual(matrix: number[][], mid: number, smallLargePair: number[]): number {
   const n = matrix.length;
   let count = 0;
   let row = n - 1;

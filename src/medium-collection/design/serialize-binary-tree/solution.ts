@@ -23,9 +23,7 @@ function rSerialize(root: TreeNode | null, result: string): string {
  * Decodes your encoded data to tree.
  */
 export function deserialize(data: string): TreeNode | null {
-  let dataArray = data
-    .split(",")
-    .map((n) => (n === "null" ? null : parseInt(n, 10)));
+  let dataArray = data.split(",").map((n) => (n === "null" ? null : parseInt(n, 10)));
   let root: TreeNode | null = new TreeNode();
   root = rDeserialize(dataArray);
   return root;

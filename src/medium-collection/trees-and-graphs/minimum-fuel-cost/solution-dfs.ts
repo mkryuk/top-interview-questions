@@ -25,13 +25,7 @@ function calculateFuel(
   }
   for (const child of adj.get(node)!) {
     if (child !== parent) {
-      const [childRepresentatives, childFuel] = calculateFuel(
-        child,
-        node,
-        adj,
-        seats,
-        fuel,
-      );
+      const [childRepresentatives, childFuel] = calculateFuel(child, node, adj, seats, fuel);
       representatives += childRepresentatives;
       fuel = childFuel;
     }

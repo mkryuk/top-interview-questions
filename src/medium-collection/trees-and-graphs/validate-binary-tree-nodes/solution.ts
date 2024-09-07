@@ -1,8 +1,4 @@
-export function validateBinaryTreeNodes(
-  n: number,
-  leftChild: number[],
-  rightChild: number[],
-): boolean {
+export function validateBinaryTreeNodes(n: number, leftChild: number[], rightChild: number[]): boolean {
   let map = new Array(n).fill(0);
   for (let i = 0; i < leftChild.length; i++) {
     if (leftChild[i] !== -1) {
@@ -40,12 +36,7 @@ export function validateBinaryTreeNodes(
   return true;
 }
 
-function dfs(
-  node: number,
-  leftChild: number[],
-  rightChild: number[],
-  visited: number[],
-) {
+function dfs(node: number, leftChild: number[], rightChild: number[], visited: number[]) {
   if (visited[node] > 1) {
     return;
   }

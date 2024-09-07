@@ -13,10 +13,7 @@ export function findFarmland(land: number[][]): number[][] {
   return result;
 }
 
-function findBottomRightCorner(
-  start: number[],
-  land: number[][],
-): [number, number] {
+function findBottomRightCorner(start: number[], land: number[][]): [number, number] {
   // Right and Down directions
   const directions = [
     [0, 1],
@@ -36,11 +33,7 @@ function findBottomRightCorner(
     directions.forEach(([di, dj]) => {
       const newI = i + di;
       const newJ = j + dj;
-      if (
-        newI < land.length &&
-        newJ < land[0].length &&
-        land[newI][newJ] === 1
-      ) {
+      if (newI < land.length && newJ < land[0].length && land[newI][newJ] === 1) {
         queue.push([newI, newJ]);
         // Update result borders
         resI = Math.max(resI, newI);

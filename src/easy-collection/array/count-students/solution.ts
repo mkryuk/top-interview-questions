@@ -1,7 +1,4 @@
-export function countStudents(
-  students: number[],
-  sandwiches: number[],
-): number {
+export function countStudents(students: number[], sandwiches: number[]): number {
   // Initialize a count array for both types of sandwiches (0 and 1)
   const studentsCount = [0, 0];
 

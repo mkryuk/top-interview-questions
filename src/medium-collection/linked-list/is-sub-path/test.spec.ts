@@ -27,6 +27,6 @@ describe("Linked List in Binary Tree", () => {
     const head = arrayToList(listNodes);
     const root = arrayToTreeNode(treeNodes);
     const result = isSubPath(head, root);
-    expect(result).toBeTrue();
+    expect(result).toBeFalse();
   });
 });

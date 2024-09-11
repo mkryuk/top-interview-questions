@@ -14,4 +14,11 @@ describe("Minimum Bit Flips to Convert Number", () => {
     const result = minBitFlips(start, goal);
     expect(result).toEqual(3);
   });
+
+  it("minBitFlips should return 3 for start = 10, goal = 82", () => {
+    const start = 10;
+    const goal = 82;
+    const result = minBitFlips(start, goal);
+    expect(result).toEqual(3);
+  });
 });

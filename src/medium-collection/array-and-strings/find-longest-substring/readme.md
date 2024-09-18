@@ -29,4 +29,4 @@ Explanation: In this case, the given string "bcbcbc" is the longest because all 
 ## Constraints:
 
 - 1 <= s.length <= 5 x 10^5
-  s contains only lowercase English letters.
+- s contains only lowercase English letters.

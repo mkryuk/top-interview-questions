@@ -21,4 +21,18 @@ describe("My Calendar II", () => {
     // and the time [50, 55) will be double booked with the second event.
     expect(myCalendarTwo.book(25, 55)).toBeTrue();
   });
+
+  it("MyCalendarTwo should pass test 1", () => {
+    const myCalendarTwo = new MyCalendarTwo();
+    expect(myCalendarTwo.book(24, 40)).toBeTrue();
+    expect(myCalendarTwo.book(43, 50)).toBeTrue();
+    expect(myCalendarTwo.book(27, 43)).toBeTrue();
+    expect(myCalendarTwo.book(5, 21)).toBeTrue();
+    expect(myCalendarTwo.book(30, 40)).toBeFalse();
+    expect(myCalendarTwo.book(14, 29)).toBeFalse();
+    expect(myCalendarTwo.book(3, 19)).toBeTrue();
+    expect(myCalendarTwo.book(3, 14)).toBeFalse();
+    expect(myCalendarTwo.book(25, 39)).toBeFalse();
+    expect(myCalendarTwo.book(6, 19)).toBeFalse();
+  });
 });

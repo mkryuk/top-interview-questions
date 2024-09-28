@@ -1,35 +1,62 @@
 export class MyCircularDeque {
-  constructor(k: number) {}
+  queue: number[];
+  readonly maxSize: number;
+  constructor(k: number) {
+    this.queue = [];
+    this.maxSize = k;
+  }
 
   insertFront(value: number): boolean {
-    return false;
+    if (this.isFull()) {
+      return false;
+    }
+    this.queue = [value, ...this.queue];
+    return true;
   }
 
   insertLast(value: number): boolean {
-    return false;
+    if (this.isFull()) {
+      return false;
+    }
+    this.queue.push(value);
+    return true;
   }
 
   deleteFront(): boolean {
-    return false;
+    if (this.isEmpty()) {
+      return false;
+    }
+    this.queue.shift();
+    return true;
   }
 
   deleteLast(): boolean {
-    return false;
+    if (this.isEmpty()) {
+      return false;
+    }
+    this.queue.pop();
+    return true;
   }
 
   getFront(): number {
-    return 0;
+    if (this.isEmpty()) {
+      return -1;
+    }
+    return this.queue[0];
   }
 
   getRear(): number {
-    return 0;
+    if (this.isEmpty()) {
+      return -1;
+    }
+    return this.queue[this.queue.length - 1];
   }
 
   isEmpty(): boolean {
-    return false;
+    return this.queue.length === 0;
   }
 
   isFull(): boolean {
-    return false;
+    return this.queue.length === this.maxSize;
   }
 }

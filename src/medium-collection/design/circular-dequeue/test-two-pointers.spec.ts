@@ -1,4 +1,4 @@
-import { MyCircularDeque } from "./solution";
+import { MyCircularDeque } from "./solution-two-pointers";
 
 describe("Design Circular Deque ", () => {
   it("MyCircularDeque should pass test 1", () => {

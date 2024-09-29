@@ -9,6 +9,6 @@ describe(" All O`one Data Structure", () => {
     expect(allOne.getMinKey()).toEqual("hello");
     allOne.inc("leet");
     expect(allOne.getMaxKey()).toEqual("hello");
-    expect(allOne.getMinKey()).toEqual("test");
+    expect(allOne.getMinKey()).toEqual("leet");
   });
 });

@@ -21,4 +21,11 @@ describe("Sentence Similarity III", () => {
     const result = areSentencesSimilar(sentence1, sentence2);
     expect(result).toBeTrue();
   });
+
+  it('areSentencesSimilar should return false for sentence1 = "Luky", sentence2 = "Lucccky"', () => {
+    const sentence1 = "Luky";
+    const sentence2 = "Lucccky";
+    const result = areSentencesSimilar(sentence1, sentence2);
+    expect(result).toBeFalse();
+  });
 });

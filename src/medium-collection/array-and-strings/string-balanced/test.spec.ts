@@ -18,4 +18,10 @@ describe("Minimum Number of Swaps to Make the String Balanced", () => {
     const result = minSwaps(s);
     expect(result).toEqual(0);
   });
+
+  it('minSwaps should return 1 for "][][]["', () => {
+    const s = "][][][";
+    const result = minSwaps(s);
+    expect(result).toEqual(1);
+  });
 });

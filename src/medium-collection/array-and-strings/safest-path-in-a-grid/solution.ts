@@ -1,4 +1,4 @@
-import { Heap } from "../../hard-collection/design/heap/heap";
+import { Heap } from "../../../hard-collection/design/heap/heap";
 
 type Grid = number[][];
 type Position = [number, number];

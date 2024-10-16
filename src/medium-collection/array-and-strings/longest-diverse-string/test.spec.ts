@@ -16,4 +16,12 @@ describe("Longest Happy String", () => {
     const result = longestDiverseString(a, b, c);
     expect(result).toEqual("aabaa");
   });
+
+  it('longestDiverseString should return "ccbccbcbcbcbcbcbcbc" for a = 0, b = 8, c = 11', () => {
+    const a = 0;
+    const b = 8;
+    const c = 11;
+    const result = longestDiverseString(a, b, c);
+    expect(result).toEqual("ccbccbcbcbcbcbcbcbc");
+  });
 });

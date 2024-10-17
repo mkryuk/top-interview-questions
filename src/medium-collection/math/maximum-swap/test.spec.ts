@@ -12,4 +12,16 @@ describe("Maximum Swap", () => {
     const result = maximumSwap(num);
     expect(result).toEqual(9973);
   });
+
+  it("maximumSwap should return 98863 for num = 98368", () => {
+    const num = 98368;
+    const result = maximumSwap(num);
+    expect(result).toEqual(98863);
+  });
+
+  it("maximumSwap should return 9913 for num = 1993", () => {
+    const num = 1993;
+    const result = maximumSwap(num);
+    expect(result).toEqual(9913);
+  });
 });

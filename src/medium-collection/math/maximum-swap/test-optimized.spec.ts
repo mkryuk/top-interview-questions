@@ -1,4 +1,4 @@
-import { maximumSwap } from "./solution";
+import { maximumSwap } from "./solution-optimized";
 
 describe("Maximum Swap", () => {
   it("maximumSwap should return 7236 for num = 2736", () => {

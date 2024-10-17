@@ -1,6 +1,6 @@
 export function maximumSwap(num: number): number {
-  const numArray = num.toString().split("");
-  const sortedNums = [...numArray].sort((a, b) => b.charCodeAt(0) - a.charCodeAt(0));
+  const numArray = num.toString().split("").map(Number);
+  const sortedNums = [...numArray].sort((a, b) => b - a);
 
   const n = sortedNums.length;
   for (let i = 0; i < n; i++) {

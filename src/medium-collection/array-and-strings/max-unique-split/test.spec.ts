@@ -18,4 +18,10 @@ describe("Split a String Into the Max Number of Unique Substrings", () => {
     const result = maxUniqueSplit(s);
     expect(result).toEqual(1);
   });
+
+  it('maxUniqueSplit should return 11 for s = "wwwzfvedwfvhsww"', () => {
+    const s = "wwwzfvedwfvhsww";
+    const result = maxUniqueSplit(s);
+    expect(result).toEqual(11);
+  });
 });

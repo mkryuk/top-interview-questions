@@ -17,4 +17,20 @@ describe("Kth Largest Sum in a Binary Tree", () => {
     const result = kthLargestLevelSum(root, k);
     expect(result).toEqual(3);
   });
+
+  it("kthLargestLevelSum should retur 706311 for root = [897935,796748,528909,null,null,null,905326,706311,null,null,282251,null,139169], k = 4", () => {
+    const nodes = [897935, 796748, 528909, null, null, null, 905326, 706311, null, null, 282251, null, 139169];
+    const k = 4;
+    const root = arrayToTreeNode(nodes);
+    const result = kthLargestLevelSum(root, k);
+    expect(result).toEqual(706311);
+  });
+
+  it("kthLargestLevelSum should retur -1 for root = [5,8,9,2,1,3,7], k = 4", () => {
+    const nodes = [5, 8, 9, 2, 1, 3, 7];
+    const k = 4;
+    const root = arrayToTreeNode(nodes);
+    const result = kthLargestLevelSum(root, k);
+    expect(result).toEqual(-1);
+  });
 });

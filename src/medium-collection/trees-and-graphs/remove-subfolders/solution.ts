@@ -1,3 +1,13 @@
 export function removeSubfolders(folder: string[]): string[] {
-  return [];
+  folder.sort();
+  let prev = "#";
+  let result: string[] = [];
+  for (const path of folder) {
+    if (path.startsWith(prev)) {
+      continue;
+    }
+    result.push(path);
+    prev = path + "/";
+  }
+  return result;
 }

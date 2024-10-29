@@ -12,4 +12,10 @@ describe("Longest Square Streak in an Array", () => {
     const result = longestSquareStreak(nums);
     expect(result).toEqual(-1);
   });
+
+  it("longestSquareStreak should return -1 for [10,2,13,16,8,9,13]", () => {
+    const nums = [10, 2, 13, 16, 8, 9, 13];
+    const result = longestSquareStreak(nums);
+    expect(result).toEqual(-1);
+  });
 });

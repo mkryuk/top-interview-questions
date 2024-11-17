@@ -21,4 +21,18 @@ describe("Shortest Subarray with Sum at Least K", () => {
     const result = shortestSubarray(nums, k);
     expect(result).toEqual(3);
   });
+
+  it("shortestSubarray should return 2 for nums = [48,99,37,4,-31], k = 140", () => {
+    const nums = [48, 99, 37, 4, -31];
+    const k = 140;
+    const result = shortestSubarray(nums, k);
+    expect(result).toEqual(2);
+  });
+
+  it("shortestSubarray should return 2 for nums = [56,-21,56,35,-9], k = 61", () => {
+    const nums = [56, -21, 56, 35, -9];
+    const k = 61;
+    const result = shortestSubarray(nums, k);
+    expect(result).toEqual(2);
+  });
 });

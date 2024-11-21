@@ -12,6 +12,6 @@ describe("Take K of Each Character From Left and Right", () => {
     const s = "a";
     const k = 1;
     const result = takeCharacters(s, k);
-    expect(result).toEqual(8);
+    expect(result).toEqual(-1);
   });
 });

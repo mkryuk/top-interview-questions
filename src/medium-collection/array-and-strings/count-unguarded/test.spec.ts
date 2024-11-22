@@ -29,6 +29,6 @@ describe("Count Unguarded Cells in the Grid", () => {
       [1, 2],
     ];
     const result = countUnguarded(m, n, guards, walls);
-    expect(result).toEqual(7);
+    expect(result).toEqual(4);
   });
 });

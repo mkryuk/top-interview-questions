@@ -21,4 +21,14 @@ describe("Shortest Distance After Road Addition Queries I", () => {
     const result = shortestDistanceAfterQueries(n, queries);
     expect(result).toEqual([1, 1]);
   });
+
+  it("shortestDistanceAfterQueries should return [3,3] for n = 6, queries = [[1,4],[0,2]]", () => {
+    const n = 6;
+    const queries = [
+      [1, 4],
+      [0, 2],
+    ];
+    const result = shortestDistanceAfterQueries(n, queries);
+    expect(result).toEqual([3, 3]);
+  });
 });

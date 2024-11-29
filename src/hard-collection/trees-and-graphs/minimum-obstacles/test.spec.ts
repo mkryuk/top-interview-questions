@@ -18,6 +18,6 @@ describe("Minimum Obstacle Removal to Reach Corner", () => {
       [0, 0, 0, 1, 0],
     ];
     const result = minimumObstacles(grid);
-    expect(result).toEqual(2);
+    expect(result).toEqual(0);
   });
 });

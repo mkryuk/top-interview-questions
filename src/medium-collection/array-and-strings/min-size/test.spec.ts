@@ -12,6 +12,13 @@ describe("Minimum Limit of Balls in a Bag", () => {
     const nums = [2, 4, 8, 2];
     const maxOperations = 4;
     const result = minimumSize(nums, maxOperations);
-    expect(result).toEqual(3);
+    expect(result).toEqual(2);
+  });
+
+  it("minimumSize should return 1 for nums = [1], maxOperations = 1", () => {
+    const nums = [1];
+    const maxOperations = 1;
+    const result = minimumSize(nums, maxOperations);
+    expect(result).toEqual(1);
   });
 });

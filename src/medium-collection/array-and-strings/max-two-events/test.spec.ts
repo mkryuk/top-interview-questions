@@ -30,4 +30,15 @@ describe("Two Best Non-Overlapping Events", () => {
     const result = maxTwoEvents(events);
     expect(result).toEqual(8);
   });
+
+  it("maxTwoEvents should return 7 for events = [[1,3,2],[4,5,2],[2,4,3],[5,7,4]]", () => {
+    const events = [
+      [1, 3, 2],
+      [4, 5, 2],
+      [2, 4, 3],
+      [5, 7, 4],
+    ];
+    const result = maxTwoEvents(events);
+    expect(result).toEqual(7);
+  });
 });

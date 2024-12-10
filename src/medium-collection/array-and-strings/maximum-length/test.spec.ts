@@ -18,4 +18,10 @@ describe("Find Longest Special Substring That Occurs Thrice I", () => {
     const result = maximumLength(s);
     expect(result).toEqual(1);
   });
+
+  it('maximumLength should return 2 for s = ""cccerrrecdcdccedecdcccddeeeddcdcddedccdceeedccecde""', () => {
+    const s = "cccerrrecdcdccedecdcccddeeeddcdcddedccdceeedccecde";
+    const result = maximumLength(s);
+    expect(result).toEqual(2);
+  });
 });

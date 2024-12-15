@@ -9,7 +9,7 @@ describe("Maximum Average Pass Ratio", () => {
     ];
     const extraStudents = 2;
     const result = maxAverageRatio(classes, extraStudents);
-    expect(result).toEqual(0.7833);
+    expect(result).toEqual(0.78333);
   });
 
   it("maxAverageRatio should return 0.53485 for classes = [[2,4],[3,9],[4,5],[2,10]], extraStudents = 4", () => {

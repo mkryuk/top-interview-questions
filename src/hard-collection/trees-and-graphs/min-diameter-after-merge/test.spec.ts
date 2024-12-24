@@ -34,4 +34,11 @@ describe("Find Minimum Diameter After Merging Two Trees", () => {
     const result = minimumDiameterAfterMerge(edges1, edges2);
     expect(result).toEqual(5);
   });
+
+  it("minimumDiameterAfterMerge should return 2 for edges1 = [], edges2 = [[0,1]]", () => {
+    const edges1: number[][] = [];
+    const edges2 = [[0, 1]];
+    const result = minimumDiameterAfterMerge(edges1, edges2);
+    expect(result).toEqual(2);
+  });
 });

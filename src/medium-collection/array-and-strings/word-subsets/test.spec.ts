@@ -14,4 +14,11 @@ describe("Word Subsets", () => {
     const result = wordSubsets(words1, words2);
     expect(result).toEqual(["apple", "google", "leetcode"]);
   });
+
+  it('wordSubsets should return ["google","leetcode"] for words1 = ["amazon","apple","facebook","google","leetcode"], words2 = ["lo","eo"]', () => {
+    const words1 = ["amazon", "apple", "facebook", "google", "leetcode"];
+    const words2 = ["lo", "eo"];
+    const result = wordSubsets(words1, words2);
+    expect(result).toEqual(["google", "leetcode"]);
+  });
 });

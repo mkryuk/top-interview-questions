@@ -22,4 +22,14 @@ describe("Trapping Rain Water II", () => {
     const result = trapRainWater(heightMap);
     expect(result).toEqual(10);
   });
+
+  it("trapRainWater should return 2 for heightMap = [[3,3,3],[3,0,4],[3,2,5]]", () => {
+    const heightMap = [
+      [3, 3, 3],
+      [3, 0, 4],
+      [3, 2, 5],
+    ];
+    const result = trapRainWater(heightMap);
+    expect(result).toEqual(2);
+  });
 });

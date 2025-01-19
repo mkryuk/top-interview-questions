@@ -30,4 +30,13 @@ describe("Minimum Cost to Make at Least One Valid Path in a Grid", () => {
     const result = minCost(grid);
     expect(result).toEqual(1);
   });
+
+  it("minCost should return 3 for grid = [[2,2,2],[2,2,2]]", () => {
+    const grid = [
+      [2, 2, 2],
+      [2, 2, 2],
+    ];
+    const result = minCost(grid);
+    expect(result).toEqual(3);
+  });
 });

@@ -21,4 +21,14 @@ describe("First Completely Painted Row or Column", () => {
     const result = firstCompleteIndex(arr, mat);
     expect(result).toEqual(3);
   });
+
+  it("firstCompleteIndex should return 1 for arr = [1,4,5,2,6,3], mat = [[4,3,5],[1,2,6]]", () => {
+    const arr = [1, 4, 5, 2, 6, 3];
+    const mat = [
+      [4, 3, 5],
+      [1, 2, 6],
+    ];
+    const result = firstCompleteIndex(arr, mat);
+    expect(result).toEqual(1);
+  });
 });

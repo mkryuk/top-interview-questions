@@ -18,4 +18,10 @@ describe("Check if Array Is Sorted and Rotated", () => {
     const result = check(nums);
     expect(result).toBeTrue();
   });
+
+  it("check should return true for nums = [6,10,6]", () => {
+    const nums = [6, 10, 6];
+    const result = check(nums);
+    expect(result).toBeTrue();
+  });
 });

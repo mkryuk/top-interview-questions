@@ -25,4 +25,17 @@ describe("Find the Number of Distinct Colors Among the Balls", () => {
     const result = queryResults(limit, queries);
     expect(result).toEqual([1, 2, 2, 3, 4]);
   });
+
+  it("queryResults should return [1,1,1,1,2] for limit = 1, queries = [[0,1],[0,4],[0,4],[0,1],[1,2]]", () => {
+    const limit = 1;
+    const queries = [
+      [0, 1],
+      [0, 4],
+      [0, 4],
+      [0, 1],
+      [1, 2],
+    ];
+    const result = queryResults(limit, queries);
+    expect(result).toEqual([1, 1, 1, 1, 2]);
+  });
 });

@@ -1,3 +1,5 @@
+import { shortestCommonSupersequence } from "./solution";
+
 describe("Shortest Common Supersequence", () => {
   it('shortestCommonSupersequence should return "cabac" for str1 = "abac", str2 = "cab"', () => {
     const str1 = "abac";

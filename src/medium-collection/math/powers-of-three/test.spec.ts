@@ -18,4 +18,10 @@ describe("Check if Number is a Sum of Powers of Three", () => {
     const result = checkPowersOfThree(n);
     expect(result).toBeFalse();
   });
+
+  it("checkPowersOfThree should return true for n = 1", () => {
+    const n = 1;
+    const result = checkPowersOfThree(n);
+    expect(result).toBeTrue();
+  });
 });

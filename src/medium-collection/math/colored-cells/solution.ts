@@ -1,3 +1,3 @@
 export function coloredCells(n: number): number {
-  return 0;
+  return 2 * n * (n - 1) + 1;
 }

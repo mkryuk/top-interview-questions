@@ -14,4 +14,11 @@ describe("Minimum Recolors to Get K Consecutive Black Blocks", () => {
     const result = minimumRecolors(blocks, k);
     expect(result).toEqual(0);
   });
+
+  it('minimumRecolors should return 6 for blocks = "WWBBBWBBBBBWWBWWWB", k = 16', () => {
+    const blocks = "WWBBBWBBBBBWWBWWWB";
+    const k = 16;
+    const result = minimumRecolors(blocks, k);
+    expect(result).toEqual(6);
+  });
 });

@@ -21,4 +21,18 @@ describe("Alternating Groups II", () => {
     const result = numberOfAlternatingGroups(colors, k);
     expect(result).toEqual(0);
   });
+
+  it("numberOfAlternatingGroups should return 4 for colors = [0,1,0,1], k = 3", () => {
+    const colors = [0, 1, 0, 1];
+    const k = 3;
+    const result = numberOfAlternatingGroups(colors, k);
+    expect(result).toEqual(4);
+  });
+
+  it("numberOfAlternatingGroups should return 1 for colors = [0,1,0,0], k = 3", () => {
+    const colors = [0, 1, 0, 0];
+    const k = 3;
+    const result = numberOfAlternatingGroups(colors, k);
+    expect(result).toEqual(1);
+  });
 });

@@ -18,4 +18,10 @@ describe("Maximum Count of Positive Integer and Negative Integer", () => {
     const result = maximumCount(nums);
     expect(result).toEqual(4);
   });
+
+  it("maximumCount should return 0 for nums = [0,0,0]", () => {
+    const nums = [0, 0, 0];
+    const result = maximumCount(nums);
+    expect(result).toEqual(0);
+  });
 });

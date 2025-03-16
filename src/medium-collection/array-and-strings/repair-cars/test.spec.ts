@@ -14,4 +14,11 @@ describe("Minimum Time to Repair Cars", () => {
     const result = repairCars(ranks, cars);
     expect(result).toEqual(16);
   });
+
+  it("repairCars should return 8112 for ranks = [3], cars = 52", () => {
+    const ranks = [3];
+    const cars = 52;
+    const result = repairCars(ranks, cars);
+    expect(result).toEqual(8112);
+  });
 });

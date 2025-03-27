@@ -18,4 +18,10 @@ describe("Minimum Index of a Valid Split", () => {
     const result = minimumIndex(nums);
     expect(result).toEqual(-1);
   });
+
+  it("minimumIndex should return -1 for nums = [9,5,5,1,1,1,1,8,1]", () => {
+    const nums = [9, 5, 5, 1, 1, 1, 1, 8, 1];
+    const result = minimumIndex(nums);
+    expect(result).toEqual(-1);
+  });
 });

@@ -1,0 +1,3 @@
+export function maxPoints(grid: number[][], queries: number[]): number[] {
+  return [];
+}

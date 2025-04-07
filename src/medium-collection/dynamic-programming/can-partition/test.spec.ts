@@ -12,4 +12,10 @@ describe("Partition Equal Subset Sum", () => {
     const result = canPartition(nums);
     expect(result).toBeFalse();
   });
+
+  it("canPartition should return false for nums = [1,2,5]", () => {
+    const nums = [1, 2, 5];
+    const result = canPartition(nums);
+    expect(result).toBeFalse();
+  });
 });

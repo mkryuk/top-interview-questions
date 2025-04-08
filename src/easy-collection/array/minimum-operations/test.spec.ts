@@ -18,4 +18,16 @@ describe("Minimum Number of Operations to Make Elements in Array Distinct", () =
     const result = minimumOperations(nums);
     expect(result).toEqual(0);
   });
+
+  it("minimumOperations should return 1 for nums = [2,7,15,1,15]", () => {
+    const nums = [2, 7, 15, 1, 15];
+    const result = minimumOperations(nums);
+    expect(result).toEqual(1);
+  });
+
+  it("minimumOperations should return 1 for nums = [5,5]", () => {
+    const nums = [5, 5];
+    const result = minimumOperations(nums);
+    expect(result).toEqual(1);
+  });
 });

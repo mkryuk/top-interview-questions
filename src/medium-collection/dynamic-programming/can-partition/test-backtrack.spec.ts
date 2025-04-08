@@ -1,4 +1,4 @@
-import { canPartition } from "./solution";
+import { canPartition } from "./solution-backtrack";
 
 describe("Partition Equal Subset Sum", () => {
   it("canPartition should return true for nums = [1,5,11,5]", () => {

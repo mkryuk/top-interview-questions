@@ -24,4 +24,12 @@ describe("Count the Hidden Sequences", () => {
     const result = numberOfArrays(differences, lower, upper);
     expect(result).toEqual(0);
   });
+
+  it("numberOfArrays should return 60 for differences = [-40], lower = -46, upper = 53", () => {
+    const differences = [-40];
+    const lower = -46;
+    const upper = 53;
+    const result = numberOfArrays(differences, lower, upper);
+    expect(result).toEqual(60);
+  });
 });

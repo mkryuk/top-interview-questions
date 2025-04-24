@@ -12,4 +12,10 @@ describe("Count Largest Group", () => {
     const result = countLargestGroup(n);
     expect(result).toEqual(2);
   });
+
+  it("countLargestGroup should return 1 for n = 1", () => {
+    const n = 1;
+    const result = countLargestGroup(n);
+    expect(result).toEqual(1);
+  });
 });

@@ -12,4 +12,10 @@ describe("Count Complete Subarrays in an Array", () => {
     const result = countCompleteSubarrays(nums);
     expect(result).toEqual(10);
   });
+
+  it("countCompleteSubarrays should return 2 for [459,459,962,1579,1435,756,1872,1597]", () => {
+    const nums = [459, 459, 962, 1579, 1435, 756, 1872, 1597];
+    const result = countCompleteSubarrays(nums);
+    expect(result).toEqual(2);
+  });
 });

@@ -1,4 +1,4 @@
-# Count Subarrays With Fixed Bounds
+# 2444. Count Subarrays With Fixed Bounds
 
 You are given an integer array nums and two integers minK and maxK.
 

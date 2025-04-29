@@ -14,4 +14,11 @@ describe("Count Subarrays With Score Less Than K", () => {
     const result = countSubarrays(nums, k);
     expect(result).toEqual(5);
   });
+
+  it("countSubarrays should return 13 for nums = [5,2,6,8,9,7], k = 50", () => {
+    const nums = [5, 2, 6, 8, 9, 7];
+    const k = 50;
+    const result = countSubarrays(nums, k);
+    expect(result).toEqual(13);
+  });
 });

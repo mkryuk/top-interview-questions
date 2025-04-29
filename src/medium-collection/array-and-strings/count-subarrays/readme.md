@@ -1,4 +1,4 @@
-# Count Subarrays Where Max Element Appears at Least K Times
+# 2962. Count Subarrays Where Max Element Appears at Least K Times
 
 You are given an integer array nums and a positive integer k.
 

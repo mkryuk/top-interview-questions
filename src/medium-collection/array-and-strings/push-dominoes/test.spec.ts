@@ -12,4 +12,17 @@ describe("838. Push Dominoes", () => {
     const result = pushDominoes(dominoes);
     expect(result).toEqual("LL.RR.LLRRLL..");
   });
+
+  it('pushDominoes should return "R...L" for dominoes = "RR.LL"', () => {
+    const dominoes = "R...L";
+    const result = pushDominoes(dominoes);
+    expect(result).toEqual("RR.LL");
+  });
 });
+
+// "RRRRRRRR..L"
+// 10 - 7 - 1 = 2 / 2 = 1
+
+// "RRRRRRRR...L"
+// // 9th index should stay
+// 11 - 7 - 1 = 3 / 2 = 1

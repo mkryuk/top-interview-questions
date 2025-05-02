@@ -6,7 +6,7 @@ describe("Maximum Number of Tasks You Can Assign", () => {
     const workers = [0, 3, 3];
     const pills = 1;
     const strength = 1;
-    const result = -maxTaskAssign(tasks, workers, pills, strength);
+    const result = maxTaskAssign(tasks, workers, pills, strength);
     expect(result).toEqual(3);
   });
 
@@ -15,7 +15,7 @@ describe("Maximum Number of Tasks You Can Assign", () => {
     const workers = [0, 0, 0];
     const pills = 1;
     const strength = 5;
-    const result = -maxTaskAssign(tasks, workers, pills, strength);
+    const result = maxTaskAssign(tasks, workers, pills, strength);
     expect(result).toEqual(1);
   });
 
@@ -24,7 +24,7 @@ describe("Maximum Number of Tasks You Can Assign", () => {
     const workers = [0, 10, 10, 10, 10];
     const pills = 3;
     const strength = 10;
-    const result = -maxTaskAssign(tasks, workers, pills, strength);
+    const result = maxTaskAssign(tasks, workers, pills, strength);
     expect(result).toEqual(2);
   });
 });

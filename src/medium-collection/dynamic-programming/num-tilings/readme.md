@@ -1,4 +1,4 @@
-# Domino and Tromino Tiling
+# 790. Domino and Tromino Tiling
 
 You have two types of tiles: a 2 x 1 domino shape and a tromino shape. You may rotate these shapes.
 

@@ -1,6 +1,6 @@
 import { lexicalOrder } from "./solution";
 
-describe("Lexicographical Numbers", () => {
+describe("386. Lexicographical Numbers", () => {
   it("lexicalOrder should return [1,10,11,12,13,2,3,4,5,6,7,8,9] for n = 13", () => {
     const n = 13;
     const result = lexicalOrder(n);

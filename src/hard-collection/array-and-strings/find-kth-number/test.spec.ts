@@ -1,6 +1,6 @@
 import { findKthNumber } from "./solution";
 
-describe("K-th Smallest in Lexicographical Order", () => {
+describe("440. K-th Smallest in Lexicographical Order", () => {
   it("findKthNumber should return 10 for n = 13, k = 2", () => {
     const n = 13;
     const k = 2;

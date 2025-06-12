@@ -19,6 +19,6 @@ describe("3445. Maximum Difference Between Even and Odd Frequency II", () => {
     const s = "110";
     const k = 3;
     const result = maxDifference(s, k);
-    expect(result).toEqual(1);
+    expect(result).toEqual(-1);
   });
 });

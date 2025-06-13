@@ -1,4 +1,4 @@
-# Minimize the Maximum Difference of Pairs
+# 2616. Minimize the Maximum Difference of Pairs
 
 You are given a 0-indexed integer array nums and an integer p. Find p pairs of indices of nums such that the maximum difference amongst all the pairs is minimized. Also, ensure no index appears more than once amongst the p pairs.
 

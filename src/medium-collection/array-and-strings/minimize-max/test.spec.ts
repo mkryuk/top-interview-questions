@@ -1,6 +1,6 @@
 import { minimizeMax } from "./solution";
 
-describe("Minimize the Maximum Difference of Pairs:", () => {
+describe("2616. Minimize the Maximum Difference of Pairs", () => {
   it("minimizeMax should return 1 for nums = [10,1,2,7,1,3], p = 2", () => {
     const nums = [10, 1, 2, 7, 1, 3];
     const p = 2;

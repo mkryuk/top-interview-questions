@@ -12,4 +12,16 @@ describe("1432. Max Difference You Can Get From Changing an Integer", () => {
     const result = maxDiff(num);
     expect(result).toEqual(8);
   });
+
+  it("maxDiff should return 888 for num = 111", () => {
+    const num = 111;
+    const result = maxDiff(num);
+    expect(result).toEqual(888);
+  });
+
+  it("maxDiff should return 8808050 for num = 1101057", () => {
+    const num = 1101057;
+    const result = maxDiff(num);
+    expect(result).toEqual(8808050);
+  });
 });

@@ -1,5 +1,5 @@
 export function minMaxDifference(num: number): number {
-  let numStr = num.toString();
+  const numStr = num.toString();
   const max: string[] = [];
   let remap: string = "";
   const firstNum = numStr[0];

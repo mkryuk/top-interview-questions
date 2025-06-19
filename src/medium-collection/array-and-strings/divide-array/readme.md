@@ -1,4 +1,4 @@
-# Divide Array Into Arrays With Max Difference
+# 2966. Divide Array Into Arrays With Max Difference
 
 You are given an integer array nums of size n and a positive integer k.
 

@@ -1,6 +1,6 @@
 import { divideArray } from "./solution";
 
-describe("Divide Array Into Arrays With Max Difference:", () => {
+describe("2966. Divide Array Into Arrays With Max Difference", () => {
   it("divideArray should return [[1,1,3],[3,4,5],[7,8,9]] for nums = [1,3,4,8,7,9,3,5,1], k = 2", () => {
     const nums = [1, 3, 4, 8, 7, 9, 3, 5, 1];
     const k = 2;

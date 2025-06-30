@@ -1,6 +1,6 @@
 import { numSubseq } from "./solution";
 
-describe("Number of Subsequences That Satisfy the Given Sum Condition", () => {
+describe("1498. Number of Subsequences That Satisfy the Given Sum Condition", () => {
   it("numSubseq should return 4 for nums = [3,5,6,7], target = 9", () => {
     const nums = [3, 5, 6, 7];
     const target = 9;

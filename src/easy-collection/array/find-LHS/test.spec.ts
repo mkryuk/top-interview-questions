@@ -18,4 +18,10 @@ describe("594. Longest Harmonious Subsequence", () => {
     const result = findLHS(nums);
     expect(result).toEqual(0);
   });
+
+  it("findLHS should return 5 for nums = [1,3,2,2,5,2,3,7]", () => {
+    const nums = [1, 3, 2, 2, 5, 2, 3, 7];
+    const result = findLHS(nums);
+    expect(result).toEqual(5);
+  });
 });

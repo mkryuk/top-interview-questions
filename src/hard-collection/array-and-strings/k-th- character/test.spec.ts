@@ -12,6 +12,6 @@ describe("3307. Find the K-th Character in String Game II", () => {
     const k = 10;
     const operations = [0, 1, 0, 1];
     const result = kthCharacter(k, operations);
-    expect(result).toEqual("a");
+    expect(result).toEqual("b");
   });
 });

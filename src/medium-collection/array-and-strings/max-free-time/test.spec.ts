@@ -27,4 +27,22 @@ describe("3439. Reschedule Meetings for Maximum Free Time I", () => {
     const result = maxFreeTime(eventTime, k, startTime, endTime);
     expect(result).toEqual(0);
   });
+
+  it("maxFreeTime should return 18 for eventTime = 34, k = 2, startTime = [0,17], endTime = [14,19]", () => {
+    const eventTime = 34;
+    const k = 2;
+    const startTime = [0, 17];
+    const endTime = [14, 19];
+    const result = maxFreeTime(eventTime, k, startTime, endTime);
+    expect(result).toEqual(18);
+  });
+
+  it("maxFreeTime should return 21 for eventTime = 99, k = 1, startTime = [7,21,25], endTime = [13,25,78]", () => {
+    const eventTime = 99;
+    const k = 1;
+    const startTime = [7, 21, 25];
+    const endTime = [13, 25, 78];
+    const result = maxFreeTime(eventTime, k, startTime, endTime);
+    expect(result).toEqual(21);
+  });
 });

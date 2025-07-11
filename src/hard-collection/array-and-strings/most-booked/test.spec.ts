@@ -1,6 +1,6 @@
 import { mostBooked } from "./solution";
 
-describe("Meeting Rooms III:", () => {
+describe("2402. Meeting Rooms III:", () => {
   it("mostBooked should return 0 for n = 2, meetings = [[0,10],[1,5],[2,7],[3,4]]", () => {
     const n = 2;
     const meetings: [number, number][] = [

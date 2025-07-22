@@ -1,6 +1,6 @@
 import { makeFancyString } from "./solution";
 
-describe("Delete Characters to Make Fancy String", () => {
+describe("1957. Delete Characters to Make Fancy String", () => {
   it('makeFancyString should return "leetcode" for s = "leeetcode"', () => {
     const s = "leeetcode";
     const result = makeFancyString(s);

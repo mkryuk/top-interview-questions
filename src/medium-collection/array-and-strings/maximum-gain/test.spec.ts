@@ -1,6 +1,6 @@
 import { maximumGain } from "./solution";
 
-describe("Maximum Score From Removing Substrings", () => {
+describe("1717. Maximum Score From Removing Substrings", () => {
   it('maximumGain should return 19 for s = "cdbcbbaaabab", x = 4, y = 5', () => {
     const s = "cdbcbbaaabab";
     const x = 4;

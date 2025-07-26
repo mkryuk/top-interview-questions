@@ -18,4 +18,16 @@ describe("3487. Maximum Unique Subarray Sum After Deletion", () => {
     const result = maxSum(nums);
     expect(result).toEqual(3);
   });
+
+  it("maxSum should return 20 for nums = [-20,20]", () => {
+    const nums = [-20, 20];
+    const result = maxSum(nums);
+    expect(result).toEqual(20);
+  });
+
+  it("maxSum should return 15 for nums = [-1,-2,-3,-4,-5]", () => {
+    const nums = [-1, -2, -3, -4, -5];
+    const result = maxSum(nums);
+    expect(result).toEqual(-1);
+  });
 });

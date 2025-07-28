@@ -1,6 +1,6 @@
 import { countMaxOrSubsets } from "./solution";
 
-describe("Count Number of Maximum Bitwise-OR Subsets", () => {
+describe("2044. Count Number of Maximum Bitwise-OR Subsets", () => {
   it("countMaxOrSubsets should return 2 for nums = [3,1]", () => {
     const nums = [3, 1];
     const result = countMaxOrSubsets(nums);

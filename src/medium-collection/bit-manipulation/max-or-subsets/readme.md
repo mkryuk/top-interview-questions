@@ -1,4 +1,4 @@
-# Count Number of Maximum Bitwise-OR Subsets
+# 2044. Count Number of Maximum Bitwise-OR Subsets
 
 Given an integer array nums, find the maximum possible bitwise OR of a subset of nums and return the number of different non-empty subsets with the maximum bitwise OR.
 

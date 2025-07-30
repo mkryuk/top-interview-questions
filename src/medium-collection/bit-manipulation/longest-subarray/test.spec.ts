@@ -1,6 +1,6 @@
 import { longestSubarray } from "./solution";
 
-describe("Longest Subarray With Maximum Bitwise AND", () => {
+describe("2419. Longest Subarray With Maximum Bitwise AND", () => {
   it("longestSubarray should return 2 for nums = [1,2,3,3,2,2]", () => {
     const nums = [1, 2, 3, 3, 2, 2];
     const result = longestSubarray(nums);

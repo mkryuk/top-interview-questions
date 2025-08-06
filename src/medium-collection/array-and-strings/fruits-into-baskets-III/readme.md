@@ -1,4 +1,4 @@
-# 3477. Fruits Into Baskets II
+# 3479. Fruits Into Baskets III
 
 You are given two arrays of integers, fruits and baskets, each of length n, where fruits[i] represents the quantity of the ith type of fruit, and baskets[j] represents the capacity of the jth basket.
 
@@ -43,5 +43,5 @@ Since all fruits are successfully placed, we return 0.
 ## Constraints:
 
 - n == fruits.length == baskets.length
-- 1 <= n <= 100
-- 1 <= fruits[i], baskets[i] <= 1000
+- 1 <= n <= 10^5
+- 1 <= fruits[i], baskets[i] <= 10^9

@@ -1,6 +1,6 @@
 import { isPowerOfTwo } from "./solution";
 
-describe("Power of Two:", () => {
+describe("231. Power of Two:", () => {
   it("isPowerOfTwo should return true for n = 1", () => {
     const n = 1;
     const result = isPowerOfTwo(n);

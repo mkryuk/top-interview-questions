@@ -7,9 +7,15 @@ describe("869. Reordered Power of 2", () => {
     expect(result).toBeTrue();
   });
 
-  it("reorderedPowerOf2 should return true for n = 10", () => {
+  it("reorderedPowerOf2 should return false for n = 10", () => {
     const n = 10;
     const result = reorderedPowerOf2(n);
     expect(result).toBeFalse();
+  });
+
+  it("reorderedPowerOf2 should return true for n = 46", () => {
+    const n = 46;
+    const result = reorderedPowerOf2(n);
+    expect(result).toBeTrue();
   });
 });

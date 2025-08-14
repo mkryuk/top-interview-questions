@@ -1,6 +1,6 @@
 import { largestGoodInteger } from "./solution";
 
-describe("Largest 3-Same-Digit Number in String:", () => {
+describe("2264. Largest 3-Same-Digit Number in String:", () => {
   it('largestGoodInteger should return "777" for num = "6777133339"', () => {
     const num = "6777133339";
     const result = largestGoodInteger(num);

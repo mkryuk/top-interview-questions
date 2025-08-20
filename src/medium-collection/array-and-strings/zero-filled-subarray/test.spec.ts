@@ -1,6 +1,6 @@
 import { zeroFilledSubarray } from "./solution";
 
-describe("Number of Zero-Filled Subarrays", () => {
+describe("2348. Number of Zero-Filled Subarrays", () => {
   it("zeroFilledSubarray should return 6 for nums = [1,3,0,0,2,0,0,4]", () => {
     const nums = [1, 3, 0, 0, 2, 0, 0, 4];
     const result = zeroFilledSubarray(nums);

@@ -1,6 +1,6 @@
 import { countSquares } from "./solution";
 
-describe("Count Square Submatrices with All Ones", () => {
+describe("1277. Count Square Submatrices with All Ones", () => {
   it("countSquares should return 15 for matrix =[[0,1,1,1], [1,1,1,1], [0,1,1,1]]", () => {
     const matrix = [
       [0, 1, 1, 1],

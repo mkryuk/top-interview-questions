@@ -6,7 +6,7 @@ describe("837. New 21 Game", () => {
     const k = 1;
     const maxPts = 10;
     const result = new21Game(n, k, maxPts);
-    expect(result).toEqual(1.0);
+    expect(result).toBeCloseTo(1.0);
   });
 
   it("new21Game should return 0.6 for n = 6, k = 1, maxPts = 10", () => {
@@ -14,7 +14,7 @@ describe("837. New 21 Game", () => {
     const k = 1;
     const maxPts = 10;
     const result = new21Game(n, k, maxPts);
-    expect(result).toEqual(0.6);
+    expect(result).toBeCloseTo(0.6);
   });
 
   it("new21Game should return 0.73278 for n = 21, k = 17, maxPts = 10", () => {
@@ -22,6 +22,6 @@ describe("837. New 21 Game", () => {
     const k = 17;
     const maxPts = 10;
     const result = new21Game(n, k, maxPts);
-    expect(result).toEqual(0.73278);
+    expect(result).toBeCloseTo(0.73278, 5);
   });
 });

@@ -18,4 +18,18 @@ describe("3000. Maximum Area of Longest Diagonal Rectangle", () => {
     const result = areaOfMaxDiagonal(dimensions);
     expect(result).toEqual(12);
   });
+
+  it("areaOfMaxDiagonal should return 20 for dimensions = [[6,5],[8,6],[2,10],[8,1],[9,2],[3,5],[3,5]]", () => {
+    const dimensions = [
+      [6, 5],
+      [8, 6],
+      [2, 10],
+      [8, 1],
+      [9, 2],
+      [3, 5],
+      [3, 5],
+    ];
+    const result = areaOfMaxDiagonal(dimensions);
+    expect(result).toEqual(20);
+  });
 });

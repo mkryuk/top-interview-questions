@@ -1,6 +1,6 @@
 import { maxAverageRatio } from "./solution";
 
-describe("Maximum Average Pass Ratio", () => {
+describe("1792. Maximum Average Pass Ratio", () => {
   it("maxAverageRatio should return 0.78333 for classes = [[1,2],[3,5],[2,2]], extraStudents = 2", () => {
     const classes = [
       [1, 2],

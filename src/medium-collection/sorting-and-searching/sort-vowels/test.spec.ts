@@ -1,6 +1,6 @@
 import { sortVowels } from "./solution";
 
-describe("Sort Vowels in a String:", () => {
+describe("2785. Sort Vowels in a String:", () => {
   it('sortVowels should return "lEOtcede" for s = "lEetcOde"', () => {
     const s = "lEetcOde";
     const result = sortVowels(s);

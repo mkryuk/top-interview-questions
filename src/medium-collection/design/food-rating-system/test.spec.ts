@@ -1,6 +1,6 @@
 import { FoodRatings } from "./solution";
 
-describe("Design a Food Rating System:", () => {
+describe("2353. Design a Food Rating System:", () => {
   it("FoodRatings should pass test 1", () => {
     const foodRatings = new FoodRatings(
       ["kimchi", "miso", "sushi", "moussaka", "ramen", "bulgogi"],

@@ -1,6 +1,6 @@
 import { maxFrequencyElements } from "./solution";
 
-describe("Count Elements With Maximum Frequency:", () => {
+describe("3005. Count Elements With Maximum Frequency:", () => {
   it("maxFrequencyElements should return 4 for nums = [1,2,2,3,1,4]", () => {
     const nums = [1, 2, 2, 3, 1, 4];
     const result = maxFrequencyElements(nums);

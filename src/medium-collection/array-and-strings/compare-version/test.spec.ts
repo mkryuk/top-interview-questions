@@ -1,6 +1,6 @@
 import { compareVersion } from "./solution";
 
-describe("Compare Version Numbers", () => {
+describe("165. Compare Version Numbers", () => {
   it('compareVersion should return 0 for version1 = "1.01", version2 = "1.001"', () => {
     const version1 = "1.01";
     const version2 = "1.001";

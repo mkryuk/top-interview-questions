@@ -1,6 +1,6 @@
 import { numWaterBottles } from "./solution";
 
-describe("Water Bottles:", () => {
+describe("1518. Water Bottles:", () => {
   it("numWaterBottles should return 13 for numBottles = 9, numExchange = 3", () => {
     const numBottles = 9;
     const numExchange = 3;

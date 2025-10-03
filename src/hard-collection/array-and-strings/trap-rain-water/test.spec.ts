@@ -1,6 +1,6 @@
 import { trapRainWater } from "./solution";
 
-describe("Trapping Rain Water II", () => {
+describe("407. Trapping Rain Water II", () => {
   it("trapRainWater should return 4 for heightMap = [[1,4,3,1,3,2],[3,2,1,3,2,4],[2,3,3,2,3,1]]", () => {
     const heightMap = [
       [1, 4, 3, 1, 3, 2],

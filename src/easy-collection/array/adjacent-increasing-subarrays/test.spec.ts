@@ -12,6 +12,20 @@ describe("3349. Adjacent Increasing Subarrays Detection I", () => {
     const nums = [1, 2, 3, 4, 4, 4, 4, 5, 6, 7];
     const k = 5;
     const result = hasIncreasingSubarrays(nums, k);
+    expect(result).toBeFalse();
+  });
+
+  it("hasIncreasingSubarrays should return true for nums = [-15,19], k = 1", () => {
+    const nums = [-15, 19];
+    const k = 1;
+    const result = hasIncreasingSubarrays(nums, k);
+    expect(result).toBeTrue();
+  });
+
+  it("hasIncreasingSubarrays should return true for nums = [5,8,-2,-1], k = 2", () => {
+    const nums = [5, 8, -2, -1];
+    const k = 2;
+    const result = hasIncreasingSubarrays(nums, k);
     expect(result).toBeTrue();
   });
 });

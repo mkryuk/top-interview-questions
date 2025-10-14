@@ -1,5 +1,4 @@
 export function minTime(skill: number[], mana: number[]): number {
-  // compute skill prefix sums: prefix_s[i] = sum of skill[0..i-1]
   const n: number = skill.length;
   const m: number = mana.length;
 
@@ -9,7 +8,6 @@ export function minTime(skill: number[], mana: number[]): number {
     prefixS[i + 1] = prefixS[i] + skill[i];
   }
 
-  // total skill sum used to compute each potion's total processing time
   const totalS: number = prefixS[n];
 
   // compute consecutive start-time gaps d[j]
@@ -26,7 +24,6 @@ export function minTime(skill: number[], mana: number[]): number {
         need = candidate;
       }
     }
-
     // by machine 0 constraint, need is at least mj * skill[0] (strictly positive), so no extra max with 0 needed
     gaps[j] = need;
   }

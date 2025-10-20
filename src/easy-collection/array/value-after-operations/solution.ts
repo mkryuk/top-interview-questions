@@ -1,3 +1,11 @@
 export function finalValueAfterOperations(operations: string[]): number {
-  return 0;
+  let result = 0;
+  for (const op of operations) {
+    if (op === "X++" || op === "++X") {
+      result++;
+    } else {
+      result--;
+    }
+  }
+  return result;
 }

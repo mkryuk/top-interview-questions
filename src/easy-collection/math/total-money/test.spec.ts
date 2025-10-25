@@ -1,6 +1,6 @@
 import { totalMoney } from "./solution";
 
-describe("Calculate Money in Leetcode Bank:", () => {
+describe("1716. Calculate Money in Leetcode Bank:", () => {
   it("totalMoney should return 10 for n = 4", () => {
     const n = 4;
     const result = totalMoney(n);

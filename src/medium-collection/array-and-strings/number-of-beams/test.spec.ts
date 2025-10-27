@@ -1,6 +1,6 @@
 import { numberOfBeams } from "./solution";
 
-describe("Number of Laser Beams in a Bank:", () => {
+describe("2125. Number of Laser Beams in a Bank:", () => {
   it('numberOfBeams should return 8 for bank = ["011001","000000","010100","001000"]', () => {
     const bank = ["011001", "000000", "010100", "001000"];
     const result = numberOfBeams(bank);

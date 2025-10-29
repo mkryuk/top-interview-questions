@@ -25,16 +25,12 @@ function generateAllBalancedUpToLen7(): number[] {
     }
 
     // skip this digit
-    {
-      dfsSubset(idx + 1, picked, sum);
-    }
+    dfsSubset(idx + 1, picked, sum);
 
     // take this digit
-    {
-      picked.push(digits[idx]);
-      dfsSubset(idx + 1, picked, sum + digits[idx]);
-      picked.pop();
-    }
+    picked.push(digits[idx]);
+    dfsSubset(idx + 1, picked, sum + digits[idx]);
+    picked.pop();
   }
 
   dfsSubset(0, [], 0);
@@ -94,8 +90,6 @@ function generatePermutations(multiset: number[], sink: number[]): void {
 
   backtrack();
 }
-
-/* ----------------------- search helper ----------------------- */
 
 // binary search for first element strictly greater than target
 function firstGreater(arr: number[], target: number): number {

@@ -1,6 +1,6 @@
 import { countUnguarded } from "./solution";
 
-describe("Count Unguarded Cells in the Grid", () => {
+describe("2257. Count Unguarded Cells in the Grid", () => {
   it("countUnguarded should return 7 for m = 4, n = 6, guards = [[0,0],[1,1],[2,3]], walls = [[0,1],[2,2],[1,4]]", () => {
     const m = 4;
     const n = 6;

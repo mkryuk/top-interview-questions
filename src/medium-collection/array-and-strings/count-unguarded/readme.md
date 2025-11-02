@@ -1,4 +1,4 @@
-# Count Unguarded Cells in the Grid
+# 2257. Count Unguarded Cells in the Grid
 
 You are given two integers m and n representing a 0-indexed m x n grid. You are also given two 2D integer arrays guards and walls where guards[i] = [rowi, coli] and walls[j] = [rowj, colj] represent the positions of the ith guard and jth wall respectively.
 

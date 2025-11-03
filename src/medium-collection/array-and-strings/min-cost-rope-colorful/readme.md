@@ -1,4 +1,4 @@
-# Minimum Time to Make Rope Colorful
+# 1578. Minimum Time to Make Rope Colorful
 
 Alice has n balloons arranged on a rope. You are given a 0-indexed string colors where colors[i] is the color of the ith balloon.
 

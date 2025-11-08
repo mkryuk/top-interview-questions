@@ -1,6 +1,6 @@
 import { minimumOneBitOperations } from "./solution";
 
-describe("Minimum One Bit Operations to Make Integers Zero:", () => {
+describe("1611. Minimum One Bit Operations to Make Integers Zero:", () => {
   it("minimumOneBitOperations should return 2 for n = 3", () => {
     const n = 3;
     const result = minimumOneBitOperations(n);

@@ -8,7 +8,7 @@ describe("3542. Minimum Operations to Convert All Elements to Zero", () => {
   });
 
   it("minOperations should return 3 for nums = [3,1,2,1]", () => {
-    const nums = [0, 2];
+    const nums = [3, 1, 2, 1];
     const result = minOperations(nums);
     expect(result).toEqual(3);
   });

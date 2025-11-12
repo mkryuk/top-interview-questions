@@ -46,7 +46,7 @@ function buildBasePower(stations: number[], r: number): number[] {
 function canAchieve(base: number[], r: number, k: number, target: number): boolean {
   const n = base.length;
 
-  // diff array to model added stations’ coverage as a sliding window
+  // diff array to model added stations coverage as a sliding window
   // addDiff[t] contributes to current windowAdd starting at index t,
   // and we subtract at t = (placedIndex + r + 1) to end coverage.
   const addDiff: number[] = new Array(n + 1).fill(0);

@@ -14,6 +14,6 @@ describe("474. Ones and Zeroes", () => {
     const m = 1;
     const n = 1;
     const result = findMaxForm(strs, m, n);
-    expect(result).toEqual(4);
+    expect(result).toEqual(2);
   });
 });

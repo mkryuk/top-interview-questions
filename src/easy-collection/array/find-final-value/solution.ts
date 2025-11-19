@@ -1,3 +1,9 @@
 export function findFinalValue(nums: number[], original: number): number {
-  return 0;
+  nums.sort((a, b) => a - b);
+  for (const num of nums) {
+    if (num === original) {
+      original *= 2;
+    }
+  }
+  return original;
 }

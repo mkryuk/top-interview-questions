@@ -1,6 +1,6 @@
 import { countPalindromicSubsequence } from "./solution";
 
-describe("Unique Length-3 Palindromic Subsequences:", () => {
+describe("1930. Unique Length-3 Palindromic Subsequences:", () => {
   it('countPalindromicSubsequence should return 3 for s = "aabca"', () => {
     const s = "aabca";
     const result = countPalindromicSubsequence(s);

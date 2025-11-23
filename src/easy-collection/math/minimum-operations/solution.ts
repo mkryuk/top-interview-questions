@@ -1,3 +1,7 @@
 export function minimumOperations(nums: number[]): number {
-  return 0;
+  let result = 0;
+  for (const num of nums) {
+    result += Math.min(num % 3, 3 - (num % 3));
+  }
+  return result;
 }

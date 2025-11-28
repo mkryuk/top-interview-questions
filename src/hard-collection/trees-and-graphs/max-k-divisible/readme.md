@@ -1,4 +1,4 @@
-# Maximum Number of K-Divisible Components
+# 2872. Maximum Number of K-Divisible Components
 
 There is an undirected tree with n nodes labeled from 0 to n - 1. You are given the integer n and a 2D integer array edges of length n - 1, where edges[i] = [ai, bi] indicates that there is an edge between nodes ai and bi in the tree.
 

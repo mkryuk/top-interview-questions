@@ -1,6 +1,6 @@
 import { maxKDivisibleComponents } from "./solution";
 
-describe("Maximum Number of K-Divisible Components", () => {
+describe("2872. Maximum Number of K-Divisible Components", () => {
   it("maxKDivisibleComponents should return 2 for n = 5, edges = [[0,2],[1,2],[1,3],[2,4]], values = [1,8,1,4,4], k = 6", () => {
     const n = 5;
     const edges = [

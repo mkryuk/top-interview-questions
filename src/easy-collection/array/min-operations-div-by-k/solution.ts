@@ -1,3 +1,4 @@
 export function minOperations(nums: number[], k: number): number {
-  return 0;
+  const sum = nums.reduce((a, b) => a + b, 0);
+  return sum % k;
 }

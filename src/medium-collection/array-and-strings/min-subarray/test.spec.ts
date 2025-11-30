@@ -1,6 +1,6 @@
 import { minSubarray } from "./solution";
 
-describe("Make Sum Divisible by P", () => {
+describe("1590. Make Sum Divisible by P", () => {
   it("minSubarray should return 1 for nums = [3,1,4,2], p = 6", () => {
     const nums = [3, 1, 4, 2];
     const p = 6;

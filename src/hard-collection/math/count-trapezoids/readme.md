@@ -8,7 +8,8 @@ A trapezoid is a convex quadrilateral with at least one pair of parallel sides. 
 
 ## Example 1:
 
-![Example 1](./images/ex1.png)
+![Example 1.1](./images/ex1.1.png)
+![Example 1.2](./images/ex1.2.png)
 
 ```
 Input: points = [[-3,2],[3,0],[2,3],[3,2],[2,-3]]

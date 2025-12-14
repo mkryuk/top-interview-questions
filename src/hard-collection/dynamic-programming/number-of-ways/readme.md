@@ -1,4 +1,4 @@
-# Number of Ways to Divide a Long Corridor
+# 2147. Number of Ways to Divide a Long Corridor
 
 Along a long library corridor, there is a line of seats and decorative plants. You are given a 0-indexed string corridor of length n consisting of letters 'S' and 'P' where each 'S' represents a seat and each 'P' represents a plant.
 

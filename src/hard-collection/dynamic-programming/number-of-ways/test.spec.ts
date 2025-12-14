@@ -1,6 +1,6 @@
 import { numberOfWays } from "./solution";
 
-describe("Number of Ways to Divide a Long Corridor:", () => {
+describe("2147. Number of Ways to Divide a Long Corridor:", () => {
   it('numberOfWays should return 3 for corridor = "SSPPSPS"', () => {
     const corridor = "SSPPSPS";
     const result = numberOfWays(corridor);

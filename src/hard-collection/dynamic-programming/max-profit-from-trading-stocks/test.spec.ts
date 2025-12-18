@@ -1,3 +1,5 @@
+import { maxProfit } from "./solution";
+
 describe("3562. Maximum Profit from Trading Stocks with Discounts", () => {
   it("maxProfit should return 5 for n = 2, present = [1,2], future = [4,3], hierarchy = [[1,2]], budget = 3", () => {
     const n = 2;

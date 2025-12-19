@@ -1,6 +1,6 @@
 import { findAllPeople } from "./solution";
 
-describe("Find All People With Secret:", () => {
+describe("2092. Find All People With Secret:", () => {
   it("findAllPeople should return [0,1,2,3,5] for test 1", () => {
     const n = 6;
     const meetings = [

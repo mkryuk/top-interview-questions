@@ -1,6 +1,6 @@
 import { maxTwoEvents } from "./solution";
 
-describe("Two Best Non-Overlapping Events", () => {
+describe("2054. Two Best Non-Overlapping Events", () => {
   it("maxTwoEvents should return 4 for events = [[1,3,2],[4,5,2],[2,4,3]]", () => {
     const events = [
       [1, 3, 2],

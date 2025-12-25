@@ -1,6 +1,6 @@
 import { maximumHappinessSum } from "./solution";
 
-describe("Maximize Happiness of Selected Children", () => {
+describe("3075. Maximize Happiness of Selected Children", () => {
   it("maximumHappinessSum should return 4 for happiness = [1,2,3], k = 2", () => {
     const happiness = [1, 2, 3];
     const k = 2;

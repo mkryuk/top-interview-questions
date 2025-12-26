@@ -1,6 +1,6 @@
 import { bestClosingTime } from "./solution-one-pass";
 
-describe("Minimum Penalty for a Shop:", () => {
+describe("2483. Minimum Penalty for a Shop:", () => {
   it('bestClosingTime should return 2 for customers = "YYNY"', () => {
     const customers = "YYNY";
     const result = bestClosingTime(customers);

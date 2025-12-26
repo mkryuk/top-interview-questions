@@ -1,4 +1,4 @@
-# Minimum Penalty for a Shop
+# 2483. Minimum Penalty for a Shop
 
 You are given the customer visit log of a shop represented by a 0-indexed string customers consisting only of characters 'N' and 'Y':
 

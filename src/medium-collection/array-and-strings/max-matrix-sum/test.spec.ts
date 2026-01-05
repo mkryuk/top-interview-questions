@@ -1,6 +1,6 @@
 import { maxMatrixSum } from "./solution";
 
-describe("Maximum Matrix Sum", () => {
+describe("1975. Maximum Matrix Sum:", () => {
   it("maxMatrixSum should return 4 for matrix = [[1,-1],[-1,1]]", () => {
     const matrix = [
       [1, -1],

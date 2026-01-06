@@ -1,7 +1,7 @@
 import { arrayToTreeNodeLevel, treeNodeToArray } from "../common";
 import { maxLevelSum } from "./solution";
 
-describe("Maximum Level Sum of a Binary Tree:", () => {
+describe("1161. Maximum Level Sum of a Binary Tree:", () => {
   it("maxLevelSum should return 2 for root = [1,7,0,7,-8,null,null]", () => {
     const nodes = [1, 7, 0, 7, -8, null, null];
     const root = arrayToTreeNodeLevel(nodes);

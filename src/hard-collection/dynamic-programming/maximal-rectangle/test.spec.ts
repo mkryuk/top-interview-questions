@@ -1,6 +1,6 @@
 import { maximalRectangle } from "./solution";
 
-describe("Maximal Rectangle", () => {
+describe("85. Maximal Rectangle:", () => {
   it("maximalRectangle should return 6 for Example 1", () => {
     const matrix = [
       ["1", "0", "1", "0", "0"],

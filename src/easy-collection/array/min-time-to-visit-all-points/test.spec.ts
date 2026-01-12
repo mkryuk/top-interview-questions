@@ -1,6 +1,6 @@
 import { minTimeToVisitAllPoints } from "./solution";
 
-describe(" Minimum Time Visiting All Points:", () => {
+describe("1266. Minimum Time Visiting All Points:", () => {
   it("minTimeToVisitAllPoints should return 7 for points = [[1,1],[3,4],[-1,0]]", () => {
     const points = [
       [1, 1],

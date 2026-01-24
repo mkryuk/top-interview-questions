@@ -1,4 +1,4 @@
-function minBitwiseArray(nums: number[]): number[] {
+export function minBitwiseArray(nums: number[]): number[] {
   const result: number[] = [];
 
   for (let i: number = 0; i < nums.length; i++) {

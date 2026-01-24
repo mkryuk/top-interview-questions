@@ -1,6 +1,6 @@
 import { minPairSum } from "./solution";
 
-describe("Minimize Maximum Pair Sum in Array:", () => {
+describe("1877. Minimize Maximum Pair Sum in Array:", () => {
   it("minPairSum should return 7 for nums = [3,5,2,3]", () => {
     const nums = [3, 5, 2, 3];
     const result = minPairSum(nums);

@@ -1,4 +1,4 @@
-# Minimize Maximum Pair Sum in Array
+# 1877. Minimize Maximum Pair Sum in Array
 
 The pair sum of a pair (a,b) is equal to a + b. The maximum pair sum is the largest pair sum in a list of pairs.
 

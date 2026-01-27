@@ -1,6 +1,6 @@
 import { minimumAbsDifference } from "./solution";
 
-describe("Minimum Absolute Difference:", () => {
+describe("1200. Minimum Absolute Difference:", () => {
   it("minimumAbsDifference should return [[1,2],[2,3],[3,4]] for arr = [4,2,1,3]", () => {
     const arr = [4, 2, 1, 3];
     const result = minimumAbsDifference(arr);

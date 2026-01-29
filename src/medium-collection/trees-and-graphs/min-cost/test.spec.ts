@@ -1,6 +1,6 @@
 import { minimumCost } from "./solution";
 
-describe("Minimum Cost to Convert String I", () => {
+describe("2976. Minimum Cost to Convert String I", () => {
   it('minimumCost should return 28 for source = "abcd", target = "acbe", original = ["a","b","c","c","e","d"], changed = ["b","c","b","e","b","e"], cost = [2,5,5,1,2,20]', () => {
     const source = "abcd";
     const target = "acbe";

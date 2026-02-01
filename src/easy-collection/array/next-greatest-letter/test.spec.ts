@@ -1,6 +1,6 @@
 import { nextGreatestLetter } from "./solution";
 
-describe("Find Smallest Letter Greater Than Target:", () => {
+describe("744. Find Smallest Letter Greater Than Target:", () => {
   it('nextGreatestLetter should return "c" for letters = ["c","f","j"], target = "a"', () => {
     const letters = ["c", "f", "j"];
     const target = "a";

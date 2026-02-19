@@ -1,3 +1,4 @@
 export function hasAlternatingBits(n: number): boolean {
-  return false;
+  const x = n ^ (n >> 1);
+  return (x & (x + 1)) === 0;
 }

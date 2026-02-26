@@ -1,4 +1,4 @@
-# Number of Steps to Reduce a Number in Binary Representation to One
+# 1404. Number of Steps to Reduce a Number in Binary Representation to One
 
 Given the binary representation of an integer as a string s, return the number of steps to reduce it to 1 under the following rules:
 

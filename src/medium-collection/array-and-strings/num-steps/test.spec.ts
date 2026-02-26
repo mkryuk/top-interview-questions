@@ -1,6 +1,6 @@
 import { numSteps } from "./solution";
 
-describe("Number of Steps to Reduce a Number in Binary Representation to One", () => {
+describe("1404. Number of Steps to Reduce a Number in Binary Representation to One", () => {
   it('numSteps should return 6 for s = "1101"', () => {
     const s = "1101";
     const result = numSteps(s);

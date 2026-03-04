@@ -1,4 +1,4 @@
-# Special Positions in a Binary Matrix
+# 1582. Special Positions in a Binary Matrix
 
 Given an m x n binary matrix mat, return the number of special positions in mat.
 

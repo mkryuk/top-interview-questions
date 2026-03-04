@@ -1,6 +1,6 @@
 import { numSpecial } from "./solution";
 
-describe("Special Positions in a Binary Matrix:", () => {
+describe("1582. Special Positions in a Binary Matrix:", () => {
   it("numSpecial should return 1 for mat = [[1,0,0],[0,0,1],[1,0,0]]", () => {
     const mat = [
       [1, 0, 0],

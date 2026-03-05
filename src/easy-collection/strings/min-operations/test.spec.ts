@@ -1,6 +1,6 @@
 import { minOperations } from "./solution";
 
-describe("Minimum Changes To Make Alternating Binary String:", () => {
+describe("1758. Minimum Changes To Make Alternating Binary String:", () => {
   it('minOperations should return 1 for s = "0100"', () => {
     const s = "0100";
     const result = minOperations(s);

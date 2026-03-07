@@ -1,3 +1,3 @@
 export function checkOnesSegment(s: string): boolean {
-  return false;
+  return !s.includes("01");
 }

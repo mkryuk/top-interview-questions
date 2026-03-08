@@ -1,6 +1,6 @@
 import { findDifferentBinaryString } from "./solution";
 
-describe("Find Unique Binary String:", () => {
+describe("1980. Find Unique Binary String:", () => {
   it('findDifferentBinaryString should return "11" for nums = ["01","10"]', () => {
     const nums = ["01", "10"];
     const result = findDifferentBinaryString(nums);

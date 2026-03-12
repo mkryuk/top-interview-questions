@@ -1,6 +1,6 @@
 import { bitwiseComplement } from "./solution";
 
-describe("Complement of Base 10 Integer", () => {
+describe("1009. Complement of Base 10 Integer:", () => {
   it("bitwiseComplement should return 2 for n = 5", () => {
     const n = 5;
     const result = bitwiseComplement(n);

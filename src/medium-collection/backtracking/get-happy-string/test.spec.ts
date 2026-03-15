@@ -1,6 +1,6 @@
 import { getHappyString } from "./solution";
 
-describe("The k-th Lexicographical String of All Happy Strings of Length n", () => {
+describe("1415. The k-th Lexicographical String of All Happy Strings of Length n", () => {
   it('getHappyString should return "c" for n = 1, k = 3', () => {
     const n = 1;
     const k = 3;

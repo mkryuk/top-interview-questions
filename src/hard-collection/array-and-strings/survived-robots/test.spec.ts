@@ -1,6 +1,6 @@
 import { survivedRobotsHealths } from "./solution";
 
-describe("Robot Collisions", () => {
+describe("2751. Robot Collisions:", () => {
   it('survivedRobotsHealths should return [2,17,9,15,10] for positions = [5,4,3,2,1], healths = [2,17,9,15,10], directions = "RRRRR"', () => {
     const positions = [5, 4, 3, 2, 1];
     const healths = [2, 17, 9, 15, 10];

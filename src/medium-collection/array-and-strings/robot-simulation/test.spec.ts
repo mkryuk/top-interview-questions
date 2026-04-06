@@ -1,6 +1,6 @@
 import { robotSim } from "./solution";
 
-describe("Walking Robot Simulation:", () => {
+describe("874. Walking Robot Simulation:", () => {
   it("robotSim should return 25 for commands = [4,-1,3], obstacles = []", () => {
     const commands = [4, -1, 3];
     const obstacles: number[][] = [];

@@ -1,4 +1,4 @@
-# Walking Robot Simulation
+# 874. Walking Robot Simulation
 
 A robot on an infinite XY-plane starts at point (0, 0) facing north. The robot can receive a sequence of these three possible types of commands:
 

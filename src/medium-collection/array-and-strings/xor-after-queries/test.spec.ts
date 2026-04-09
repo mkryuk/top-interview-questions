@@ -1,6 +1,6 @@
 import { xorAfterQueries } from "./solution";
 
-describe("XOR After Range Multiplication Queries I", () => {
+describe("XOR After Range Multiplication Queries I:", () => {
   it("xorAfterQueries should return 4 for nums = [1,1,1], queries = [[0,2,1,4]]", () => {
     const nums = [1, 1, 1];
     const queries = [[0, 2, 1, 4]];

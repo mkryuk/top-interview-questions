@@ -1,6 +1,6 @@
 import { minimumTotalDistance } from "./solution";
 
-describe("Minimum Total Distance Traveled", () => {
+describe("2463. Minimum Total Distance Traveled", () => {
   it("minimumTotalDistance should return 4 for robot = [0,4,6], factory = [[2,2],[6,2]]", () => {
     const robot = [0, 4, 6];
     const factory = [

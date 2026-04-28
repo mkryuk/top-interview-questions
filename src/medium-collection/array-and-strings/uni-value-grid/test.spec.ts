@@ -1,6 +1,6 @@
 import { minOperations } from "./solution";
 
-describe("Minimum Operations to Make a Uni-Value Grid", () => {
+describe("2033. Minimum Operations to Make a Uni-Value Grid:", () => {
   it("minOperations should return 4 for grid = [[2,4],[6,8]], x = 2", () => {
     const grid = [
       [2, 4],

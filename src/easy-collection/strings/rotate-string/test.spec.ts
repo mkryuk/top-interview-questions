@@ -1,6 +1,6 @@
 import { rotateString } from "./solution";
 
-describe("Rotate String", () => {
+describe("796. Rotate String", () => {
   it('rotateString should return true for s = "abcde", goal = "cdeab"', () => {
     const s = "abcde";
     const goal = "cdeab";

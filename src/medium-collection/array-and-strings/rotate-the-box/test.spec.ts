@@ -1,6 +1,6 @@
 import { rotateTheBox } from "./solution";
 
-describe("Rotating the Box", () => {
+describe("1861. Rotating the Box", () => {
   it("rotateTheBox should rotate box 1", () => {
     const box = [["#", ".", "#"]];
     const result = rotateTheBox(box);

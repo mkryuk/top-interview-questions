@@ -1,6 +1,6 @@
 import { isGood } from "./solution-sort";
 
-describe("Check if Array is Good:", () => {
+describe("2784. Check if Array is Good:", () => {
   it("isGood should return false for nums = [2, 1, 3]", () => {
     const nums = [2, 1, 3];
     const result = isGood(nums);

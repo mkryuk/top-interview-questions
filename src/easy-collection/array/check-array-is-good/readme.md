@@ -1,4 +1,4 @@
-# Check if Array is Good
+# 2784. Check if Array is Good
 
 You are given an integer array nums. We consider an array good if it is a permutation of an array base[n].
 

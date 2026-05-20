@@ -1,6 +1,6 @@
 import { getCommon } from "./solution";
 
-describe("Minimum Common Value:", () => {
+describe("2540. Minimum Common Value:", () => {
   it("getCommon should return 2 for nums1 = [1,2,3], nums2 = [2,4]", () => {
     const nums1 = [1, 2, 3];
     const nums2 = [2, 4];

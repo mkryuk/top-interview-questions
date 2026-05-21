@@ -1,6 +1,6 @@
 import { findThePrefixCommonArray } from "./solution";
 
-describe("Find the Prefix Common Array of Two Arrays", () => {
+describe("2657. Find the Prefix Common Array of Two Arrays", () => {
   it("findThePrefixCommonArray should return [0,2,3,4] for A = [1,3,2,4], B = [3,1,2,4]", () => {
     const A = [1, 3, 2, 4];
     const B = [3, 1, 2, 4];

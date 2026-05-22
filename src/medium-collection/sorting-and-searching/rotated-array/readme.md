@@ -1,4 +1,4 @@
-# Search in Rotated Sorted Array
+# 33. Search in Rotated Sorted Array
 
 There is an integer array nums sorted in ascending order (with distinct values).
 

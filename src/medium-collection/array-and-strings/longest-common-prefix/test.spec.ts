@@ -1,6 +1,6 @@
 import { longestCommonPrefix } from "./solution";
 
-describe("Find the Length of the Longest Common Prefix", () => {
+describe("3043. Find the Length of the Longest Common Prefix:", () => {
   it("longestCommonPrefix should return 3 for arr1 = [1,10,100], arr2 = [1000]", () => {
     const arr1 = [1, 10, 100];
     const arr2 = [1000];

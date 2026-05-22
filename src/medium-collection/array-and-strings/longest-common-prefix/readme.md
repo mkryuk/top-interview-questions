@@ -1,4 +1,4 @@
-# Find the Length of the Longest Common Prefix
+# 3043. Find the Length of the Longest Common Prefix
 
 You are given two arrays with positive integers arr1 and arr2.
 

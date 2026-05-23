@@ -1,6 +1,6 @@
 import { check } from "./solution-optimized";
 
-describe("Check if Array Is Sorted and Rotated", () => {
+describe("1752. Check if Array Is Sorted and Rotated:", () => {
   it("check should return true for nums = [3,4,5,1,2]", () => {
     const nums = [3, 4, 5, 1, 2];
     const result = check(nums);

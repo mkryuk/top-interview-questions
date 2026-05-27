@@ -1,6 +1,6 @@
 import { numberOfSpecialChars } from "./solution";
 
-describe("Count the Number of Special Characters I", () => {
+describe("3120. Count the Number of Special Characters I:", () => {
   it('numberOfSpecialChars should return 3 for word = "aaAbcBC"', () => {
     const word = "aaAbcBC";
     const result = numberOfSpecialChars(word);

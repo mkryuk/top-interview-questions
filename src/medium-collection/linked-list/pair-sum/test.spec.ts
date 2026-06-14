@@ -1,7 +1,7 @@
 import { arrayToList } from "../common";
 import { pairSum } from "./solution";
 
-describe("Maximum Twin Sum of a Linked List:", () => {
+describe("2130. Maximum Twin Sum of a Linked List:", () => {
   it("pairSum should return 6 for head = [5,4,2,1]", () => {
     const nodes = [5, 4, 2, 1];
     const head = arrayToList(nodes);

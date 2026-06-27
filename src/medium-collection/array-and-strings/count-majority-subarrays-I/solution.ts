@@ -1,4 +1,4 @@
-function countMajoritySubarrays(nums: number[], target: number): number {
+export function countMajoritySubarrays(nums: number[], target: number): number {
   const n = nums.length;
   let result = 0;
   for (let left = 0; left < n; left++) {

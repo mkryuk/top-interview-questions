@@ -1,6 +1,6 @@
 import { maximumElementAfterDecrementingAndRearranging } from "./solution";
 
-describe("Maximum Element After Decreasing and Rearranging:", () => {
+describe("1846. Maximum Element After Decreasing and Rearranging:", () => {
   it("maximumElementAfterDecrementingAndRearranging should return 2 for arr = [2,2,1,2,1]", () => {
     const arr = [2, 2, 1, 2, 1];
     const result = maximumElementAfterDecrementingAndRearranging(arr);

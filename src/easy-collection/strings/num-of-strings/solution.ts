@@ -1,3 +1,9 @@
 export function numOfStrings(patterns: string[], word: string): number {
-  return 0;
+  let result = 0;
+  for (const str of patterns) {
+    if (word.includes(str)) {
+      result++;
+    }
+  }
+  return result;
 }

@@ -1,6 +1,6 @@
 import { numberOfSubstrings } from "./solution";
 
-describe("Number of Substrings Containing All Three Characters", () => {
+describe("1358. Number of Substrings Containing All Three Characters", () => {
   it('numberOfSubstrings should return 10 for s = "abcabc"', () => {
     const s = "abcabc";
     const result = numberOfSubstrings(s);

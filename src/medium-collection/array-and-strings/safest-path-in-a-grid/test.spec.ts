@@ -1,6 +1,6 @@
 import { maximumSafenessFactor } from "./solution";
 
-describe("Find the Safest Path in a Grid", () => {
+describe("2812. Find the Safest Path in a Grid", () => {
   it("maximumSafenessFactor should return 0 for grid = [[1,0,0],[0,0,0],[0,0,1]]", () => {
     const grid = [
       [1, 0, 0],

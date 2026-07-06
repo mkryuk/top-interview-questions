@@ -1,6 +1,6 @@
 import { removeCoveredIntervals } from "./solution";
 
-describe("Remove Covered Intervals:", () => {
+describe("1288. Remove Covered Intervals:", () => {
   it("removeCoveredIntervals should return 2 for intervals = [[1,4],[3,6],[2,8]]", () => {
     const intervals = [
       [1, 4],

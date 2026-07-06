@@ -1,4 +1,4 @@
-# Remove Covered Intervals
+# 1288. Remove Covered Intervals
 
 Given an array intervals where intervals[i] = [li, ri] represent the interval [li, ri), remove all intervals that are covered by another interval in the list.
 

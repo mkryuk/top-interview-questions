@@ -1,6 +1,6 @@
 import { sequentialDigits } from "./solution";
 
-describe("Sequential Digits:", () => {
+describe("1291. Sequential Digits:", () => {
   it("sequentialDigits should return [123,234] for low = 100, high = 300", () => {
     const low = 100;
     const high = 300;

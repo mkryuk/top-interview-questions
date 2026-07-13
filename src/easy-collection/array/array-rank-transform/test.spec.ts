@@ -1,6 +1,6 @@
 import { arrayRankTransform } from "./solution";
 
-describe("Rank Transform of an Array", () => {
+describe("1331. Rank Transform of an Array", () => {
   it("arrayRankTransform should return [4,1,2,3] for arr = [40,10,20,30]", () => {
     const arr = [40, 10, 20, 30];
     const result = arrayRankTransform(arr);

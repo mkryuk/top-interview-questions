@@ -1,6 +1,6 @@
 import { maximumProduct } from "./solution";
 
-describe("Maximum Product of Three Numbers:", () => {
+describe("628. Maximum Product of Three Numbers:", () => {
   it("maximumProduct should return 6 for nums = [1,2,3]", () => {
     const nums = [1, 2, 3];
     const result = maximumProduct(nums);

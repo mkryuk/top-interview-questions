@@ -1,6 +1,6 @@
 import { maxProduct } from "./solution";
 
-describe("Maximum Product of Two Elements in an Array:", () => {
+describe("1464. Maximum Product of Two Elements in an Array:", () => {
   it("maxProduct should return 12 for nums = [3,4,5,2]", () => {
     const nums = [3, 4, 5, 2];
     const result = maxProduct(nums);

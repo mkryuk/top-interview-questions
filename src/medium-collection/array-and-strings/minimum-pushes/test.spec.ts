@@ -1,6 +1,6 @@
 import { minimumPushes } from "./solution";
 
-describe("Minimum Number of Pushes to Type Word II", () => {
+describe("3016. Minimum Number of Pushes to Type Word II", () => {
   it('minimumPushes should return 5 for word = "abcde"', () => {
     const word = "abcde";
     const result = minimumPushes(word);

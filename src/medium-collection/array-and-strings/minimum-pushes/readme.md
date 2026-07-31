@@ -1,4 +1,4 @@
-# Minimum Number of Pushes to Type Word II
+# 3016. Minimum Number of Pushes to Type Word II
 
 You are given a string word containing lowercase English letters.
 

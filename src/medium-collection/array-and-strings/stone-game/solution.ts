@@ -1,3 +1,3 @@
 export function stoneGame(piles: number[]): boolean {
-  return false;
+  return true;
 }

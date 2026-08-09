@@ -1,6 +1,6 @@
 import { stoneGameII } from "./solution";
 
-describe("Stone Game II", () => {
+describe("1140. Stone Game II", () => {
   it("stoneGameII should return 10 for piles = [2,7,9,4,4]", () => {
     const piles = [2, 7, 9, 4, 4];
     const result = stoneGameII(piles);

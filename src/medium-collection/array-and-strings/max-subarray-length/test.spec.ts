@@ -1,6 +1,6 @@
 import { maxSubarrayLength } from "./solution";
 
-describe("Length of Longest Subarray With at Most K Frequency", () => {
+describe("2958. Length of Longest Subarray With at Most K Frequency", () => {
   it("maxSubarrayLength should return 6 for nums = [1,2,3,1,2,3,1,2], k = 2", () => {
     const nums = [1, 2, 3, 1, 2, 3, 1, 2];
     const k = 2;

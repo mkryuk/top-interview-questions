@@ -1,6 +1,6 @@
 import { lexicographicallySmallestArray } from "./solution";
 
-describe("Make Lexicographically Smallest Array by Swapping Elements", () => {
+describe("2948. Make Lexicographically Smallest Array by Swapping Elements", () => {
   it("lexicographicallySmallestArray should return [1,3,5,8,9] for nums = [1,5,3,9,8], limit = 2", () => {
     const nums = [1, 5, 3, 9, 8];
     const limit = 2;

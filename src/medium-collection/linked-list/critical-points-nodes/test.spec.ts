@@ -1,7 +1,7 @@
 import { arrayToList, listToArray } from "../common";
 import { nodesBetweenCriticalPoints } from "./solution";
 
-describe("Find the Minimum and Maximum Number of Nodes Between Critical Points", () => {
+describe("2058. Find the Minimum and Maximum Number of Nodes Between Critical Points", () => {
   it("nodesBetweenCriticalPoints should return [-1,-1] for head = [3,1]", () => {
     const nodes = [3, 1];
     const head = arrayToList(nodes);

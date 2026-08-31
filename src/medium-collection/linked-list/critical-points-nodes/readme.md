@@ -1,4 +1,4 @@
-# Find the Minimum and Maximum Number of Nodes Between Critical Points
+# 2058. Find the Minimum and Maximum Number of Nodes Between Critical Points
 
 A critical point in a linked list is defined as either a local maxima or a local minima.
 

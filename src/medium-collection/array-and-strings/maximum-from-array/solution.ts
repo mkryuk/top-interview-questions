@@ -1,4 +1,4 @@
-function minimumDeletions(nums: number[]): number {
+export function minimumDeletions(nums: number[]): number {
   const n = nums.length;
 
   let minIndex = 0;

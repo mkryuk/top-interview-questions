@@ -1,6 +1,6 @@
 import { reverseParentheses } from "./solution";
 
-describe("Reverse Substrings Between Each Pair of Parentheses", () => {
+describe("1190. Reverse Substrings Between Each Pair of Parentheses", () => {
   it('reverseParentheses should return "dcba" for s = "(abcd)"', () => {
     const s = "(abcd)";
     const result = reverseParentheses(s);

@@ -1,6 +1,6 @@
 import { maxDepth } from "./solution";
 
-describe("Maximum Nesting Depth of the Parentheses", () => {
+describe("1614. Maximum Nesting Depth of the Parentheses", () => {
   it('maxDepth should return 3 for s = "(1+(2*3)+((8)/4))+1"', () => {
     const s = "(1+(2*3)+((8)/4))+1";
     const result = maxDepth(s);

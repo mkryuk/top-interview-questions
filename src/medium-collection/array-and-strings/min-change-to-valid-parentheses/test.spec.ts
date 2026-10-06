@@ -1,6 +1,6 @@
 import { minAddToMakeValid } from "./solution";
 
-describe("Minimum Add to Make Parentheses Valid", () => {
+describe("921. Minimum Add to Make Parentheses Valid", () => {
   it('minAddToMakeValid should return 1 for s = "())"', () => {
     const s = "())";
     const result = minAddToMakeValid(s);

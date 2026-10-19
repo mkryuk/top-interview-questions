@@ -1,6 +1,6 @@
 import { targetIndices } from "./solution";
 
-describe("Find Target Indices After Sorting Array:", () => {
+describe("2089. Find Target Indices After Sorting Array:", () => {
   it("targetIndices should return [1,2] for nums = [1,2,5,2,3], target = 2", () => {
     const nums = [1, 2, 5, 2, 3];
     const target = 2;

@@ -1,6 +1,6 @@
 import { countServers } from "./solution";
 
-describe("Count Servers that Communicate", () => {
+describe("1267. Count Servers that Communicate", () => {
   it("countServers should return 0 for grid = [[1,0],[0,1]]", () => {
     const grid = [
       [1, 0],
